@@ -1,0 +1,130 @@
+{"timestamp": "2025-11-18T15:34:54.008521", "level": "INFO", "logger": "IBE100", "message": "Initializing IBE-100 Enterprise v3.0.0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.099745", "level": "INFO", "logger": "IBE100", "message": "Qt application initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.101896", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.102374", "level": "INFO", "logger": "Main", "message": "IBE-100 v3.0 Enterprise Starting...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.103313", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.104922", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck service initialized with path: C:\\Program Files\\TSDuck\\bin\\tsp.exe", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.300203", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck installation verified", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.601119", "level": "INFO", "logger": "Database", "message": "Database schema initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.602881", "level": "INFO", "logger": "Database", "message": "Database initialized: database\\sessions.db", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.606302", "level": "INFO", "logger": "StreamService", "message": "Stream service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.608703", "level": "INFO", "logger": "SCTE35Service", "message": "SCTE-35 service initialized with directory: scte35_final", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.610096", "level": "INFO", "logger": "SCTE35Service", "message": "Profile: default", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.610534", "level": "INFO", "logger": "SCTE35Service", "message": "Last event ID: 10023", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.612884", "level": "INFO", "logger": "TelegramService", "message": "Telegram service initialized (disabled - no token/chat_id)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.641817", "level": "INFO", "logger": "SCTE35Monitor", "message": "SCTE-35 Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.644390", "level": "INFO", "logger": "MonitoringService", "message": "Monitoring service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.699072", "level": "INFO", "logger": "ProfileService", "message": "Loaded 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.699416", "level": "INFO", "logger": "ProfileService", "message": "Profile service initialized with 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.700531", "level": "INFO", "logger": "StreamAnalyzer", "message": "Stream Analyzer service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.701628", "level": "INFO", "logger": "BitrateMonitor", "message": "Bitrate Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.703165", "level": "INFO", "logger": "EPGService", "message": "EPG service initialized with directory: epg", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:54.703539", "level": "INFO", "logger": "Main", "message": "Services initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:57.280667", "level": "INFO", "logger": "IBE100", "message": "Main window initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:57.470953", "level": "INFO", "logger": "Main", "message": "Application ready", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:34:57.471775", "level": "INFO", "logger": "IBE100", "message": "Starting application...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:07.261017", "level": "INFO", "logger": "StreamService", "message": "Starting stream session: b7f04fa3-02c6-4a74-8346-367deb7a2bca", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:08.294737", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 35676", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:14.875400", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 30808", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:21.006910", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 32372", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:27.177341", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 17132", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:33.288433", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29272", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:39.509296", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29040", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:45.699255", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29436", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:51.839242", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 33692", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:35:58.006012", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 24268", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:04.168557", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 23392", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:10.412571", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29596", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:16.740129", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 26616", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:22.988197", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 9272", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:29.238057", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29552", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:35.469404", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 34296", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:41.609093", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 28316", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:47.740571", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 32348", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:36:54.249412", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 32692", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:00.610117", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 2540", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:06.915263", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 11372", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:13.131437", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 21424", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:19.467755", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 8880", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:26.012360", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 25596", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:32.245017", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 29288", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:38.858628", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 22132", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:45.042711", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 20356", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:37:51.203414", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 32676", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:39:55.349347", "level": "INFO", "logger": "StreamService", "message": "Stopping stream...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:39:55.374464", "level": "ERROR", "logger": "StreamService", "message": "Stream error: 'NoneType' object has no attribute 'returncode'", "module": "logger", "function": "error", "line": 136, "exception": "Traceback (most recent call last):\n  File \"src\\services\\stream_service.py\", line 123, in _run_stream\nAttributeError: 'NoneType' object has no attribute 'returncode'"}
+{"timestamp": "2025-11-18T15:39:55.377789", "level": "INFO", "logger": "StreamService", "message": "Stream session ended: b7f04fa3-02c6-4a74-8346-367deb7a2bca", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:39:56.334732", "level": "INFO", "logger": "StreamService", "message": "Stream stopped", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:43:05.987027", "level": "INFO", "logger": "IBE100", "message": "Application exited with code 0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:43:05.988007", "level": "INFO", "logger": "Main", "message": "Application shutting down...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:58.926597", "level": "INFO", "logger": "IBE100", "message": "Initializing IBE-100 Enterprise v3.0.0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.015895", "level": "INFO", "logger": "IBE100", "message": "Qt application initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.017716", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.018097", "level": "INFO", "logger": "Main", "message": "IBE-100 v3.0 Enterprise Starting...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.018307", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.020945", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck service initialized with path: C:\\Program Files\\TSDuck\\bin\\tsp.exe", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.155509", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck installation verified", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.161615", "level": "INFO", "logger": "Database", "message": "Database schema initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.162182", "level": "INFO", "logger": "Database", "message": "Database initialized: database\\sessions.db", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.164489", "level": "INFO", "logger": "StreamService", "message": "Stream service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.165782", "level": "INFO", "logger": "SCTE35Service", "message": "SCTE-35 service initialized with directory: scte35_final", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.166051", "level": "INFO", "logger": "SCTE35Service", "message": "Profile: default", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.166236", "level": "INFO", "logger": "SCTE35Service", "message": "Last event ID: 10023", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.167200", "level": "INFO", "logger": "TelegramService", "message": "Telegram service initialized (disabled - no token/chat_id)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.168384", "level": "INFO", "logger": "SCTE35Monitor", "message": "SCTE-35 Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.187513", "level": "INFO", "logger": "MonitoringService", "message": "Monitoring service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.191094", "level": "INFO", "logger": "ProfileService", "message": "Loaded 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.191732", "level": "INFO", "logger": "ProfileService", "message": "Profile service initialized with 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.194132", "level": "INFO", "logger": "StreamAnalyzer", "message": "Stream Analyzer service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.195584", "level": "INFO", "logger": "BitrateMonitor", "message": "Bitrate Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.196867", "level": "INFO", "logger": "EPGService", "message": "EPG service initialized with directory: epg", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:48:59.197240", "level": "INFO", "logger": "Main", "message": "Services initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:01.067184", "level": "INFO", "logger": "IBE100", "message": "Main window initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:01.230815", "level": "INFO", "logger": "Main", "message": "Application ready", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:01.231255", "level": "INFO", "logger": "IBE100", "message": "Starting application...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:18.161649", "level": "INFO", "logger": "SCTE35Service", "message": "Generated SCTE-35 marker: cue_out_10024_1763461158.xml (Event ID: 10024)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:18.182901", "level": "INFO", "logger": "SCTE35Service", "message": "Generated SCTE-35 marker: cue_in_10025_1763461158.xml (Event ID: 10025)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:18.183759", "level": "INFO", "logger": "SCTE35Service", "message": "Generated CUE pair: OUT=10024, IN=10025", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:30.300963", "level": "INFO", "logger": "StreamService", "message": "Starting stream session: bc932e4c-e812-4d8e-b133-c028131d6ab7", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:49:31.213876", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 27456", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:51:49.266819", "level": "INFO", "logger": "IBE100", "message": "Application exited with code 0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-18T15:51:49.267363", "level": "INFO", "logger": "Main", "message": "Application shutting down...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.068619", "level": "INFO", "logger": "IBE100", "message": "Initializing IBE-100 Enterprise v3.0.0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.199372", "level": "INFO", "logger": "IBE100", "message": "Application icon set: C:\\Users\\LIVEPC~1\\AppData\\Local\\Temp\\_MEI312922\\logo.ico", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.200060", "level": "INFO", "logger": "IBE100", "message": "Qt application initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.201525", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.201852", "level": "INFO", "logger": "Main", "message": "IBE-210 v2.1.0 Enterprise Starting...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.202116", "level": "INFO", "logger": "Main", "message": "============================================================", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.203664", "level": "INFO", "logger": "TSDuckService", "message": "Using bundled TSDuck: C:\\Users\\LIVEPC~1\\AppData\\Local\\Temp\\_MEI312922\\tsduck\\bin\\tsp.exe", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.204568", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck service initialized (source: bundled)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.877496", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck installation verified", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.891438", "level": "INFO", "logger": "Database", "message": "Database schema initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.892005", "level": "INFO", "logger": "Database", "message": "Database initialized: database\\sessions.db", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.894209", "level": "INFO", "logger": "TelegramService", "message": "Telegram service initialized (disabled - no token/chat_id)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.895332", "level": "INFO", "logger": "StreamService", "message": "Stream service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.914313", "level": "INFO", "logger": "SCTE35Service", "message": "SCTE-35 service initialized with directory: scte35_final", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.914841", "level": "INFO", "logger": "SCTE35Service", "message": "Profile: default", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.915386", "level": "INFO", "logger": "SCTE35Service", "message": "Last event ID: 10025", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.917960", "level": "INFO", "logger": "SCTE35Monitor", "message": "SCTE-35 Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.919372", "level": "INFO", "logger": "MonitoringService", "message": "Monitoring service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.958435", "level": "INFO", "logger": "ProfileService", "message": "Loaded 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.959049", "level": "INFO", "logger": "ProfileService", "message": "Profile service initialized with 3 profiles", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.960886", "level": "INFO", "logger": "StreamAnalyzer", "message": "Stream Analyzer service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.962034", "level": "INFO", "logger": "BitrateMonitor", "message": "Bitrate Monitor service initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.963331", "level": "INFO", "logger": "EPGService", "message": "EPG service initialized with directory: epg", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.965644", "level": "INFO", "logger": "Main", "message": "Backup manager initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:39.965895", "level": "INFO", "logger": "Main", "message": "Services initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:41.932882", "level": "INFO", "logger": "IBE100", "message": "Main window initialized", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:42.172634", "level": "INFO", "logger": "Main", "message": "Application ready", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:16:42.173472", "level": "INFO", "logger": "IBE100", "message": "Starting application...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:18:53.230731", "level": "INFO", "logger": "SCTE35Service", "message": "Generated SCTE-35 marker: cue_out_10026_1763635733.xml (Event ID: 10026)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:18:53.262183", "level": "INFO", "logger": "SCTE35Service", "message": "Generated SCTE-35 marker: cue_in_10027_1763635733.xml (Event ID: 10027)", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:18:53.262506", "level": "INFO", "logger": "SCTE35Service", "message": "Generated CUE pair: OUT=10026, IN=10027", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:03.315883", "level": "INFO", "logger": "StreamService", "message": "Starting stream session: 93dae787-cea5-44b7-8fbb-e067aaf46acb", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:03.316509", "level": "INFO", "logger": "StreamService", "message": "TSDuck command: C:\\Users\\LIVEPC~1\\AppData\\Local\\Temp\\_MEI312922\\tsduck\\bin\\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\\cue_in_10027_1763635733.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:04.528851", "level": "INFO", "logger": "TSDuckService", "message": "TSDuck process started: PID 50044", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:30.573424", "level": "INFO", "logger": "StreamService", "message": "Stopping stream...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:30.601148", "level": "INFO", "logger": "StreamService", "message": "Stream session ended: 93dae787-cea5-44b7-8fbb-e067aaf46acb", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:31.536570", "level": "INFO", "logger": "StreamService", "message": "Stream stopped", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:38.329997", "level": "INFO", "logger": "IBE100", "message": "Application exited with code 0", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-20T16:19:38.330428", "level": "INFO", "logger": "Main", "message": "Application shutting down...", "module": "logger", "function": "info", "line": 128}

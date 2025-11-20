@@ -1,0 +1,11 @@
+{
+  "scte35_marker": {
+    "event_id": 10051,
+    "cue_type": "CUE-IN (Ad Break End)",
+    "preroll_seconds": 0,
+    "ad_duration_seconds": 0,
+    "schedule_time": "Immediate",
+    "immediate": true,
+    "created_at": "2025-11-19T17:03:32.426595"
+  }
+}

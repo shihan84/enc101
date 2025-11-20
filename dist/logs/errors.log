@@ -1,0 +1,4 @@
+2025-11-18 15:39:55 - StreamService - ERROR - logger - error:136 - Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "src\services\stream_service.py", line 123, in _run_stream
+AttributeError: 'NoneType' object has no attribute 'returncode'

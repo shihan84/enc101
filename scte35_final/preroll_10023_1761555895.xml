@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spliceInfoSection protocolVersion="0" ptsAdjustment="0" tier="4095">
+    <spliceInsert spliceEventId="10023" 
+                  spliceEventCancelIndicator="false" 
+                  outOfNetworkIndicator="false" 
+                  spliceImmediateFlag="false">
+        <program><spliceTime ptsTime="180000"/></program>
+        <breakDuration autoReturn="true">
+            <duration>54000000</duration>
+        </breakDuration>
+    </spliceInsert>
+</spliceInfoSection>

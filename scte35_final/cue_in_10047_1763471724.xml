@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tsduck>
+    <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
+        <splice_insert splice_event_id="10047" 
+                      splice_event_cancel="false" 
+                      out_of_network="false" 
+                      splice_immediate="true" 
+                      unique_program_id="1" 
+                      avail_num="1" 
+                      avails_expected="1">
+            <break_duration auto_return="true" duration="0" />
+        </splice_insert>
+    </splice_information_table>
+</tsduck>

@@ -1,0 +1,21 @@
+{
+  "app_name": "IBE-100 Enterprise",
+  "app_version": "3.0.0",
+  "log_level": "INFO",
+  "log_dir": "logs",
+  "tsduck_path": "",
+  "tsduck_timeout": 30,
+  "default_latency": 2000,
+  "default_service_id": 1,
+  "default_vpid": 256,
+  "default_apid": 257,
+  "default_scte35_pid": 500,
+  "api_enabled": false,
+  "api_host": "127.0.0.1",
+  "api_port": 8080,
+  "api_key": "",
+  "database_path": "database/sessions.db",
+  "theme": "dark",
+  "window_width": 1200,
+  "window_height": 800
+}

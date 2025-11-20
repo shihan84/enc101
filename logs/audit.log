@@ -1,0 +1,1566 @@
+2025-11-18 13:26:49 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 13:26:49 | INFO | Qt application initialized
+2025-11-18 13:26:49 | INFO | ============================================================
+2025-11-18 13:26:49 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 13:26:49 | INFO | ============================================================
+2025-11-18 13:26:49 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 13:26:50 | INFO | TSDuck installation verified
+2025-11-18 13:26:50 | INFO | Database schema initialized
+2025-11-18 13:26:50 | INFO | Database initialized: database\sessions.db
+2025-11-18 13:26:50 | INFO | Stream service initialized
+2025-11-18 13:26:50 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 13:26:50 | INFO | Monitoring service initialized
+2025-11-18 13:26:50 | INFO | Loaded 3 profiles
+2025-11-18 13:26:50 | INFO | Profile service initialized with 3 profiles
+2025-11-18 13:26:50 | INFO | Services initialized
+2025-11-18 13:26:51 | INFO | Main window initialized
+2025-11-18 13:26:51 | INFO | Application ready
+2025-11-18 13:26:51 | INFO | Starting application...
+2025-11-18 13:31:04 | INFO | Application exited with code 0
+2025-11-18 13:31:04 | INFO | Application shutting down...
+2025-11-18 13:33:31 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 13:33:32 | INFO | Qt application initialized
+2025-11-18 13:33:32 | INFO | ============================================================
+2025-11-18 13:33:32 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 13:33:32 | INFO | ============================================================
+2025-11-18 13:33:32 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 13:33:32 | INFO | TSDuck installation verified
+2025-11-18 13:33:32 | INFO | Database schema initialized
+2025-11-18 13:33:32 | INFO | Database initialized: database\sessions.db
+2025-11-18 13:33:32 | INFO | Stream service initialized
+2025-11-18 13:33:32 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 13:33:32 | INFO | Monitoring service initialized
+2025-11-18 13:33:32 | INFO | Loaded 3 profiles
+2025-11-18 13:33:32 | INFO | Profile service initialized with 3 profiles
+2025-11-18 13:33:32 | INFO | Services initialized
+2025-11-18 13:33:32 | INFO | Main window initialized
+2025-11-18 13:33:33 | INFO | Application ready
+2025-11-18 13:33:33 | INFO | Starting application...
+2025-11-18 13:43:13 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 13:43:13 | INFO | Qt application initialized
+2025-11-18 13:43:13 | INFO | ============================================================
+2025-11-18 13:43:13 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 13:43:13 | INFO | ============================================================
+2025-11-18 13:43:13 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 13:43:13 | INFO | TSDuck installation verified
+2025-11-18 13:43:13 | INFO | Database schema initialized
+2025-11-18 13:43:13 | INFO | Database initialized: database\sessions.db
+2025-11-18 13:43:13 | INFO | Stream service initialized
+2025-11-18 13:43:13 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 13:43:13 | INFO | Monitoring service initialized
+2025-11-18 13:43:13 | INFO | Loaded 3 profiles
+2025-11-18 13:43:13 | INFO | Profile service initialized with 3 profiles
+2025-11-18 13:43:13 | INFO | Services initialized
+2025-11-18 13:43:14 | INFO | Main window initialized
+2025-11-18 13:43:14 | INFO | Application ready
+2025-11-18 13:43:14 | INFO | Starting application...
+2025-11-18 13:43:48 | INFO | Application exited with code 0
+2025-11-18 13:43:48 | INFO | Application shutting down...
+2025-11-18 13:50:55 | INFO | Application exited with code 0
+2025-11-18 13:50:55 | INFO | Application shutting down...
+2025-11-18 13:51:56 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 13:51:56 | INFO | Qt application initialized
+2025-11-18 13:52:05 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 13:52:05 | INFO | Qt application initialized
+2025-11-18 13:52:05 | INFO | ============================================================
+2025-11-18 13:52:05 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 13:52:05 | INFO | ============================================================
+2025-11-18 13:52:05 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 13:52:05 | INFO | TSDuck installation verified
+2025-11-18 13:52:05 | INFO | Database schema initialized
+2025-11-18 13:52:05 | INFO | Database initialized: database\sessions.db
+2025-11-18 13:52:05 | INFO | Stream service initialized
+2025-11-18 13:52:05 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 13:52:05 | INFO | Monitoring service initialized
+2025-11-18 13:52:05 | INFO | Loaded 3 profiles
+2025-11-18 13:52:05 | INFO | Profile service initialized with 3 profiles
+2025-11-18 13:52:05 | INFO | Services initialized
+2025-11-18 13:52:06 | INFO | Main window initialized
+2025-11-18 13:52:06 | INFO | Application ready
+2025-11-18 13:52:06 | INFO | Starting application...
+2025-11-18 14:04:17 | INFO | Application exited with code 0
+2025-11-18 14:04:17 | INFO | Application shutting down...
+2025-11-18 14:36:32 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 14:36:32 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 14:36:32 | INFO | Stream Analyzer service initialized
+2025-11-18 14:36:32 | INFO | Bitrate Monitor service initialized
+2025-11-18 14:36:32 | INFO | EPG service initialized with directory: epg
+2025-11-18 14:36:32 | INFO | Stream Analyzer service initialized
+2025-11-18 14:36:32 | INFO | Bitrate Monitor service initialized
+2025-11-18 14:36:32 | INFO | EPG service initialized with directory: epg
+2025-11-18 14:36:53 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 14:36:53 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 14:36:53 | INFO | Stream Analyzer service initialized
+2025-11-18 14:36:53 | INFO | Bitrate Monitor service initialized
+2025-11-18 14:36:53 | INFO | EPG service initialized with directory: epg
+2025-11-18 14:36:53 | INFO | Stream Analyzer service initialized
+2025-11-18 14:36:53 | INFO | Bitrate Monitor service initialized
+2025-11-18 14:36:53 | INFO | EPG service initialized with directory: epg
+2025-11-18 14:38:10 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 14:38:10 | INFO | Qt application initialized
+2025-11-18 14:38:10 | INFO | ============================================================
+2025-11-18 14:38:10 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 14:38:10 | INFO | ============================================================
+2025-11-18 14:38:10 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 14:38:10 | INFO | TSDuck installation verified
+2025-11-18 14:38:10 | INFO | Database schema initialized
+2025-11-18 14:38:10 | INFO | Database initialized: database\sessions.db
+2025-11-18 14:38:10 | INFO | Stream service initialized
+2025-11-18 14:38:10 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 14:38:10 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 14:38:10 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 14:38:10 | INFO | Monitoring service initialized
+2025-11-18 14:38:10 | INFO | Loaded 3 profiles
+2025-11-18 14:38:10 | INFO | Profile service initialized with 3 profiles
+2025-11-18 14:38:10 | INFO | Stream Analyzer service initialized
+2025-11-18 14:38:10 | INFO | Bitrate Monitor service initialized
+2025-11-18 14:38:10 | INFO | EPG service initialized with directory: epg
+2025-11-18 14:38:10 | INFO | Services initialized
+2025-11-18 14:38:12 | INFO | Main window initialized
+2025-11-18 14:38:12 | INFO | Application ready
+2025-11-18 14:38:12 | INFO | Starting application...
+2025-11-18 14:42:17 | INFO | Application exited with code 0
+2025-11-18 14:42:17 | INFO | Application shutting down...
+2025-11-18 15:02:27 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:02:27 | INFO | Qt application initialized
+2025-11-18 15:02:27 | INFO | ============================================================
+2025-11-18 15:02:27 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:02:27 | INFO | ============================================================
+2025-11-18 15:02:27 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:02:27 | INFO | TSDuck installation verified
+2025-11-18 15:02:27 | INFO | Database schema initialized
+2025-11-18 15:02:27 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:02:27 | INFO | Stream service initialized
+2025-11-18 15:02:27 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:02:27 | INFO | Last event ID: 10023
+2025-11-18 15:02:27 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:02:27 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:02:27 | INFO | Monitoring service initialized
+2025-11-18 15:02:27 | INFO | Loaded 3 profiles
+2025-11-18 15:02:27 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:02:27 | INFO | Stream Analyzer service initialized
+2025-11-18 15:02:27 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:02:27 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:02:27 | INFO | Services initialized
+2025-11-18 15:02:29 | INFO | Main window initialized
+2025-11-18 15:02:29 | INFO | Application ready
+2025-11-18 15:02:29 | INFO | Starting application...
+2025-11-18 15:02:40 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:02:40 | INFO | Qt application initialized
+2025-11-18 15:02:40 | INFO | ============================================================
+2025-11-18 15:02:40 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:02:40 | INFO | ============================================================
+2025-11-18 15:02:40 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:02:40 | INFO | TSDuck installation verified
+2025-11-18 15:02:40 | INFO | Database schema initialized
+2025-11-18 15:02:40 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:02:40 | INFO | Stream service initialized
+2025-11-18 15:02:40 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:02:40 | INFO | Last event ID: 10023
+2025-11-18 15:02:40 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:02:40 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:02:40 | INFO | Monitoring service initialized
+2025-11-18 15:02:40 | INFO | Loaded 3 profiles
+2025-11-18 15:02:40 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:02:40 | INFO | Stream Analyzer service initialized
+2025-11-18 15:02:40 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:02:40 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:02:40 | INFO | Services initialized
+2025-11-18 15:02:42 | INFO | Main window initialized
+2025-11-18 15:02:42 | INFO | Application ready
+2025-11-18 15:02:42 | INFO | Starting application...
+2025-11-18 15:04:05 | INFO | Application exited with code 0
+2025-11-18 15:04:05 | INFO | Application shutting down...
+2025-11-18 15:05:16 | INFO | Application exited with code 0
+2025-11-18 15:05:16 | INFO | Application shutting down...
+2025-11-18 15:11:13 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:11:13 | INFO | Qt application initialized
+2025-11-18 15:11:13 | INFO | ============================================================
+2025-11-18 15:11:13 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:11:13 | INFO | ============================================================
+2025-11-18 15:11:13 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:11:13 | INFO | TSDuck installation verified
+2025-11-18 15:11:13 | INFO | Database schema initialized
+2025-11-18 15:11:13 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:11:13 | INFO | Stream service initialized
+2025-11-18 15:11:13 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:11:13 | INFO | Last event ID: 10023
+2025-11-18 15:11:13 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:11:13 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:11:13 | INFO | Monitoring service initialized
+2025-11-18 15:11:13 | INFO | Loaded 3 profiles
+2025-11-18 15:11:13 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:11:13 | INFO | Stream Analyzer service initialized
+2025-11-18 15:11:13 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:11:13 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:11:13 | INFO | Services initialized
+2025-11-18 15:11:15 | INFO | Main window initialized
+2025-11-18 15:11:15 | INFO | Application ready
+2025-11-18 15:11:15 | INFO | Starting application...
+2025-11-18 15:20:30 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:20:30 | INFO | Profile: default
+2025-11-18 15:20:30 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:21:11 | INFO | Profile: default
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final\Distributor_SRT
+2025-11-18 15:21:11 | INFO | Profile: Distributor_SRT
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final\HLS_Output
+2025-11-18 15:21:11 | INFO | Profile: HLS_Output
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final\Test_Profile_1
+2025-11-18 15:21:11 | INFO | Profile: Test_Profile_1
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | Switched to profile: Test_Profile_2
+2025-11-18 15:21:11 | INFO | New markers directory: scte35_final\Test_Profile_2
+2025-11-18 15:21:11 | INFO | Last event ID for this profile: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final\ID_Test_1
+2025-11-18 15:21:11 | INFO | Profile: ID_Test_1
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:11 | INFO | SCTE-35 service initialized with directory: scte35_final\ID_Test_2
+2025-11-18 15:21:11 | INFO | Profile: ID_Test_2
+2025-11-18 15:21:11 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:21:29 | INFO | Profile: default
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\Distributor_SRT
+2025-11-18 15:21:29 | INFO | Profile: Distributor_SRT
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\HLS_Output
+2025-11-18 15:21:29 | INFO | Profile: HLS_Output
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\Test_Profile_1
+2025-11-18 15:21:29 | INFO | Profile: Test_Profile_1
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | Switched to profile: Test_Profile_2
+2025-11-18 15:21:29 | INFO | New markers directory: scte35_final\Test_Profile_2
+2025-11-18 15:21:29 | INFO | Last event ID for this profile: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\ID_Test_1
+2025-11-18 15:21:29 | INFO | Profile: ID_Test_1
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\ID_Test_2
+2025-11-18 15:21:29 | INFO | Profile: ID_Test_2
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\Test_Profile_With_Spaces__Special
+2025-11-18 15:21:29 | INFO | Profile: Test Profile With Spaces & Special!@#
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\Persistence_Test
+2025-11-18 15:21:29 | INFO | Profile: Persistence_Test
+2025-11-18 15:21:29 | INFO | Last event ID: 10023
+2025-11-18 15:21:29 | INFO | SCTE-35 service initialized with directory: scte35_final\Persistence_Test
+2025-11-18 15:21:29 | INFO | Profile: Persistence_Test
+2025-11-18 15:21:29 | INFO | Last event ID: 10024
+2025-11-18 15:23:19 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:23:19 | INFO | Qt application initialized
+2025-11-18 15:23:19 | INFO | ============================================================
+2025-11-18 15:23:19 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:23:19 | INFO | ============================================================
+2025-11-18 15:23:19 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:23:19 | INFO | TSDuck installation verified
+2025-11-18 15:23:19 | INFO | Database schema initialized
+2025-11-18 15:23:19 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:23:19 | INFO | Stream service initialized
+2025-11-18 15:23:19 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:23:19 | INFO | Profile: default
+2025-11-18 15:23:19 | INFO | Last event ID: 10023
+2025-11-18 15:23:19 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:23:19 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:23:19 | INFO | Monitoring service initialized
+2025-11-18 15:23:19 | INFO | Loaded 3 profiles
+2025-11-18 15:23:19 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:23:19 | INFO | Stream Analyzer service initialized
+2025-11-18 15:23:19 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:23:19 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:23:19 | INFO | Services initialized
+2025-11-18 15:23:21 | INFO | Main window initialized
+2025-11-18 15:23:21 | INFO | Application ready
+2025-11-18 15:23:21 | INFO | Starting application...
+2025-11-18 15:24:31 | INFO | Application exited with code 0
+2025-11-18 15:24:31 | INFO | Application shutting down...
+2025-11-18 15:26:48 | INFO | Application exited with code 0
+2025-11-18 15:26:48 | INFO | Application shutting down...
+2025-11-18 15:53:47 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:53:47 | INFO | Application icon set: logo.ico
+2025-11-18 15:53:47 | INFO | Qt application initialized
+2025-11-18 15:53:47 | INFO | ============================================================
+2025-11-18 15:53:47 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:53:47 | INFO | ============================================================
+2025-11-18 15:53:47 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:53:48 | INFO | TSDuck installation verified
+2025-11-18 15:53:48 | INFO | Database schema initialized
+2025-11-18 15:53:48 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:53:48 | INFO | Stream service initialized
+2025-11-18 15:53:48 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:53:48 | INFO | Profile: default
+2025-11-18 15:53:48 | INFO | Last event ID: 10023
+2025-11-18 15:53:48 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:53:48 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:53:48 | INFO | Monitoring service initialized
+2025-11-18 15:53:48 | INFO | Loaded 3 profiles
+2025-11-18 15:53:48 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:53:48 | INFO | Stream Analyzer service initialized
+2025-11-18 15:53:48 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:53:48 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:53:48 | INFO | Services initialized
+2025-11-18 15:53:49 | INFO | Main window initialized
+2025-11-18 15:53:50 | INFO | Application ready
+2025-11-18 15:53:50 | INFO | Starting application...
+2025-11-18 15:54:22 | INFO | Generated SCTE-35 marker: cue_out_10024_1763461462.xml (Event ID: 10024)
+2025-11-18 15:54:22 | INFO | Generated SCTE-35 marker: cue_in_10025_1763461462.xml (Event ID: 10025)
+2025-11-18 15:54:22 | INFO | Generated CUE pair: OUT=10024, IN=10025
+2025-11-18 15:54:30 | INFO | Starting stream session: 167b1bef-f0c6-4d45-82ab-38118380bc9d
+2025-11-18 15:54:30 | INFO | Killed 1 TSDuck process(es)
+2025-11-18 15:54:31 | INFO | TSDuck process started: PID 21096
+2025-11-18 15:54:42 | INFO | TSDuck process started: PID 11604
+2025-11-18 15:56:53 | INFO | Stopping stream...
+2025-11-18 15:56:53 | ERROR | Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "E:\NEW DOWNLOADS\Enc-100\Encoder-100\IBE-100_v3.0_ENTERPRISE\src\services\stream_service.py", line 123, in _run_stream
+    exit_code = self._process.returncode
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 15:56:53 | INFO | Stream session ended: 167b1bef-f0c6-4d45-82ab-38118380bc9d
+2025-11-18 15:56:54 | INFO | Stream stopped
+2025-11-18 15:56:56 | INFO | Application exited with code 0
+2025-11-18 15:56:56 | INFO | Application shutting down...
+2025-11-18 16:34:38 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 16:34:38 | INFO | Application icon set: logo.ico
+2025-11-18 16:34:38 | INFO | Qt application initialized
+2025-11-18 16:34:38 | INFO | ============================================================
+2025-11-18 16:34:38 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 16:34:38 | INFO | ============================================================
+2025-11-18 16:34:38 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 16:34:38 | INFO | TSDuck installation verified
+2025-11-18 16:34:38 | INFO | Database schema initialized
+2025-11-18 16:34:38 | INFO | Database initialized: database\sessions.db
+2025-11-18 16:34:38 | INFO | Stream service initialized
+2025-11-18 16:34:38 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 16:34:38 | INFO | Profile: default
+2025-11-18 16:34:38 | INFO | Last event ID: 10025
+2025-11-18 16:34:38 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 16:34:38 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 16:34:38 | INFO | Monitoring service initialized
+2025-11-18 16:34:38 | INFO | Loaded 3 profiles
+2025-11-18 16:34:38 | INFO | Profile service initialized with 3 profiles
+2025-11-18 16:34:38 | INFO | Stream Analyzer service initialized
+2025-11-18 16:34:38 | INFO | Bitrate Monitor service initialized
+2025-11-18 16:34:38 | INFO | EPG service initialized with directory: epg
+2025-11-18 16:34:38 | INFO | Services initialized
+2025-11-18 16:34:40 | INFO | Main window initialized
+2025-11-18 16:34:40 | INFO | Application ready
+2025-11-18 16:34:40 | INFO | Starting application...
+2025-11-18 16:40:09 | INFO | Generated SCTE-35 marker: cue_out_10026_1763464209.xml (Event ID: 10026)
+2025-11-18 16:40:09 | INFO | Generated SCTE-35 marker: cue_in_10027_1763464209.xml (Event ID: 10027)
+2025-11-18 16:40:09 | INFO | Generated CUE pair: OUT=10026, IN=10027
+2025-11-18 16:40:18 | INFO | Starting stream session: 2f72c4d2-e2eb-48ab-89a7-ada17424cfde
+2025-11-18 16:40:19 | INFO | TSDuck process started: PID 4404
+2025-11-18 16:40:22 | WARNING | SRT connection error detected: ['16:40:19.417000/T20980!W:SRT.cn: @382100168: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:40:28 | INFO | TSDuck process started: PID 35000
+2025-11-18 16:40:31 | WARNING | SRT connection error detected: ['16:40:28.478000/T9484!W:SRT.cn: @992908482: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:40:37 | INFO | TSDuck process started: PID 26096
+2025-11-18 16:40:40 | WARNING | SRT connection error detected: ['16:40:37.514000/T26848!W:SRT.cn: @770775072: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:40:46 | INFO | TSDuck process started: PID 2552
+2025-11-18 16:40:50 | WARNING | SRT connection error detected: ['16:40:46.968000/T35112!W:SRT.cn: @926808093: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:40:55 | INFO | TSDuck process started: PID 31968
+2025-11-18 16:40:59 | WARNING | SRT connection error detected: ['16:40:56.305000/T35232!W:SRT.cn: @955959083: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:05 | INFO | TSDuck process started: PID 21996
+2025-11-18 16:41:08 | WARNING | SRT connection error detected: ['16:41:05.499000/T26560!W:SRT.cn: @91096381: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:14 | INFO | TSDuck process started: PID 34516
+2025-11-18 16:41:18 | WARNING | SRT connection error detected: ['16:41:14.928000/T8860!W:SRT.cn: @679866328: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:23 | INFO | TSDuck process started: PID 23696
+2025-11-18 16:41:27 | WARNING | SRT connection error detected: ['16:41:24.412000/T29372!W:SRT.cn: @922016470: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:33 | INFO | TSDuck process started: PID 28788
+2025-11-18 16:41:36 | WARNING | SRT connection error detected: ['16:41:33.573000/T18204!W:SRT.cn: @71951845: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:42 | INFO | TSDuck process started: PID 30536
+2025-11-18 16:41:46 | WARNING | SRT connection error detected: ['16:41:42.826000/T28692!W:SRT.cn: @803054557: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:41:52 | INFO | TSDuck process started: PID 26728
+2025-11-18 16:41:55 | WARNING | SRT connection error detected: ['16:41:52.369000/T26580!W:SRT.cn: @112146244: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:01 | INFO | TSDuck process started: PID 26500
+2025-11-18 16:42:04 | WARNING | SRT connection error detected: ['16:42:01.521000/T18128!W:SRT.cn: @488595828: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:10 | INFO | TSDuck process started: PID 16548
+2025-11-18 16:42:14 | WARNING | SRT connection error detected: ['16:42:10.892000/T31032!W:SRT.cn: @701771745: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:19 | INFO | TSDuck process started: PID 2932
+2025-11-18 16:42:23 | WARNING | SRT connection error detected: ['16:42:20.192000/T33380!W:SRT.cn: @1035548323: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:29 | INFO | TSDuck process started: PID 4648
+2025-11-18 16:42:32 | WARNING | SRT connection error detected: ['16:42:29.432000/T2184!W:SRT.cn: @330659667: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:38 | INFO | TSDuck process started: PID 27564
+2025-11-18 16:42:41 | WARNING | SRT connection error detected: ['16:42:38.623000/T32476!W:SRT.cn: @1034586617: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:47 | INFO | TSDuck process started: PID 16632
+2025-11-18 16:42:51 | WARNING | SRT connection error detected: ['16:42:48.054000/T35568!W:SRT.cn: @477955009: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:42:57 | INFO | TSDuck process started: PID 26096
+2025-11-18 16:43:00 | WARNING | SRT connection error detected: ['16:42:57.543000/T4680!W:SRT.cn: @726919396: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:06 | INFO | TSDuck process started: PID 33020
+2025-11-18 16:43:10 | WARNING | SRT connection error detected: ['16:43:06.903000/T6784!W:SRT.cn: @181022189: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:15 | INFO | TSDuck process started: PID 28916
+2025-11-18 16:43:19 | WARNING | SRT connection error detected: ['16:43:16.375000/T11472!W:SRT.cn: @71153141: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:25 | INFO | TSDuck process started: PID 21440
+2025-11-18 16:43:28 | WARNING | SRT connection error detected: ['16:43:25.725000/T34800!W:SRT.cn: @710803872: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:34 | INFO | TSDuck process started: PID 34308
+2025-11-18 16:43:37 | WARNING | SRT connection error detected: ['16:43:34.746000/T29264!W:SRT.cn: @595825948: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:43 | INFO | TSDuck process started: PID 34020
+2025-11-18 16:43:47 | WARNING | SRT connection error detected: ['16:43:43.985000/T29224!W:SRT.cn: @622849712: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:43:53 | INFO | TSDuck process started: PID 12096
+2025-11-18 16:43:56 | WARNING | SRT connection error detected: ['16:43:53.741000/T34100!W:SRT.cn: @910092113: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:44:02 | INFO | TSDuck process started: PID 24268
+2025-11-18 16:44:06 | WARNING | SRT connection error detected: ['16:44:02.962000/T33952!W:SRT.cn: @1009532973: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:44:06 | INFO | Stopping stream...
+2025-11-18 16:44:07 | INFO | Stream session ended: 2f72c4d2-e2eb-48ab-89a7-ada17424cfde
+2025-11-18 16:44:07 | INFO | Stream stopped
+2025-11-18 16:45:34 | INFO | Starting stream session: 4bdf904f-bb18-45de-81aa-b24c20c40177
+2025-11-18 16:45:35 | INFO | TSDuck process started: PID 20708
+2025-11-18 16:45:39 | WARNING | SRT connection error detected: ['16:45:36.143000/T31448!W:SRT.cn: @859155676: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:UNKNOWN', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Unknown or erroneous']
+2025-11-18 16:45:43 | INFO | Stopping stream...
+2025-11-18 16:45:43 | INFO | Stream session ended: 4bdf904f-bb18-45de-81aa-b24c20c40177
+2025-11-18 16:45:44 | INFO | Stream stopped
+2025-11-18 16:45:53 | INFO | Application exited with code 0
+2025-11-18 16:45:53 | INFO | Application shutting down...
+2025-11-18 16:58:28 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 16:58:29 | INFO | Application icon set: logo.ico
+2025-11-18 16:58:29 | INFO | Qt application initialized
+2025-11-18 16:58:29 | INFO | ============================================================
+2025-11-18 16:58:29 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 16:58:29 | INFO | ============================================================
+2025-11-18 16:58:29 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 16:58:29 | INFO | TSDuck installation verified
+2025-11-18 16:58:29 | INFO | Database schema initialized
+2025-11-18 16:58:29 | INFO | Database initialized: database\sessions.db
+2025-11-18 16:58:29 | INFO | Stream service initialized
+2025-11-18 16:58:29 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 16:58:29 | INFO | Profile: default
+2025-11-18 16:58:29 | INFO | Last event ID: 10027
+2025-11-18 16:58:29 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 16:58:29 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 16:58:29 | INFO | Monitoring service initialized
+2025-11-18 16:58:29 | INFO | Loaded 3 profiles
+2025-11-18 16:58:29 | INFO | Profile service initialized with 3 profiles
+2025-11-18 16:58:29 | INFO | Stream Analyzer service initialized
+2025-11-18 16:58:29 | INFO | Bitrate Monitor service initialized
+2025-11-18 16:58:29 | INFO | EPG service initialized with directory: epg
+2025-11-18 16:58:29 | INFO | Services initialized
+2025-11-18 16:58:31 | INFO | Main window initialized
+2025-11-18 16:58:31 | INFO | Application ready
+2025-11-18 16:58:31 | INFO | Starting application...
+2025-11-18 16:59:10 | INFO | Generated SCTE-35 marker: cue_out_10028_1763465350.xml (Event ID: 10028)
+2025-11-18 16:59:10 | INFO | Generated SCTE-35 marker: cue_in_10029_1763465350.xml (Event ID: 10029)
+2025-11-18 16:59:10 | INFO | Generated CUE pair: OUT=10028, IN=10029
+2025-11-18 16:59:15 | INFO | Starting stream session: fe9d0bf5-3c07-4331-b5f3-e67c824f8abf
+2025-11-18 16:59:15 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10029_1763465350.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 16:59:16 | INFO | TSDuck process started: PID 29196
+2025-11-18 17:04:41 | INFO | Stopping stream...
+2025-11-18 17:04:41 | INFO | Stream session ended: fe9d0bf5-3c07-4331-b5f3-e67c824f8abf
+2025-11-18 17:04:42 | INFO | Stream stopped
+2025-11-18 17:13:43 | INFO | Application exited with code 0
+2025-11-18 17:13:43 | INFO | Application shutting down...
+2025-11-18 17:16:04 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:16:04 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI354962\logo.ico
+2025-11-18 17:16:04 | INFO | Qt application initialized
+2025-11-18 17:16:04 | INFO | ============================================================
+2025-11-18 17:16:04 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:16:04 | INFO | ============================================================
+2025-11-18 17:16:04 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:16:04 | INFO | TSDuck installation verified
+2025-11-18 17:16:04 | INFO | Database schema initialized
+2025-11-18 17:16:04 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:16:04 | INFO | Stream service initialized
+2025-11-18 17:16:04 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:16:04 | INFO | Profile: default
+2025-11-18 17:16:04 | INFO | Last event ID: 10029
+2025-11-18 17:16:04 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:16:04 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:16:04 | INFO | Monitoring service initialized
+2025-11-18 17:16:04 | INFO | Loaded 3 profiles
+2025-11-18 17:16:04 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:16:04 | INFO | Stream Analyzer service initialized
+2025-11-18 17:16:04 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:16:04 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:16:04 | INFO | Services initialized
+2025-11-18 17:16:06 | INFO | Main window initialized
+2025-11-18 17:16:07 | INFO | Application ready
+2025-11-18 17:16:07 | INFO | Starting application...
+2025-11-18 17:19:19 | INFO | Generated SCTE-35 marker: cue_out_10030_1763466559.xml (Event ID: 10030)
+2025-11-18 17:19:19 | INFO | Generated SCTE-35 marker: cue_in_10031_1763466559.xml (Event ID: 10031)
+2025-11-18 17:19:19 | INFO | Generated CUE pair: OUT=10030, IN=10031
+2025-11-18 17:19:32 | INFO | Starting stream session: 93d66a06-b302-478e-8aef-7d6515dabd5e
+2025-11-18 17:19:32 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10031_1763466559.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:19:33 | INFO | TSDuck process started: PID 33856
+2025-11-18 17:24:40 | INFO | Stopping stream...
+2025-11-18 17:24:40 | ERROR | Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "src\services\stream_service.py", line 147, in _run_stream
+    self._process = None
+                ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 17:24:40 | INFO | Stream session ended: 93d66a06-b302-478e-8aef-7d6515dabd5e
+2025-11-18 17:24:41 | INFO | Stream stopped
+2025-11-18 17:24:47 | INFO | Application exited with code 0
+2025-11-18 17:24:48 | INFO | Application shutting down...
+2025-11-18 17:28:08 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:28:09 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI259322\logo.ico
+2025-11-18 17:28:09 | INFO | Qt application initialized
+2025-11-18 17:28:09 | INFO | ============================================================
+2025-11-18 17:28:09 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:28:09 | INFO | ============================================================
+2025-11-18 17:28:09 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:28:09 | INFO | TSDuck installation verified
+2025-11-18 17:28:09 | INFO | Database schema initialized
+2025-11-18 17:28:09 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:28:09 | INFO | Stream service initialized
+2025-11-18 17:28:09 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:28:09 | INFO | Profile: default
+2025-11-18 17:28:09 | INFO | Last event ID: 10031
+2025-11-18 17:28:09 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:28:09 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:28:09 | INFO | Monitoring service initialized
+2025-11-18 17:28:09 | INFO | Loaded 3 profiles
+2025-11-18 17:28:09 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:28:09 | INFO | Stream Analyzer service initialized
+2025-11-18 17:28:09 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:28:09 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:28:09 | INFO | Services initialized
+2025-11-18 17:28:11 | INFO | Main window initialized
+2025-11-18 17:28:11 | INFO | Application ready
+2025-11-18 17:28:11 | INFO | Starting application...
+2025-11-18 17:30:04 | INFO | Generated SCTE-35 marker: cue_out_10032_1763467204.xml (Event ID: 10032)
+2025-11-18 17:30:04 | INFO | Generated SCTE-35 marker: cue_in_10033_1763467204.xml (Event ID: 10033)
+2025-11-18 17:30:04 | INFO | Generated CUE pair: OUT=10032, IN=10033
+2025-11-18 17:30:12 | INFO | Starting stream session: b6e87a92-cbba-4e8b-9b97-88dcda312be5
+2025-11-18 17:30:12 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10033_1763467204.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:30:13 | INFO | TSDuck process started: PID 21716
+2025-11-18 17:33:53 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:33:53 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI166282\logo.ico
+2025-11-18 17:33:53 | INFO | Qt application initialized
+2025-11-18 17:33:53 | INFO | ============================================================
+2025-11-18 17:33:53 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:33:53 | INFO | ============================================================
+2025-11-18 17:33:53 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:33:53 | INFO | TSDuck installation verified
+2025-11-18 17:33:53 | INFO | Database schema initialized
+2025-11-18 17:33:53 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:33:53 | INFO | Stream service initialized
+2025-11-18 17:33:53 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:33:53 | INFO | Profile: default
+2025-11-18 17:33:53 | INFO | Last event ID: 10033
+2025-11-18 17:33:54 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:33:54 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:33:54 | INFO | Monitoring service initialized
+2025-11-18 17:33:54 | INFO | Loaded 3 profiles
+2025-11-18 17:33:54 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:33:54 | INFO | Stream Analyzer service initialized
+2025-11-18 17:33:54 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:33:54 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:33:54 | INFO | Services initialized
+2025-11-18 17:33:56 | INFO | Main window initialized
+2025-11-18 17:33:56 | INFO | Application ready
+2025-11-18 17:33:56 | INFO | Starting application...
+2025-11-18 17:34:00 | INFO | Generated SCTE-35 marker: cue_out_10034_1763467440.xml (Event ID: 10034)
+2025-11-18 17:34:00 | INFO | Generated SCTE-35 marker: cue_in_10035_1763467440.xml (Event ID: 10035)
+2025-11-18 17:34:00 | INFO | Generated CUE pair: OUT=10034, IN=10035
+2025-11-18 17:34:09 | INFO | Starting stream session: 8a1c8dcc-61c5-481e-aa05-da3d555a8244
+2025-11-18 17:34:09 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10035_1763467440.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:34:10 | INFO | Killed 1 TSDuck process(es)
+2025-11-18 17:34:10 | INFO | TSDuck process started: PID 31552
+2025-11-18 17:34:14 | WARNING | SRT connection error detected: ['17:34:10.503000/T4036!W:SRT.cn: @884126125: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:PEER', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Peer rejected connection']
+2025-11-18 17:34:20 | INFO | TSDuck process started: PID 4544
+2025-11-18 17:38:27 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:38:27 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI313802\logo.ico
+2025-11-18 17:38:27 | INFO | Qt application initialized
+2025-11-18 17:38:27 | INFO | ============================================================
+2025-11-18 17:38:27 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:38:27 | INFO | ============================================================
+2025-11-18 17:38:27 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:38:27 | INFO | TSDuck installation verified
+2025-11-18 17:38:27 | INFO | Database schema initialized
+2025-11-18 17:38:27 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:38:27 | INFO | Stream service initialized
+2025-11-18 17:38:27 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:38:27 | INFO | Profile: default
+2025-11-18 17:38:27 | INFO | Last event ID: 10035
+2025-11-18 17:38:27 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:38:27 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:38:27 | INFO | Monitoring service initialized
+2025-11-18 17:38:27 | INFO | Loaded 3 profiles
+2025-11-18 17:38:27 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:38:27 | INFO | Stream Analyzer service initialized
+2025-11-18 17:38:27 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:38:27 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:38:27 | INFO | Services initialized
+2025-11-18 17:38:29 | INFO | Main window initialized
+2025-11-18 17:38:29 | INFO | Application ready
+2025-11-18 17:38:29 | INFO | Starting application...
+2025-11-18 17:38:52 | INFO | Generated SCTE-35 marker: cue_out_10036_1763467732.xml (Event ID: 10036)
+2025-11-18 17:38:52 | INFO | Generated SCTE-35 marker: cue_in_10037_1763467732.xml (Event ID: 10037)
+2025-11-18 17:38:52 | INFO | Generated CUE pair: OUT=10036, IN=10037
+2025-11-18 17:39:01 | INFO | Starting stream session: a744bdf8-4710-42e7-9c79-780c86bedaf2
+2025-11-18 17:39:01 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10037_1763467732.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:39:02 | INFO | Killed 1 TSDuck process(es)
+2025-11-18 17:39:02 | INFO | TSDuck process started: PID 32616
+2025-11-18 17:39:06 | WARNING | SRT connection error detected: ['17:39:03.288000/T17924!W:SRT.cn: @597776382: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:PEER', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Peer rejected connection']
+2025-11-18 17:39:12 | INFO | TSDuck process started: PID 11432
+2025-11-18 17:43:03 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:43:03 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI167442\logo.ico
+2025-11-18 17:43:03 | INFO | Qt application initialized
+2025-11-18 17:43:03 | INFO | ============================================================
+2025-11-18 17:43:03 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:43:03 | INFO | ============================================================
+2025-11-18 17:43:03 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:43:04 | INFO | TSDuck installation verified
+2025-11-18 17:43:04 | INFO | Database schema initialized
+2025-11-18 17:43:04 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:43:04 | INFO | Stream service initialized
+2025-11-18 17:43:04 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:43:04 | INFO | Profile: default
+2025-11-18 17:43:04 | INFO | Last event ID: 10037
+2025-11-18 17:43:04 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:43:04 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:43:04 | INFO | Monitoring service initialized
+2025-11-18 17:43:04 | INFO | Loaded 3 profiles
+2025-11-18 17:43:04 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:43:04 | INFO | Stream Analyzer service initialized
+2025-11-18 17:43:04 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:43:04 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:43:04 | INFO | Services initialized
+2025-11-18 17:43:06 | INFO | Main window initialized
+2025-11-18 17:43:06 | INFO | Application ready
+2025-11-18 17:43:06 | INFO | Starting application...
+2025-11-18 17:43:10 | INFO | Generated SCTE-35 marker: cue_out_10038_1763467990.xml (Event ID: 10038)
+2025-11-18 17:43:11 | INFO | Generated SCTE-35 marker: cue_in_10039_1763467991.xml (Event ID: 10039)
+2025-11-18 17:43:11 | INFO | Generated CUE pair: OUT=10038, IN=10039
+2025-11-18 17:43:21 | INFO | Starting stream session: aef02846-9a3a-4ad3-adf6-8aba354f69bb
+2025-11-18 17:43:21 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10039_1763467991.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:43:22 | INFO | TSDuck process started: PID 23140
+2025-11-18 17:48:46 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 17:48:47 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI214562\logo.ico
+2025-11-18 17:48:47 | INFO | Qt application initialized
+2025-11-18 17:48:47 | INFO | ============================================================
+2025-11-18 17:48:47 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 17:48:47 | INFO | ============================================================
+2025-11-18 17:48:47 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 17:48:47 | INFO | TSDuck installation verified
+2025-11-18 17:48:47 | INFO | Database schema initialized
+2025-11-18 17:48:47 | INFO | Database initialized: database\sessions.db
+2025-11-18 17:48:47 | INFO | Stream service initialized
+2025-11-18 17:48:47 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 17:48:47 | INFO | Profile: default
+2025-11-18 17:48:47 | INFO | Last event ID: 10039
+2025-11-18 17:48:47 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 17:48:47 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 17:48:47 | INFO | Monitoring service initialized
+2025-11-18 17:48:47 | INFO | Loaded 3 profiles
+2025-11-18 17:48:47 | INFO | Profile service initialized with 3 profiles
+2025-11-18 17:48:47 | INFO | Stream Analyzer service initialized
+2025-11-18 17:48:47 | INFO | Bitrate Monitor service initialized
+2025-11-18 17:48:47 | INFO | EPG service initialized with directory: epg
+2025-11-18 17:48:47 | INFO | Services initialized
+2025-11-18 17:48:49 | INFO | Main window initialized
+2025-11-18 17:48:49 | INFO | Application ready
+2025-11-18 17:48:49 | INFO | Starting application...
+2025-11-18 17:50:09 | INFO | Generated SCTE-35 marker: cue_out_10040_1763468409.xml (Event ID: 10040)
+2025-11-18 17:50:09 | INFO | Generated SCTE-35 marker: cue_in_10041_1763468409.xml (Event ID: 10041)
+2025-11-18 17:50:09 | INFO | Generated CUE pair: OUT=10040, IN=10041
+2025-11-18 17:50:16 | INFO | Starting stream session: 60c0f8a8-a697-4a3b-8f9e-9993cfdc8628
+2025-11-18 17:50:16 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10041_1763468409.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 17:50:17 | INFO | Killed 1 TSDuck process(es)
+2025-11-18 17:50:17 | INFO | TSDuck process started: PID 16692
+2025-11-18 17:50:20 | WARNING | SRT connection error detected: ['17:50:17.583000/T25776!W:SRT.cn: @599050845: processConnectResponse: rejecting per reception of a rejection HS response: ERROR:PEER', '* Error: srt: error during srt_connect: Connection setup failure: connection rejected, reject reason: Peer rejected connection']
+2025-11-18 17:50:26 | INFO | TSDuck process started: PID 35304
+2025-11-18 18:04:08 | INFO | TSDuck process started: PID 20080
+2025-11-18 18:04:19 | INFO | Stopping stream...
+2025-11-18 18:04:19 | ERROR | Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:04:19 | INFO | Stream session ended: 60c0f8a8-a697-4a3b-8f9e-9993cfdc8628
+2025-11-18 18:04:20 | INFO | Stream stopped
+2025-11-18 18:04:45 | INFO | Application exited with code 0
+2025-11-18 18:04:45 | INFO | Application shutting down...
+2025-11-18 18:08:00 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 18:08:00 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI339042\logo.ico
+2025-11-18 18:08:00 | INFO | Qt application initialized
+2025-11-18 18:08:00 | INFO | ============================================================
+2025-11-18 18:08:00 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 18:08:00 | INFO | ============================================================
+2025-11-18 18:08:00 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 18:08:00 | INFO | TSDuck installation verified
+2025-11-18 18:08:00 | INFO | Database schema initialized
+2025-11-18 18:08:00 | INFO | Database initialized: database\sessions.db
+2025-11-18 18:08:00 | INFO | Stream service initialized
+2025-11-18 18:08:00 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 18:08:00 | INFO | Profile: default
+2025-11-18 18:08:00 | INFO | Last event ID: 10041
+2025-11-18 18:08:00 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 18:08:00 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 18:08:00 | INFO | Monitoring service initialized
+2025-11-18 18:08:00 | INFO | Loaded 3 profiles
+2025-11-18 18:08:00 | INFO | Profile service initialized with 3 profiles
+2025-11-18 18:08:00 | INFO | Stream Analyzer service initialized
+2025-11-18 18:08:00 | INFO | Bitrate Monitor service initialized
+2025-11-18 18:08:00 | INFO | EPG service initialized with directory: epg
+2025-11-18 18:08:00 | INFO | Services initialized
+2025-11-18 18:08:03 | INFO | Main window initialized
+2025-11-18 18:08:03 | INFO | Application ready
+2025-11-18 18:08:03 | INFO | Starting application...
+2025-11-18 18:08:07 | INFO | Generated SCTE-35 marker: cue_out_10042_1763469487.xml (Event ID: 10042)
+2025-11-18 18:08:07 | INFO | Generated SCTE-35 marker: cue_in_10043_1763469487.xml (Event ID: 10043)
+2025-11-18 18:08:07 | INFO | Generated CUE pair: OUT=10042, IN=10043
+2025-11-18 18:08:21 | INFO | Starting stream session: 7ea28711-577c-4197-ba5a-64c254891698
+2025-11-18 18:08:21 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10043_1763469487.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --pid 500 --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 18:08:22 | INFO | TSDuck process started: PID 9576
+2025-11-18 18:08:28 | INFO | TSDuck process started: PID 2392
+2025-11-18 18:08:34 | INFO | TSDuck process started: PID 25200
+2025-11-18 18:08:40 | INFO | TSDuck process started: PID 18204
+2025-11-18 18:08:46 | INFO | TSDuck process started: PID 34072
+2025-11-18 18:08:52 | INFO | TSDuck process started: PID 4596
+2025-11-18 18:08:53 | INFO | Stopping stream...
+2025-11-18 18:08:53 | INFO | Stream session ended: 7ea28711-577c-4197-ba5a-64c254891698
+2025-11-18 18:08:54 | INFO | Stream stopped
+2025-11-18 18:12:21 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 18:12:22 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI353642\logo.ico
+2025-11-18 18:12:22 | INFO | Qt application initialized
+2025-11-18 18:12:22 | INFO | ============================================================
+2025-11-18 18:12:22 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 18:12:22 | INFO | ============================================================
+2025-11-18 18:12:22 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 18:12:22 | INFO | TSDuck installation verified
+2025-11-18 18:12:22 | INFO | Database schema initialized
+2025-11-18 18:12:22 | INFO | Database initialized: database\sessions.db
+2025-11-18 18:12:22 | INFO | Stream service initialized
+2025-11-18 18:12:22 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 18:12:22 | INFO | Profile: default
+2025-11-18 18:12:22 | INFO | Last event ID: 10043
+2025-11-18 18:12:22 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 18:12:22 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 18:12:22 | INFO | Monitoring service initialized
+2025-11-18 18:12:22 | INFO | Loaded 3 profiles
+2025-11-18 18:12:22 | INFO | Profile service initialized with 3 profiles
+2025-11-18 18:12:22 | INFO | Stream Analyzer service initialized
+2025-11-18 18:12:22 | INFO | Bitrate Monitor service initialized
+2025-11-18 18:12:22 | INFO | EPG service initialized with directory: epg
+2025-11-18 18:12:22 | INFO | Services initialized
+2025-11-18 18:12:24 | INFO | Main window initialized
+2025-11-18 18:12:24 | INFO | Application ready
+2025-11-18 18:12:24 | INFO | Starting application...
+2025-11-18 18:19:52 | INFO | Generated SCTE-35 marker: cue_out_10044_1763470191.xml (Event ID: 10044)
+2025-11-18 18:19:52 | INFO | Generated SCTE-35 marker: cue_in_10045_1763470192.xml (Event ID: 10045)
+2025-11-18 18:19:52 | INFO | Generated CUE pair: OUT=10044, IN=10045
+2025-11-18 18:19:57 | INFO | Starting stream session: 3eac8ec8-0683-497e-9206-eafa73df6985
+2025-11-18 18:19:57 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10045_1763470192.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 18:19:58 | INFO | TSDuck process started: PID 34772
+2025-11-18 18:27:58 | INFO | Telegram service configured
+2025-11-18 18:28:01 | INFO | Telegram service configured
+2025-11-18 18:28:02 | INFO | Telegram bot connected: @Scte35_bot
+2025-11-18 18:32:53 | INFO | TSDuck process started: PID 20616
+2025-11-18 18:36:19 | INFO | Stopping stream...
+2025-11-18 18:36:19 | ERROR | Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:36:19 | INFO | Stream session ended: 3eac8ec8-0683-497e-9206-eafa73df6985
+2025-11-18 18:36:20 | INFO | Stream stopped
+2025-11-18 18:36:39 | INFO | Starting stream session: 33a7972a-b624-4afa-a589-ec9aeab9e8cc
+2025-11-18 18:36:39 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10045_1763470192.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 18:36:40 | INFO | TSDuck process started: PID 33888
+2025-11-18 18:39:42 | INFO | TSDuck process started: PID 26004
+2025-11-18 18:42:34 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 18:42:34 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI183042\logo.ico
+2025-11-18 18:42:34 | INFO | Qt application initialized
+2025-11-18 18:42:34 | INFO | ============================================================
+2025-11-18 18:42:34 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 18:42:34 | INFO | ============================================================
+2025-11-18 18:42:34 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 18:42:35 | INFO | TSDuck installation verified
+2025-11-18 18:42:35 | INFO | Database schema initialized
+2025-11-18 18:42:35 | INFO | Database initialized: database\sessions.db
+2025-11-18 18:42:35 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 18:42:35 | INFO | Stream service initialized
+2025-11-18 18:42:35 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 18:42:35 | INFO | Profile: default
+2025-11-18 18:42:35 | INFO | Last event ID: 10045
+2025-11-18 18:42:35 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 18:42:35 | INFO | Monitoring service initialized
+2025-11-18 18:42:35 | INFO | Loaded 3 profiles
+2025-11-18 18:42:35 | INFO | Profile service initialized with 3 profiles
+2025-11-18 18:42:35 | INFO | Stream Analyzer service initialized
+2025-11-18 18:42:35 | INFO | Bitrate Monitor service initialized
+2025-11-18 18:42:35 | INFO | EPG service initialized with directory: epg
+2025-11-18 18:42:35 | INFO | Services initialized
+2025-11-18 18:42:39 | INFO | Main window initialized
+2025-11-18 18:42:40 | INFO | Application ready
+2025-11-18 18:42:40 | INFO | Starting application...
+2025-11-18 18:45:24 | INFO | Generated SCTE-35 marker: cue_out_10046_1763471724.xml (Event ID: 10046)
+2025-11-18 18:45:24 | INFO | Generated SCTE-35 marker: cue_in_10047_1763471724.xml (Event ID: 10047)
+2025-11-18 18:45:24 | INFO | Generated CUE pair: OUT=10046, IN=10047
+2025-11-18 18:45:30 | INFO | Starting stream session: 4603d90a-89fc-4d07-bfcf-9d7feb6ef1f1
+2025-11-18 18:45:30 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10047_1763471724.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 18:45:31 | INFO | TSDuck process started: PID 32592
+2025-11-18 18:46:10 | INFO | Telegram service configured
+2025-11-18 18:46:11 | INFO | Telegram service configured
+2025-11-18 18:46:12 | INFO | Telegram bot connected: @Scte35_bot
+2025-11-18 18:49:04 | INFO | Stopping stream...
+2025-11-18 18:49:04 | ERROR | Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:49:04 | INFO | Stream session ended: 4603d90a-89fc-4d07-bfcf-9d7feb6ef1f1
+2025-11-18 18:49:06 | INFO | Stream stopped
+2025-11-18 18:49:10 | INFO | Starting stream session: e3975616-1261-4b2f-a1cf-101944ee9779
+2025-11-18 18:49:10 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10047_1763471724.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 18:49:11 | INFO | TSDuck process started: PID 34540
+2025-11-19 12:49:38 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-19 12:49:38 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\logo.ico
+2025-11-19 12:49:38 | INFO | Qt application initialized
+2025-11-19 12:49:38 | INFO | ============================================================
+2025-11-19 12:49:38 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-19 12:49:38 | INFO | ============================================================
+2025-11-19 12:49:38 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-19 12:49:38 | INFO | TSDuck installation verified
+2025-11-19 12:49:38 | INFO | Database schema initialized
+2025-11-19 12:49:38 | INFO | Database initialized: database\sessions.db
+2025-11-19 12:49:38 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-19 12:49:38 | INFO | Stream service initialized
+2025-11-19 12:49:38 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-19 12:49:38 | INFO | Profile: default
+2025-11-19 12:49:38 | INFO | Last event ID: 10047
+2025-11-19 12:49:38 | INFO | SCTE-35 Monitor service initialized
+2025-11-19 12:49:38 | INFO | Monitoring service initialized
+2025-11-19 12:49:38 | INFO | Loaded 3 profiles
+2025-11-19 12:49:38 | INFO | Profile service initialized with 3 profiles
+2025-11-19 12:49:38 | INFO | Stream Analyzer service initialized
+2025-11-19 12:49:38 | INFO | Bitrate Monitor service initialized
+2025-11-19 12:49:38 | INFO | EPG service initialized with directory: epg
+2025-11-19 12:49:38 | INFO | Services initialized
+2025-11-19 12:49:40 | INFO | Main window initialized
+2025-11-19 12:49:40 | INFO | Application ready
+2025-11-19 12:49:40 | INFO | Starting application...
+2025-11-19 12:50:24 | INFO | Telegram service configured
+2025-11-19 12:50:25 | INFO | Telegram service configured
+2025-11-19 12:50:26 | INFO | Telegram bot connected: @Scte35_bot
+2025-11-19 12:50:32 | INFO | Generated SCTE-35 marker: cue_out_10048_1763536832.xml (Event ID: 10048)
+2025-11-19 12:50:32 | INFO | Generated SCTE-35 marker: cue_in_10049_1763536832.xml (Event ID: 10049)
+2025-11-19 12:50:32 | INFO | Generated CUE pair: OUT=10048, IN=10049
+2025-11-19 12:50:42 | INFO | Starting stream session: 0754edb6-3afa-4ad4-925c-de400d3a21d4
+2025-11-19 12:50:42 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10049_1763536832.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-19 12:50:43 | INFO | TSDuck process started: PID 25584
+2025-11-19 12:52:46 | INFO | TSDuck process started: PID 33416
+2025-11-19 15:42:47 | INFO | TSDuck process started: PID 24532
+2025-11-19 15:43:18 | INFO | TSDuck process started: PID 28084
+2025-11-19 15:43:28 | INFO | TSDuck process started: PID 9168
+2025-11-19 15:43:37 | INFO | TSDuck process started: PID 36968
+2025-11-19 15:43:47 | INFO | TSDuck process started: PID 38228
+2025-11-19 15:43:58 | INFO | TSDuck process started: PID 27484
+2025-11-19 15:44:08 | INFO | TSDuck process started: PID 25364
+2025-11-19 15:44:18 | INFO | TSDuck process started: PID 31252
+2025-11-19 15:44:28 | INFO | TSDuck process started: PID 24340
+2025-11-19 15:44:38 | INFO | TSDuck process started: PID 15020
+2025-11-19 15:44:48 | INFO | TSDuck process started: PID 21704
+2025-11-19 15:44:58 | INFO | TSDuck process started: PID 36704
+2025-11-19 15:45:08 | INFO | TSDuck process started: PID 1404
+2025-11-19 15:45:17 | INFO | TSDuck process started: PID 38260
+2025-11-19 15:45:27 | INFO | TSDuck process started: PID 37856
+2025-11-19 15:45:37 | INFO | TSDuck process started: PID 32448
+2025-11-19 15:45:47 | INFO | TSDuck process started: PID 29704
+2025-11-19 15:45:57 | INFO | TSDuck process started: PID 28036
+2025-11-19 15:46:07 | INFO | TSDuck process started: PID 17576
+2025-11-19 15:46:17 | INFO | TSDuck process started: PID 9108
+2025-11-19 15:46:27 | INFO | TSDuck process started: PID 37668
+2025-11-19 15:46:37 | INFO | TSDuck process started: PID 36484
+2025-11-19 15:46:46 | INFO | TSDuck process started: PID 30380
+2025-11-19 15:46:56 | INFO | TSDuck process started: PID 30004
+2025-11-19 15:47:06 | INFO | TSDuck process started: PID 9076
+2025-11-19 15:47:15 | INFO | TSDuck process started: PID 20784
+2025-11-19 15:47:25 | INFO | TSDuck process started: PID 38600
+2025-11-19 15:47:34 | INFO | TSDuck process started: PID 17656
+2025-11-19 15:47:44 | INFO | TSDuck process started: PID 36600
+2025-11-19 15:47:53 | INFO | TSDuck process started: PID 31364
+2025-11-19 15:48:03 | INFO | TSDuck process started: PID 23352
+2025-11-19 15:48:13 | INFO | TSDuck process started: PID 27776
+2025-11-19 15:48:22 | INFO | TSDuck process started: PID 35176
+2025-11-19 15:48:32 | INFO | TSDuck process started: PID 23080
+2025-11-19 15:48:41 | INFO | TSDuck process started: PID 36204
+2025-11-19 15:48:50 | INFO | TSDuck process started: PID 20864
+2025-11-19 15:49:00 | INFO | TSDuck process started: PID 24564
+2025-11-19 15:49:09 | INFO | TSDuck process started: PID 35576
+2025-11-19 15:49:18 | INFO | TSDuck process started: PID 33340
+2025-11-19 15:49:28 | INFO | TSDuck process started: PID 38796
+2025-11-19 15:49:37 | INFO | TSDuck process started: PID 34352
+2025-11-19 15:49:46 | INFO | TSDuck process started: PID 36716
+2025-11-19 15:49:56 | INFO | TSDuck process started: PID 15012
+2025-11-19 15:50:06 | INFO | TSDuck process started: PID 2640
+2025-11-19 15:50:16 | INFO | TSDuck process started: PID 11160
+2025-11-19 15:50:25 | INFO | TSDuck process started: PID 27408
+2025-11-19 15:50:35 | INFO | TSDuck process started: PID 32052
+2025-11-19 15:50:44 | INFO | TSDuck process started: PID 31692
+2025-11-19 15:50:54 | INFO | TSDuck process started: PID 37120
+2025-11-19 15:51:03 | INFO | TSDuck process started: PID 31196
+2025-11-19 15:51:13 | INFO | TSDuck process started: PID 21128
+2025-11-19 15:51:22 | INFO | TSDuck process started: PID 38760
+2025-11-19 15:51:32 | INFO | TSDuck process started: PID 34212
+2025-11-19 15:51:41 | INFO | TSDuck process started: PID 36588
+2025-11-19 15:51:51 | INFO | TSDuck process started: PID 35412
+2025-11-19 15:52:00 | INFO | TSDuck process started: PID 36252
+2025-11-19 15:52:10 | INFO | TSDuck process started: PID 16236
+2025-11-19 15:52:20 | INFO | TSDuck process started: PID 31836
+2025-11-19 15:52:30 | INFO | TSDuck process started: PID 38264
+2025-11-19 15:52:39 | INFO | TSDuck process started: PID 37676
+2025-11-19 15:52:48 | INFO | TSDuck process started: PID 28564
+2025-11-19 15:52:58 | INFO | TSDuck process started: PID 35436
+2025-11-19 15:53:07 | INFO | TSDuck process started: PID 22696
+2025-11-19 15:53:17 | INFO | TSDuck process started: PID 27780
+2025-11-19 15:53:26 | INFO | TSDuck process started: PID 8412
+2025-11-19 15:53:36 | INFO | TSDuck process started: PID 2932
+2025-11-19 15:53:45 | INFO | TSDuck process started: PID 34832
+2025-11-19 15:53:55 | INFO | TSDuck process started: PID 2876
+2025-11-19 15:54:05 | INFO | TSDuck process started: PID 28232
+2025-11-19 15:54:16 | INFO | TSDuck process started: PID 23760
+2025-11-19 15:54:25 | INFO | TSDuck process started: PID 24208
+2025-11-19 15:54:35 | INFO | TSDuck process started: PID 30228
+2025-11-19 15:54:44 | INFO | TSDuck process started: PID 24740
+2025-11-19 15:54:53 | INFO | TSDuck process started: PID 20068
+2025-11-19 15:55:03 | INFO | TSDuck process started: PID 38028
+2025-11-19 15:55:12 | INFO | TSDuck process started: PID 1684
+2025-11-19 15:55:22 | INFO | TSDuck process started: PID 36276
+2025-11-19 15:55:31 | INFO | TSDuck process started: PID 36956
+2025-11-19 15:55:41 | INFO | TSDuck process started: PID 33224
+2025-11-19 15:55:50 | INFO | TSDuck process started: PID 34212
+2025-11-19 15:56:00 | INFO | TSDuck process started: PID 36200
+2025-11-19 15:56:09 | INFO | TSDuck process started: PID 27324
+2025-11-19 15:56:19 | INFO | TSDuck process started: PID 36624
+2025-11-19 15:56:28 | INFO | TSDuck process started: PID 35436
+2025-11-19 15:56:38 | INFO | TSDuck process started: PID 25308
+2025-11-19 15:56:47 | INFO | TSDuck process started: PID 15012
+2025-11-19 15:56:57 | INFO | TSDuck process started: PID 36952
+2025-11-19 15:57:06 | INFO | TSDuck process started: PID 15924
+2025-11-19 15:57:16 | INFO | TSDuck process started: PID 21624
+2025-11-19 15:57:26 | INFO | TSDuck process started: PID 21788
+2025-11-19 15:57:35 | INFO | TSDuck process started: PID 36660
+2025-11-19 15:57:45 | INFO | TSDuck process started: PID 33920
+2025-11-19 15:57:54 | INFO | TSDuck process started: PID 8836
+2025-11-19 15:58:03 | INFO | TSDuck process started: PID 10396
+2025-11-19 15:58:13 | INFO | TSDuck process started: PID 28868
+2025-11-19 15:58:22 | INFO | TSDuck process started: PID 22456
+2025-11-19 15:58:31 | INFO | TSDuck process started: PID 15892
+2025-11-19 15:58:41 | INFO | TSDuck process started: PID 30600
+2025-11-19 15:58:50 | INFO | TSDuck process started: PID 27860
+2025-11-19 15:58:59 | INFO | TSDuck process started: PID 28360
+2025-11-19 15:59:09 | INFO | TSDuck process started: PID 16236
+2025-11-19 15:59:19 | INFO | TSDuck process started: PID 37428
+2025-11-19 15:59:28 | INFO | TSDuck process started: PID 38212
+2025-11-19 15:59:38 | INFO | TSDuck process started: PID 30312
+2025-11-19 15:59:47 | INFO | TSDuck process started: PID 35852
+2025-11-19 15:59:56 | INFO | TSDuck process started: PID 27964
+2025-11-19 16:00:06 | INFO | TSDuck process started: PID 31212
+2025-11-19 16:00:16 | INFO | TSDuck process started: PID 35456
+2025-11-19 16:00:25 | INFO | TSDuck process started: PID 13756
+2025-11-19 16:00:35 | INFO | TSDuck process started: PID 27436
+2025-11-19 16:00:44 | INFO | TSDuck process started: PID 35996
+2025-11-19 16:00:54 | INFO | TSDuck process started: PID 35892
+2025-11-19 16:01:03 | INFO | TSDuck process started: PID 35988
+2025-11-19 16:01:12 | INFO | TSDuck process started: PID 35648
+2025-11-19 16:01:22 | INFO | TSDuck process started: PID 38564
+2025-11-19 16:01:32 | INFO | TSDuck process started: PID 15104
+2025-11-19 16:01:41 | INFO | TSDuck process started: PID 33676
+2025-11-19 16:01:51 | INFO | TSDuck process started: PID 20488
+2025-11-19 16:02:00 | INFO | TSDuck process started: PID 8836
+2025-11-19 16:02:10 | INFO | TSDuck process started: PID 36676
+2025-11-19 16:02:20 | INFO | TSDuck process started: PID 13644
+2025-11-19 16:02:29 | INFO | TSDuck process started: PID 33848
+2025-11-19 16:02:39 | INFO | TSDuck process started: PID 5596
+2025-11-19 16:02:48 | INFO | TSDuck process started: PID 34832
+2025-11-19 16:02:58 | INFO | TSDuck process started: PID 28960
+2025-11-19 16:03:07 | INFO | TSDuck process started: PID 3248
+2025-11-19 16:03:17 | INFO | TSDuck process started: PID 15252
+2025-11-19 16:03:26 | INFO | TSDuck process started: PID 27840
+2025-11-19 16:03:36 | INFO | TSDuck process started: PID 38000
+2025-11-19 16:03:45 | INFO | TSDuck process started: PID 25288
+2025-11-19 16:03:54 | INFO | TSDuck process started: PID 31388
+2025-11-19 16:04:04 | INFO | TSDuck process started: PID 11680
+2025-11-19 16:04:13 | INFO | TSDuck process started: PID 24864
+2025-11-19 16:04:23 | INFO | TSDuck process started: PID 26660
+2025-11-19 16:04:32 | INFO | TSDuck process started: PID 38588
+2025-11-19 16:04:42 | INFO | TSDuck process started: PID 11400
+2025-11-19 16:04:52 | INFO | TSDuck process started: PID 9040
+2025-11-19 16:05:01 | INFO | TSDuck process started: PID 21748
+2025-11-19 16:05:11 | INFO | TSDuck process started: PID 36800
+2025-11-19 16:05:20 | INFO | TSDuck process started: PID 28232
+2025-11-19 16:05:30 | INFO | TSDuck process started: PID 36000
+2025-11-19 16:05:39 | INFO | TSDuck process started: PID 30676
+2025-11-19 16:05:49 | INFO | TSDuck process started: PID 6488
+2025-11-19 16:05:58 | INFO | TSDuck process started: PID 32336
+2025-11-19 16:06:08 | INFO | TSDuck process started: PID 14936
+2025-11-19 16:06:17 | INFO | TSDuck process started: PID 11400
+2025-11-19 16:06:27 | INFO | TSDuck process started: PID 23788
+2025-11-19 16:06:37 | INFO | TSDuck process started: PID 34456
+2025-11-19 16:06:46 | INFO | TSDuck process started: PID 30716
+2025-11-19 16:06:56 | INFO | TSDuck process started: PID 31036
+2025-11-19 16:07:05 | INFO | TSDuck process started: PID 2892
+2025-11-19 16:07:15 | INFO | TSDuck process started: PID 25044
+2025-11-19 16:07:25 | INFO | TSDuck process started: PID 34504
+2025-11-19 16:07:34 | INFO | TSDuck process started: PID 13840
+2025-11-19 16:07:44 | INFO | TSDuck process started: PID 35408
+2025-11-19 16:07:54 | INFO | TSDuck process started: PID 28000
+2025-11-19 16:08:03 | INFO | TSDuck process started: PID 27164
+2025-11-19 16:08:13 | INFO | TSDuck process started: PID 16252
+2025-11-19 16:08:22 | INFO | TSDuck process started: PID 33996
+2025-11-19 16:08:32 | INFO | TSDuck process started: PID 8420
+2025-11-19 16:08:41 | INFO | TSDuck process started: PID 34540
+2025-11-19 16:08:50 | INFO | TSDuck process started: PID 19996
+2025-11-19 16:09:00 | INFO | TSDuck process started: PID 26288
+2025-11-19 16:09:09 | INFO | TSDuck process started: PID 27392
+2025-11-19 16:09:18 | INFO | TSDuck process started: PID 36456
+2025-11-19 16:09:28 | INFO | TSDuck process started: PID 18600
+2025-11-19 16:09:37 | INFO | TSDuck process started: PID 26016
+2025-11-19 16:09:47 | INFO | TSDuck process started: PID 38380
+2025-11-19 16:09:56 | INFO | TSDuck process started: PID 27524
+2025-11-19 16:10:06 | INFO | TSDuck process started: PID 23360
+2025-11-19 16:10:16 | INFO | TSDuck process started: PID 38696
+2025-11-19 16:10:25 | INFO | TSDuck process started: PID 34504
+2025-11-19 16:10:35 | INFO | TSDuck process started: PID 15452
+2025-11-19 16:10:44 | INFO | TSDuck process started: PID 32372
+2025-11-19 16:10:54 | INFO | TSDuck process started: PID 31956
+2025-11-19 16:11:03 | INFO | TSDuck process started: PID 35820
+2025-11-19 16:11:13 | INFO | TSDuck process started: PID 26164
+2025-11-19 16:11:23 | INFO | TSDuck process started: PID 28056
+2025-11-19 16:11:32 | INFO | TSDuck process started: PID 38712
+2025-11-19 16:11:42 | INFO | TSDuck process started: PID 35868
+2025-11-19 16:11:52 | INFO | TSDuck process started: PID 18268
+2025-11-19 16:12:01 | INFO | TSDuck process started: PID 28712
+2025-11-19 16:12:11 | INFO | TSDuck process started: PID 21128
+2025-11-19 16:12:20 | INFO | TSDuck process started: PID 20688
+2025-11-19 16:12:30 | INFO | TSDuck process started: PID 9140
+2025-11-19 16:12:39 | INFO | TSDuck process started: PID 5860
+2025-11-19 16:12:49 | INFO | TSDuck process started: PID 21728
+2025-11-19 16:12:58 | INFO | TSDuck process started: PID 8964
+2025-11-19 16:13:08 | INFO | TSDuck process started: PID 21676
+2025-11-19 16:13:17 | INFO | TSDuck process started: PID 37200
+2025-11-19 16:13:26 | INFO | TSDuck process started: PID 29080
+2025-11-19 16:13:36 | INFO | TSDuck process started: PID 19952
+2025-11-19 16:13:45 | INFO | TSDuck process started: PID 38412
+2025-11-19 16:13:54 | INFO | TSDuck process started: PID 37448
+2025-11-19 16:14:35 | INFO | TSDuck process started: PID 35452
+2025-11-19 16:14:44 | INFO | TSDuck process started: PID 38340
+2025-11-19 16:14:54 | INFO | TSDuck process started: PID 38528
+2025-11-19 16:15:03 | INFO | TSDuck process started: PID 35900
+2025-11-19 16:15:13 | INFO | TSDuck process started: PID 36160
+2025-11-19 16:15:22 | INFO | TSDuck process started: PID 37116
+2025-11-19 16:15:31 | INFO | TSDuck process started: PID 36888
+2025-11-19 16:15:41 | INFO | TSDuck process started: PID 4956
+2025-11-19 16:15:50 | INFO | TSDuck process started: PID 35968
+2025-11-19 16:15:59 | INFO | TSDuck process started: PID 28360
+2025-11-19 16:16:09 | INFO | TSDuck process started: PID 25864
+2025-11-19 16:16:19 | INFO | TSDuck process started: PID 23164
+2025-11-19 16:16:29 | INFO | TSDuck process started: PID 37744
+2025-11-19 16:16:38 | INFO | TSDuck process started: PID 32572
+2025-11-19 16:16:48 | INFO | TSDuck process started: PID 38848
+2025-11-19 16:16:58 | INFO | TSDuck process started: PID 36252
+2025-11-19 16:17:07 | INFO | TSDuck process started: PID 6764
+2025-11-19 16:17:17 | INFO | TSDuck process started: PID 13472
+2025-11-19 16:17:26 | INFO | TSDuck process started: PID 37544
+2025-11-19 16:17:35 | INFO | TSDuck process started: PID 38588
+2025-11-19 16:17:45 | INFO | TSDuck process started: PID 22188
+2025-11-19 16:17:54 | INFO | TSDuck process started: PID 37184
+2025-11-19 16:18:04 | INFO | TSDuck process started: PID 34052
+2025-11-19 16:18:14 | INFO | TSDuck process started: PID 28228
+2025-11-19 16:18:23 | INFO | TSDuck process started: PID 38324
+2025-11-19 16:18:33 | INFO | TSDuck process started: PID 35760
+2025-11-19 16:18:43 | INFO | TSDuck process started: PID 36204
+2025-11-19 16:18:52 | INFO | TSDuck process started: PID 21704
+2025-11-19 16:19:02 | INFO | TSDuck process started: PID 37544
+2025-11-19 16:19:12 | INFO | TSDuck process started: PID 38684
+2025-11-19 16:19:22 | INFO | TSDuck process started: PID 3248
+2025-11-19 16:19:32 | INFO | TSDuck process started: PID 30172
+2025-11-19 16:19:42 | INFO | TSDuck process started: PID 13476
+2025-11-19 16:19:52 | INFO | TSDuck process started: PID 36504
+2025-11-19 16:20:17 | INFO | TSDuck process started: PID 13604
+2025-11-19 16:20:49 | INFO | TSDuck process started: PID 25688
+2025-11-19 16:20:59 | INFO | TSDuck process started: PID 38736
+2025-11-19 16:21:08 | INFO | TSDuck process started: PID 9976
+2025-11-19 16:21:18 | INFO | TSDuck process started: PID 38632
+2025-11-19 16:21:27 | INFO | TSDuck process started: PID 24092
+2025-11-19 16:21:36 | INFO | TSDuck process started: PID 27724
+2025-11-19 16:21:46 | INFO | TSDuck process started: PID 33000
+2025-11-19 16:21:56 | INFO | TSDuck process started: PID 19248
+2025-11-19 16:22:06 | INFO | TSDuck process started: PID 4584
+2025-11-19 16:22:16 | INFO | TSDuck process started: PID 6788
+2025-11-19 16:22:26 | INFO | TSDuck process started: PID 32936
+2025-11-19 16:22:37 | INFO | TSDuck process started: PID 36908
+2025-11-19 16:22:47 | INFO | TSDuck process started: PID 19640
+2025-11-19 16:22:56 | INFO | TSDuck process started: PID 2932
+2025-11-19 16:23:06 | INFO | TSDuck process started: PID 36732
+2025-11-19 16:23:16 | INFO | TSDuck process started: PID 14524
+2025-11-19 16:23:25 | INFO | TSDuck process started: PID 35720
+2025-11-19 16:23:34 | INFO | TSDuck process started: PID 23688
+2025-11-19 16:23:44 | INFO | TSDuck process started: PID 36400
+2025-11-19 16:23:53 | INFO | TSDuck process started: PID 25160
+2025-11-19 16:24:03 | INFO | TSDuck process started: PID 36184
+2025-11-19 16:24:12 | INFO | TSDuck process started: PID 15000
+2025-11-19 16:24:22 | INFO | TSDuck process started: PID 15040
+2025-11-19 16:24:32 | INFO | TSDuck process started: PID 2392
+2025-11-19 16:24:41 | INFO | TSDuck process started: PID 32092
+2025-11-19 16:24:51 | INFO | TSDuck process started: PID 6176
+2025-11-19 16:25:00 | INFO | TSDuck process started: PID 25700
+2025-11-19 16:25:10 | INFO | TSDuck process started: PID 15036
+2025-11-19 16:25:19 | INFO | TSDuck process started: PID 17904
+2025-11-19 16:25:29 | INFO | TSDuck process started: PID 10644
+2025-11-19 16:25:40 | INFO | TSDuck process started: PID 38908
+2025-11-19 16:25:50 | INFO | TSDuck process started: PID 23104
+2025-11-19 16:25:59 | INFO | TSDuck process started: PID 31272
+2025-11-19 16:26:09 | INFO | TSDuck process started: PID 32320
+2025-11-19 16:26:20 | INFO | TSDuck process started: PID 3292
+2025-11-19 16:26:30 | INFO | TSDuck process started: PID 18592
+2025-11-19 16:26:41 | INFO | TSDuck process started: PID 39540
+2025-11-19 16:27:12 | INFO | TSDuck process started: PID 23776
+2025-11-19 16:27:30 | INFO | TSDuck process started: PID 40504
+2025-11-19 16:27:51 | INFO | TSDuck process started: PID 40488
+2025-11-19 16:28:13 | INFO | TSDuck process started: PID 40484
+2025-11-19 16:28:30 | INFO | TSDuck process started: PID 41640
+2025-11-19 16:28:44 | INFO | TSDuck process started: PID 40832
+2025-11-19 16:29:00 | INFO | TSDuck process started: PID 41228
+2025-11-19 16:29:12 | INFO | TSDuck process started: PID 41244
+2025-11-19 16:29:25 | INFO | TSDuck process started: PID 39144
+2025-11-19 16:29:37 | INFO | TSDuck process started: PID 40044
+2025-11-19 16:29:50 | INFO | TSDuck process started: PID 2972
+2025-11-19 16:30:03 | INFO | TSDuck process started: PID 40884
+2025-11-19 16:30:16 | INFO | TSDuck process started: PID 36344
+2025-11-19 16:30:29 | INFO | TSDuck process started: PID 41216
+2025-11-19 16:30:41 | INFO | TSDuck process started: PID 40224
+2025-11-19 16:30:52 | INFO | TSDuck process started: PID 41792
+2025-11-19 16:31:02 | INFO | TSDuck process started: PID 39024
+2025-11-19 16:31:12 | INFO | TSDuck process started: PID 39204
+2025-11-19 16:31:22 | INFO | TSDuck process started: PID 41612
+2025-11-19 16:31:33 | INFO | TSDuck process started: PID 35452
+2025-11-19 16:31:44 | INFO | TSDuck process started: PID 41316
+2025-11-19 16:31:56 | INFO | TSDuck process started: PID 26140
+2025-11-19 16:32:06 | INFO | TSDuck process started: PID 39984
+2025-11-19 16:32:16 | INFO | TSDuck process started: PID 39740
+2025-11-19 16:32:27 | INFO | TSDuck process started: PID 23356
+2025-11-19 16:32:37 | INFO | TSDuck process started: PID 25308
+2025-11-19 16:32:47 | INFO | TSDuck process started: PID 41636
+2025-11-19 16:32:57 | INFO | TSDuck process started: PID 35688
+2025-11-19 16:33:06 | INFO | TSDuck process started: PID 37292
+2025-11-19 16:33:16 | INFO | TSDuck process started: PID 28988
+2025-11-19 16:33:27 | INFO | TSDuck process started: PID 32020
+2025-11-19 16:33:37 | INFO | TSDuck process started: PID 30136
+2025-11-19 16:33:47 | INFO | TSDuck process started: PID 26604
+2025-11-19 16:33:57 | INFO | TSDuck process started: PID 41324
+2025-11-19 16:34:07 | INFO | TSDuck process started: PID 39160
+2025-11-19 16:34:18 | INFO | TSDuck process started: PID 20752
+2025-11-19 16:34:28 | INFO | TSDuck process started: PID 29440
+2025-11-19 16:34:38 | INFO | TSDuck process started: PID 40036
+2025-11-19 16:34:48 | INFO | TSDuck process started: PID 40716
+2025-11-19 16:34:58 | INFO | TSDuck process started: PID 39216
+2025-11-19 16:35:08 | INFO | TSDuck process started: PID 39852
+2025-11-19 16:35:19 | INFO | TSDuck process started: PID 22088
+2025-11-19 16:35:29 | INFO | TSDuck process started: PID 40368
+2025-11-19 16:35:38 | INFO | TSDuck process started: PID 41316
+2025-11-19 16:35:48 | INFO | TSDuck process started: PID 39760
+2025-11-19 16:35:58 | INFO | TSDuck process started: PID 28228
+2025-11-19 16:36:08 | INFO | TSDuck process started: PID 34672
+2025-11-19 16:36:18 | INFO | TSDuck process started: PID 37780
+2025-11-19 16:36:28 | INFO | TSDuck process started: PID 39640
+2025-11-19 16:36:38 | INFO | TSDuck process started: PID 40996
+2025-11-19 16:36:49 | INFO | TSDuck process started: PID 36888
+2025-11-19 16:36:59 | INFO | TSDuck process started: PID 39728
+2025-11-19 16:37:10 | INFO | TSDuck process started: PID 41300
+2025-11-19 16:37:20 | INFO | TSDuck process started: PID 18280
+2025-11-19 16:37:30 | INFO | TSDuck process started: PID 30600
+2025-11-19 16:37:40 | INFO | TSDuck process started: PID 40896
+2025-11-19 16:37:51 | INFO | TSDuck process started: PID 39228
+2025-11-19 16:38:01 | INFO | TSDuck process started: PID 25936
+2025-11-19 16:38:12 | INFO | TSDuck process started: PID 28868
+2025-11-19 16:38:23 | INFO | TSDuck process started: PID 39492
+2025-11-19 16:38:35 | INFO | TSDuck process started: PID 27780
+2025-11-19 16:38:47 | INFO | TSDuck process started: PID 37096
+2025-11-19 16:38:59 | INFO | TSDuck process started: PID 41632
+2025-11-19 16:39:10 | INFO | TSDuck process started: PID 40396
+2025-11-19 16:39:22 | INFO | TSDuck process started: PID 43460
+2025-11-19 16:39:33 | INFO | TSDuck process started: PID 43416
+2025-11-19 16:39:45 | INFO | TSDuck process started: PID 41524
+2025-11-19 16:39:57 | INFO | TSDuck process started: PID 37020
+2025-11-19 16:40:11 | INFO | TSDuck process started: PID 44960
+2025-11-19 16:40:26 | INFO | TSDuck process started: PID 45176
+2025-11-19 16:40:45 | INFO | TSDuck process started: PID 29328
+2025-11-19 16:41:01 | INFO | TSDuck process started: PID 45208
+2025-11-19 16:41:16 | INFO | TSDuck process started: PID 49096
+2025-11-19 16:41:34 | INFO | TSDuck process started: PID 49740
+2025-11-19 16:41:50 | INFO | TSDuck process started: PID 50280
+2025-11-19 16:42:05 | INFO | TSDuck process started: PID 43016
+2025-11-19 16:42:21 | INFO | TSDuck process started: PID 33868
+2025-11-19 16:42:33 | INFO | TSDuck process started: PID 42212
+2025-11-19 16:42:45 | INFO | TSDuck process started: PID 39332
+2025-11-19 16:42:56 | INFO | TSDuck process started: PID 39580
+2025-11-19 16:43:07 | INFO | TSDuck process started: PID 50304
+2025-11-19 16:43:18 | INFO | TSDuck process started: PID 50528
+2025-11-19 16:43:29 | INFO | TSDuck process started: PID 40136
+2025-11-19 16:43:39 | INFO | TSDuck process started: PID 42652
+2025-11-19 16:43:50 | INFO | TSDuck process started: PID 29460
+2025-11-19 16:44:00 | INFO | TSDuck process started: PID 50300
+2025-11-19 16:44:11 | INFO | TSDuck process started: PID 36928
+2025-11-19 16:44:22 | INFO | TSDuck process started: PID 42508
+2025-11-19 16:44:32 | INFO | TSDuck process started: PID 42216
+2025-11-19 16:44:43 | INFO | TSDuck process started: PID 41208
+2025-11-19 16:44:53 | INFO | TSDuck process started: PID 22032
+2025-11-19 16:45:06 | INFO | TSDuck process started: PID 34772
+2025-11-19 16:45:19 | INFO | TSDuck process started: PID 43068
+2025-11-19 16:45:31 | INFO | TSDuck process started: PID 48664
+2025-11-19 16:45:44 | INFO | TSDuck process started: PID 4404
+2025-11-19 16:45:58 | INFO | TSDuck process started: PID 40776
+2025-11-19 16:46:14 | INFO | TSDuck process started: PID 37100
+2025-11-19 16:46:27 | INFO | TSDuck process started: PID 23560
+2025-11-19 16:46:38 | INFO | TSDuck process started: PID 43452
+2025-11-19 16:46:48 | INFO | TSDuck process started: PID 51068
+2025-11-19 16:46:58 | INFO | TSDuck process started: PID 41128
+2025-11-19 16:47:08 | INFO | TSDuck process started: PID 4728
+2025-11-19 16:47:18 | INFO | TSDuck process started: PID 47556
+2025-11-19 16:47:28 | INFO | TSDuck process started: PID 40400
+2025-11-19 16:47:38 | INFO | TSDuck process started: PID 23392
+2025-11-19 16:47:49 | INFO | TSDuck process started: PID 38916
+2025-11-19 16:47:59 | INFO | TSDuck process started: PID 48932
+2025-11-19 16:48:09 | INFO | TSDuck process started: PID 42312
+2025-11-19 16:48:19 | INFO | TSDuck process started: PID 38944
+2025-11-19 16:48:29 | INFO | TSDuck process started: PID 44016
+2025-11-19 16:48:38 | INFO | TSDuck process started: PID 37544
+2025-11-19 16:48:48 | INFO | TSDuck process started: PID 48044
+2025-11-19 16:48:58 | INFO | TSDuck process started: PID 42044
+2025-11-19 16:49:08 | INFO | TSDuck process started: PID 47228
+2025-11-19 16:49:18 | INFO | TSDuck process started: PID 36608
+2025-11-19 16:49:28 | INFO | TSDuck process started: PID 40216
+2025-11-19 16:49:39 | INFO | TSDuck process started: PID 41364
+2025-11-19 16:49:49 | INFO | TSDuck process started: PID 44560
+2025-11-19 16:49:59 | INFO | TSDuck process started: PID 14992
+2025-11-19 16:50:09 | INFO | TSDuck process started: PID 41908
+2025-11-19 16:50:19 | INFO | TSDuck process started: PID 43180
+2025-11-19 16:50:28 | INFO | TSDuck process started: PID 37720
+2025-11-19 16:50:38 | INFO | TSDuck process started: PID 49796
+2025-11-19 16:50:48 | INFO | TSDuck process started: PID 49688
+2025-11-19 16:50:57 | INFO | TSDuck process started: PID 45296
+2025-11-19 16:51:06 | INFO | TSDuck process started: PID 45348
+2025-11-19 16:51:16 | INFO | TSDuck process started: PID 48884
+2025-11-19 16:51:26 | INFO | TSDuck process started: PID 46920
+2025-11-19 16:51:35 | INFO | TSDuck process started: PID 50480
+2025-11-19 16:51:45 | INFO | TSDuck process started: PID 48100
+2025-11-19 16:51:55 | INFO | TSDuck process started: PID 47256
+2025-11-19 16:52:05 | INFO | TSDuck process started: PID 41556
+2025-11-19 16:52:14 | INFO | TSDuck process started: PID 38676
+2025-11-19 16:52:24 | INFO | TSDuck process started: PID 47528
+2025-11-19 16:52:34 | INFO | TSDuck process started: PID 31212
+2025-11-19 16:52:43 | INFO | TSDuck process started: PID 46864
+2025-11-19 16:52:53 | INFO | TSDuck process started: PID 43016
+2025-11-19 16:53:03 | INFO | TSDuck process started: PID 50252
+2025-11-19 16:53:12 | INFO | TSDuck process started: PID 49304
+2025-11-19 16:53:22 | INFO | TSDuck process started: PID 24364
+2025-11-19 16:53:31 | INFO | TSDuck process started: PID 40964
+2025-11-19 16:53:41 | INFO | TSDuck process started: PID 42660
+2025-11-19 16:53:51 | INFO | TSDuck process started: PID 39680
+2025-11-19 16:54:00 | INFO | TSDuck process started: PID 30332
+2025-11-19 16:54:10 | INFO | TSDuck process started: PID 37564
+2025-11-19 16:54:19 | INFO | TSDuck process started: PID 37540
+2025-11-19 16:54:29 | INFO | TSDuck process started: PID 31492
+2025-11-19 16:54:38 | INFO | TSDuck process started: PID 19464
+2025-11-19 16:54:47 | INFO | TSDuck process started: PID 11308
+2025-11-19 16:54:57 | INFO | TSDuck process started: PID 39856
+2025-11-19 16:55:06 | INFO | TSDuck process started: PID 47268
+2025-11-19 16:55:16 | INFO | TSDuck process started: PID 40064
+2025-11-19 16:55:26 | INFO | TSDuck process started: PID 41472
+2025-11-19 16:55:35 | INFO | TSDuck process started: PID 48312
+2025-11-19 16:55:45 | INFO | TSDuck process started: PID 41884
+2025-11-19 16:55:54 | INFO | TSDuck process started: PID 46308
+2025-11-19 16:56:04 | INFO | TSDuck process started: PID 46732
+2025-11-19 16:56:13 | INFO | TSDuck process started: PID 43544
+2025-11-19 16:56:23 | INFO | TSDuck process started: PID 39948
+2025-11-19 16:56:33 | INFO | TSDuck process started: PID 47744
+2025-11-19 16:56:42 | INFO | TSDuck process started: PID 44720
+2025-11-19 16:56:51 | INFO | TSDuck process started: PID 24156
+2025-11-19 16:57:01 | INFO | TSDuck process started: PID 40388
+2025-11-19 16:57:11 | INFO | TSDuck process started: PID 38796
+2025-11-19 16:57:20 | INFO | TSDuck process started: PID 49024
+2025-11-19 16:57:30 | INFO | TSDuck process started: PID 50660
+2025-11-19 16:57:39 | INFO | TSDuck process started: PID 50316
+2025-11-19 16:57:49 | INFO | TSDuck process started: PID 47944
+2025-11-19 16:57:59 | INFO | TSDuck process started: PID 51036
+2025-11-19 16:58:08 | INFO | TSDuck process started: PID 45248
+2025-11-19 16:58:18 | INFO | TSDuck process started: PID 42808
+2025-11-19 16:58:28 | INFO | TSDuck process started: PID 49776
+2025-11-19 16:58:37 | INFO | TSDuck process started: PID 35952
+2025-11-19 16:58:47 | INFO | TSDuck process started: PID 49684
+2025-11-19 16:58:57 | INFO | TSDuck process started: PID 23516
+2025-11-19 16:59:06 | INFO | TSDuck process started: PID 35956
+2025-11-19 16:59:16 | INFO | TSDuck process started: PID 48288
+2025-11-19 16:59:26 | INFO | TSDuck process started: PID 48616
+2025-11-19 16:59:35 | INFO | TSDuck process started: PID 31212
+2025-11-19 16:59:45 | INFO | TSDuck process started: PID 47976
+2025-11-19 16:59:55 | INFO | TSDuck process started: PID 30768
+2025-11-19 17:00:04 | INFO | TSDuck process started: PID 49964
+2025-11-19 17:00:14 | INFO | TSDuck process started: PID 40100
+2025-11-19 17:00:23 | INFO | TSDuck process started: PID 38112
+2025-11-19 17:00:33 | INFO | TSDuck process started: PID 40664
+2025-11-19 17:00:43 | INFO | TSDuck process started: PID 13472
+2025-11-19 17:00:52 | INFO | TSDuck process started: PID 16904
+2025-11-19 17:01:02 | INFO | TSDuck process started: PID 27160
+2025-11-19 17:01:12 | INFO | TSDuck process started: PID 48704
+2025-11-19 17:01:22 | INFO | TSDuck process started: PID 43780
+2025-11-19 17:01:32 | INFO | TSDuck process started: PID 47476
+2025-11-19 17:01:42 | INFO | TSDuck process started: PID 38372
+2025-11-19 17:01:45 | INFO | Stopping stream...
+2025-11-19 17:01:45 | ERROR | Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-19 17:01:46 | INFO | Stream session ended: 0754edb6-3afa-4ad4-925c-de400d3a21d4
+2025-11-19 17:01:48 | INFO | Stream stopped
+2025-11-19 17:02:05 | INFO | Starting stream session: a616dc39-21a9-4045-b4ea-e0800d3ecaca
+2025-11-19 17:02:05 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10049_1763536832.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-19 17:02:06 | INFO | TSDuck process started: PID 24680
+2025-11-19 17:02:17 | INFO | TSDuck process started: PID 9660
+2025-11-19 17:02:28 | INFO | TSDuck process started: PID 3360
+2025-11-19 17:02:38 | INFO | TSDuck process started: PID 50696
+2025-11-19 17:02:48 | INFO | TSDuck process started: PID 47728
+2025-11-19 17:02:58 | INFO | TSDuck process started: PID 41828
+2025-11-19 17:03:05 | INFO | Stopping stream...
+2025-11-19 17:03:06 | INFO | Stream session ended: a616dc39-21a9-4045-b4ea-e0800d3ecaca
+2025-11-19 17:03:09 | INFO | Stream stopped
+2025-11-19 17:03:28 | INFO | Saved 4 profiles
+2025-11-19 17:03:28 | INFO | Saved profile: new
+2025-11-19 17:03:32 | INFO | Generated SCTE-35 marker: cue_out_10050_1763552012.xml (Event ID: 10050)
+2025-11-19 17:03:32 | INFO | Generated SCTE-35 marker: cue_in_10051_1763552012.xml (Event ID: 10051)
+2025-11-19 17:03:32 | INFO | Generated SCTE-35 marker: cue_crash_10052_1763552012.xml (Event ID: 10052)
+2025-11-19 17:03:32 | INFO | Generated preroll sequence: OUT=10050, IN=10051, CRASH=10052
+2025-11-19 17:03:43 | INFO | Starting stream session: 51fb37de-9551-47ab-bfbc-c86a9f023ebf
+2025-11-19 17:03:43 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_crash_10052_1763552012.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-19 17:03:45 | INFO | TSDuck process started: PID 16896
+2025-11-19 17:03:57 | INFO | TSDuck process started: PID 38676
+2025-11-19 17:04:08 | INFO | TSDuck process started: PID 9312
+2025-11-19 17:04:18 | INFO | TSDuck process started: PID 38260
+2025-11-19 17:04:30 | INFO | TSDuck process started: PID 46928
+2025-11-19 17:04:39 | INFO | TSDuck process started: PID 43984
+2025-11-19 17:04:50 | INFO | TSDuck process started: PID 17328
+2025-11-19 17:05:00 | INFO | TSDuck process started: PID 50036
+2025-11-19 17:05:10 | INFO | TSDuck process started: PID 49596
+2025-11-19 17:05:21 | INFO | TSDuck process started: PID 43768
+2025-11-19 17:05:59 | INFO | TSDuck process started: PID 40788
+2025-11-19 17:06:14 | INFO | Stopping stream...
+2025-11-19 17:06:19 | INFO | TSDuck process started: PID 32904
+2025-11-19 17:06:19 | ERROR | Telegram send error: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+Traceback (most recent call last):
+  File "src\services\telegram_service.py", line 94, in send_message
+    response = requests.post(url, json=payload, timeout=10)
+  File "requests\api.py", line 115, in post
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 616, in send
+  File "requests\adapters.py", line 303, in cert_verify
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+2025-11-19 17:06:20 | INFO | Stream stopped
+2025-11-19 17:06:20 | INFO | Application exited with code 0
+2025-11-19 17:06:20 | INFO | Application shutting down...
+2025-11-19 17:06:21 | ERROR | Telegram send error: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+Traceback (most recent call last):
+  File "src\services\telegram_service.py", line 94, in send_message
+    response = requests.post(url, json=payload, timeout=10)
+  File "requests\api.py", line 115, in post
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 616, in send
+  File "requests\adapters.py", line 303, in cert_verify
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10023
+2025-11-19 17:22:52 | INFO | Generated SCTE-35 marker: preroll_10024_1763553172.xml (Event ID: 10024)
+2025-11-19 17:22:52 | INFO | Generated SCTE-35 marker: preroll_10025_1763553172.xml (Event ID: 10025)
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10025
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10025
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10025
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10025
+2025-11-19 17:22:52 | INFO | Generated SCTE-35 marker: preroll_10023_1763553172.xml (Event ID: 10023)
+2025-11-19 17:22:52 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:22:52 | INFO | Profile: test_profile
+2025-11-19 17:22:52 | INFO | Last event ID: 10025
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10025
+2025-11-19 17:30:45 | INFO | Generated SCTE-35 marker: preroll_10026_1763553645.xml (Event ID: 10026)
+2025-11-19 17:30:45 | INFO | Generated SCTE-35 marker: preroll_10027_1763553645.xml (Event ID: 10027)
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10027
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10027
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10027
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10027
+2025-11-19 17:30:45 | INFO | Generated SCTE-35 marker: preroll_10023_1763553645.xml (Event ID: 10023)
+2025-11-19 17:30:45 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 17:30:45 | INFO | Profile: test_profile
+2025-11-19 17:30:45 | INFO | Last event ID: 10027
+2025-11-19 17:41:56 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-19 17:41:56 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI499962\logo.ico
+2025-11-19 17:41:56 | INFO | Qt application initialized
+2025-11-19 17:41:56 | INFO | ============================================================
+2025-11-19 17:41:56 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-19 17:41:56 | INFO | ============================================================
+2025-11-19 17:41:56 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-19 17:41:56 | INFO | TSDuck installation verified
+2025-11-19 17:41:56 | INFO | Database schema initialized
+2025-11-19 17:41:56 | INFO | Database initialized: database\sessions.db
+2025-11-19 17:41:56 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-19 17:41:56 | INFO | Stream service initialized
+2025-11-19 17:41:56 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-19 17:41:56 | INFO | Profile: default
+2025-11-19 17:41:56 | INFO | Last event ID: 10052
+2025-11-19 17:41:56 | INFO | SCTE-35 Monitor service initialized
+2025-11-19 17:41:57 | INFO | Monitoring service initialized
+2025-11-19 17:41:57 | INFO | Loaded 4 profiles
+2025-11-19 17:41:57 | INFO | Profile service initialized with 4 profiles
+2025-11-19 17:41:57 | INFO | Stream Analyzer service initialized
+2025-11-19 17:41:57 | INFO | Bitrate Monitor service initialized
+2025-11-19 17:41:57 | INFO | EPG service initialized with directory: epg
+2025-11-19 17:41:57 | INFO | Services initialized
+2025-11-19 17:42:12 | INFO | Main window initialized
+2025-11-19 17:42:12 | INFO | Application ready
+2025-11-19 17:42:12 | INFO | Starting application...
+2025-11-19 18:02:39 | INFO | Generated SCTE-35 marker: cue_out_10053_1763555559.xml (Event ID: 10053)
+2025-11-19 18:02:39 | INFO | Generated SCTE-35 marker: cue_in_10054_1763555559.xml (Event ID: 10054)
+2025-11-19 18:02:39 | INFO | Generated CUE pair: OUT=10053, IN=10054
+2025-11-19 18:02:51 | INFO | Starting stream session: 7645fa0a-d092-46b7-bea5-f5b767c4b1bd
+2025-11-19 18:02:51 | INFO | TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10054_1763555559.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-19 18:02:52 | INFO | TSDuck process started: PID 44740
+2025-11-19 18:03:03 | INFO | TSDuck process started: PID 45192
+2025-11-19 18:03:16 | INFO | TSDuck process started: PID 42956
+2025-11-19 18:03:29 | INFO | TSDuck process started: PID 44984
+2025-11-19 18:03:39 | INFO | TSDuck process started: PID 50052
+2025-11-19 18:03:49 | INFO | TSDuck process started: PID 46660
+2025-11-19 18:03:59 | INFO | TSDuck process started: PID 34832
+2025-11-19 18:04:09 | INFO | TSDuck process started: PID 48244
+2025-11-19 18:04:19 | INFO | TSDuck process started: PID 19664
+2025-11-19 18:04:28 | INFO | TSDuck process started: PID 15008
+2025-11-19 18:43:40 | INFO | TSDuck process started: PID 26504
+2025-11-19 18:44:12 | INFO | TSDuck process started: PID 43952
+2025-11-19 19:19:11 | INFO | EPG service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmp2_7z8fbs\epg
+2025-11-19 19:19:11 | INFO | Generated EIT file: eit_1_1763560151.xml
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmp7dbnqe8g\markers
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10023
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: cue_out_10024_1763560151.xml (Event ID: 10024)
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: cue_out_10025_1763560151.xml (Event ID: 10025)
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: cue_out_10026_1763560151.xml (Event ID: 10026)
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmpstm7ssyi\markers
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10023
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: preroll_10023_1763560151.xml (Event ID: 10023)
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10027
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: preroll_10028_1763560151.xml (Event ID: 10028)
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: preroll_10029_1763560151.xml (Event ID: 10029)
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10029
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10029
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10029
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10029
+2025-11-19 19:19:11 | INFO | Generated SCTE-35 marker: preroll_10023_1763560151.xml (Event ID: 10023)
+2025-11-19 19:19:11 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:19:11 | INFO | Profile: test_profile
+2025-11-19 19:19:11 | INFO | Last event ID: 10029
+2025-11-19 19:23:14 | INFO | EPG service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmp22b_am69\epg
+2025-11-19 19:23:14 | INFO | Generated EIT file: eit_1_1763560394.xml
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmppua6fds8\markers
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10023
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: cue_out_10024_1763560394.xml (Event ID: 10024)
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: cue_out_10025_1763560394.xml (Event ID: 10025)
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: cue_out_10026_1763560394.xml (Event ID: 10026)
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmpp2yiizys\markers
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10023
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: preroll_10023_1763560394.xml (Event ID: 10023)
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10029
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: preroll_10030_1763560394.xml (Event ID: 10030)
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: preroll_10031_1763560394.xml (Event ID: 10031)
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10031
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10031
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10031
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10031
+2025-11-19 19:23:14 | INFO | Generated SCTE-35 marker: preroll_10023_1763560394.xml (Event ID: 10023)
+2025-11-19 19:23:14 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:14 | INFO | Profile: test_profile
+2025-11-19 19:23:14 | INFO | Last event ID: 10031
+2025-11-19 19:23:27 | INFO | EPG service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmpil826p0g\epg
+2025-11-19 19:23:27 | INFO | Generated EIT file: eit_1_1763560407.xml
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmpevsedkxg\markers
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10023
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: cue_out_10024_1763560407.xml (Event ID: 10024)
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: cue_out_10025_1763560407.xml (Event ID: 10025)
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: cue_out_10026_1763560407.xml (Event ID: 10026)
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: C:\Users\LIVEPC~1\AppData\Local\Temp\tmp123b84ek\markers
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10023
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: preroll_10023_1763560407.xml (Event ID: 10023)
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10031
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: preroll_10032_1763560407.xml (Event ID: 10032)
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: preroll_10033_1763560407.xml (Event ID: 10033)
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10033
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10033
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10033
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10033
+2025-11-19 19:23:27 | INFO | Generated SCTE-35 marker: preroll_10023_1763560407.xml (Event ID: 10023)
+2025-11-19 19:23:27 | INFO | SCTE-35 service initialized with directory: scte35_final\test_profile
+2025-11-19 19:23:27 | INFO | Profile: test_profile
+2025-11-19 19:23:27 | INFO | Last event ID: 10033
+2025-11-19 19:32:58 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-19 19:32:58 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI284802\logo.ico
+2025-11-19 19:32:58 | INFO | Qt application initialized
+2025-11-19 19:32:58 | INFO | ============================================================
+2025-11-19 19:32:58 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-19 19:32:58 | INFO | ============================================================
+2025-11-19 19:32:58 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-19 19:32:58 | INFO | TSDuck installation verified
+2025-11-19 19:32:58 | INFO | Database schema initialized
+2025-11-19 19:32:58 | INFO | Database initialized: database\sessions.db
+2025-11-19 19:32:58 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-19 19:32:58 | INFO | Stream service initialized
+2025-11-19 19:32:58 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-19 19:32:58 | INFO | Profile: default
+2025-11-19 19:32:58 | INFO | Last event ID: 10054
+2025-11-19 19:32:58 | INFO | SCTE-35 Monitor service initialized
+2025-11-19 19:32:58 | INFO | Monitoring service initialized
+2025-11-19 19:32:58 | INFO | Loaded 4 profiles
+2025-11-19 19:32:58 | INFO | Profile service initialized with 4 profiles
+2025-11-19 19:32:58 | INFO | Stream Analyzer service initialized
+2025-11-19 19:32:58 | INFO | Bitrate Monitor service initialized
+2025-11-19 19:32:58 | INFO | EPG service initialized with directory: epg
+2025-11-19 19:32:58 | INFO | Services initialized
+2025-11-19 19:33:01 | INFO | Main window initialized
+2025-11-19 19:33:01 | INFO | Application ready
+2025-11-19 19:33:01 | INFO | Starting application...
+2025-11-20 14:04:35 | INFO | Application exited with code 0
+2025-11-20 14:04:35 | INFO | Application shutting down...

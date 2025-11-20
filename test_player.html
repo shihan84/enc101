@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBE-100 HLS/DASH Test Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+        input {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #444;
+            border-radius: 4px;
+            background: #333;
+            color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #4CAF50;
+            color: white;
+        }
+        .error {
+            background: #f44336;
+            color: white;
+        }
+        .info {
+            background: #2196F3;
+            color: white;
+        }
+        pre {
+            background: #000;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dashjs@latest/dist/dash.all.min.js"></script>
+</head>
+<body>
+    <h1>🌐 IBE-100 Test Player</h1>
+    <div class="container">
+        <h3>📺 Stream Configuration</h3>
+        <input type="text" id="streamUrl" placeholder="Enter stream URL (e.g., http://localhost:8000/output/hls/stream.m3u8)" value="http://localhost:8000/output/hls/stream.m3u8">
+        <br>
+        <select id="streamType">
+            <option value="hls">HLS (HTTP Live Streaming)</option>
+            <option value="dash">DASH</option>
+        </select>
+        <button onclick="loadStream()">▶️ Load Stream</button>
+        <button onclick="playStream()">▶️ Play</button>
+        <button onclick="pauseStream()">⏸️ Pause</button>
+        <button onclick="reloadStream()">🔄 Reload</button>
+        <div id="status"></div>
+    </div>
+    
+    <div class="container">
+        <video id="videoPlayer" controls></video>
+    </div>
+    
+    <div class="container">
+        <h3>📊 Stream Information</h3>
+        <pre id="streamInfo"></pre>
+    </div>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+        let hls;
+        let dashPlayer;
+
+        function setStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.className = `status ${type}`;
+            status.innerHTML = message;
+        }
+
+        function loadStream() {
+            const url = document.getElementById('streamUrl').value;
+            const type = document.getElementById('streamType').value;
+            
+            if (!url) {
+                setStatus('❌ Please enter a stream URL', 'error');
+                return;
+            }
+
+            setStatus('⏳ Loading stream...', 'info');
+
+            if (type === 'hls') {
+                if (hls) {
+                    hls.destroy();
+                }
+                
+                if (Hls.isSupported()) {
+                    hls = new Hls({ enableWorker: false });
+                    hls.loadSource(url);
+                    hls.attachMedia(video);
+                    
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        setStatus('✅ HLS stream loaded successfully! Ready to play.', 'success');
+                    });
+                    
+                    hls.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS Error:', data);
+                        if (data.fatal) {
+                            setStatus('❌ HLS Error: ' + data.type, 'error');
+                        }
+                    });
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    video.src = url;
+                    setStatus('✅ Using native HLS support', 'success');
+                } else {
+                    setStatus('❌ HLS not supported in this browser', 'error');
+                }
+            } else if (type === 'dash') {
+                if (dashPlayer) {
+                    dashPlayer.reset();
+                }
+                
+                if (typeof dash !== 'undefined') {
+                    dashPlayer = dash.MediaPlayer().create();
+                    dashPlayer.initialize(video, url, false);
+                    setStatus('✅ DASH player initialized', 'success');
+                    
+                    dashPlayer.on('streamInitialized', () => {
+                        setStatus('✅ DASH stream ready', 'success');
+                    });
+                    
+                    dashPlayer.on('error', (e) => {
+                        setStatus('❌ DASH Error: ' + e.error.code, 'error');
+                    });
+                } else {
+                    setStatus('❌ DASH.js not loaded', 'error');
+                }
+            }
+        }
+
+        function playStream() {
+            video.play().catch(err => {
+                setStatus('❌ Cannot play: ' + err.message, 'error');
+            });
+        }
+
+        function pauseStream() {
+            video.pause();
+        }
+
+        function reloadStream() {
+            loadStream();
+        }
+
+        // Load default stream on page load
+        window.onload = () => {
+            setStatus('💡 Enter a stream URL and select the output type, then click "Load Stream"', 'info');
+        };
+    </script>
+</body>
+</html>
+

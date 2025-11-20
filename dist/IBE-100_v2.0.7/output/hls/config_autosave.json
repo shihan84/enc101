@@ -1,0 +1,22 @@
+{
+  "input_type": "HLS (HTTP Live Streaming)",
+  "input_url": "https://cdn.itassist.one/BREAKING/NEWS/index.m3u8",
+  "output_type": "SRT",
+  "output_srt": "cdn.itassist.one:8888",
+  "output_hls": "output/hls",
+  "output_dash": "output/dash",
+  "enable_cors": true,
+  "segment_duration": 10,
+  "playlist_window": 5,
+  "service_name": "SCTE-35 Stream",
+  "provider_name": "ITAssist",
+  "service_id": 1,
+  "vpid": 256,
+  "apid": 257,
+  "scte35_pid": 500,
+  "stream_id": "#!::r=scte/scte,m=publish",
+  "latency": 2000,
+  "start_delay": 2000,
+  "inject_count": 1,
+  "inject_interval": 1000
+}

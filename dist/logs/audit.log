@@ -1,0 +1,133 @@
+2025-11-18 15:34:54 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:34:54 | INFO | Qt application initialized
+2025-11-18 15:34:54 | INFO | ============================================================
+2025-11-18 15:34:54 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:34:54 | INFO | ============================================================
+2025-11-18 15:34:54 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:34:54 | INFO | TSDuck installation verified
+2025-11-18 15:34:54 | INFO | Database schema initialized
+2025-11-18 15:34:54 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:34:54 | INFO | Stream service initialized
+2025-11-18 15:34:54 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:34:54 | INFO | Profile: default
+2025-11-18 15:34:54 | INFO | Last event ID: 10023
+2025-11-18 15:34:54 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:34:54 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:34:54 | INFO | Monitoring service initialized
+2025-11-18 15:34:54 | INFO | Loaded 3 profiles
+2025-11-18 15:34:54 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:34:54 | INFO | Stream Analyzer service initialized
+2025-11-18 15:34:54 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:34:54 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:34:54 | INFO | Services initialized
+2025-11-18 15:34:57 | INFO | Main window initialized
+2025-11-18 15:34:57 | INFO | Application ready
+2025-11-18 15:34:57 | INFO | Starting application...
+2025-11-18 15:35:07 | INFO | Starting stream session: b7f04fa3-02c6-4a74-8346-367deb7a2bca
+2025-11-18 15:35:08 | INFO | TSDuck process started: PID 35676
+2025-11-18 15:35:14 | INFO | TSDuck process started: PID 30808
+2025-11-18 15:35:21 | INFO | TSDuck process started: PID 32372
+2025-11-18 15:35:27 | INFO | TSDuck process started: PID 17132
+2025-11-18 15:35:33 | INFO | TSDuck process started: PID 29272
+2025-11-18 15:35:39 | INFO | TSDuck process started: PID 29040
+2025-11-18 15:35:45 | INFO | TSDuck process started: PID 29436
+2025-11-18 15:35:51 | INFO | TSDuck process started: PID 33692
+2025-11-18 15:35:58 | INFO | TSDuck process started: PID 24268
+2025-11-18 15:36:04 | INFO | TSDuck process started: PID 23392
+2025-11-18 15:36:10 | INFO | TSDuck process started: PID 29596
+2025-11-18 15:36:16 | INFO | TSDuck process started: PID 26616
+2025-11-18 15:36:22 | INFO | TSDuck process started: PID 9272
+2025-11-18 15:36:29 | INFO | TSDuck process started: PID 29552
+2025-11-18 15:36:35 | INFO | TSDuck process started: PID 34296
+2025-11-18 15:36:41 | INFO | TSDuck process started: PID 28316
+2025-11-18 15:36:47 | INFO | TSDuck process started: PID 32348
+2025-11-18 15:36:54 | INFO | TSDuck process started: PID 32692
+2025-11-18 15:37:00 | INFO | TSDuck process started: PID 2540
+2025-11-18 15:37:06 | INFO | TSDuck process started: PID 11372
+2025-11-18 15:37:13 | INFO | TSDuck process started: PID 21424
+2025-11-18 15:37:19 | INFO | TSDuck process started: PID 8880
+2025-11-18 15:37:26 | INFO | TSDuck process started: PID 25596
+2025-11-18 15:37:32 | INFO | TSDuck process started: PID 29288
+2025-11-18 15:37:38 | INFO | TSDuck process started: PID 22132
+2025-11-18 15:37:45 | INFO | TSDuck process started: PID 20356
+2025-11-18 15:37:51 | INFO | TSDuck process started: PID 32676
+2025-11-18 15:39:55 | INFO | Stopping stream...
+2025-11-18 15:39:55 | ERROR | Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "src\services\stream_service.py", line 123, in _run_stream
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 15:39:55 | INFO | Stream session ended: b7f04fa3-02c6-4a74-8346-367deb7a2bca
+2025-11-18 15:39:56 | INFO | Stream stopped
+2025-11-18 15:43:05 | INFO | Application exited with code 0
+2025-11-18 15:43:05 | INFO | Application shutting down...
+2025-11-18 15:48:58 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:48:59 | INFO | Qt application initialized
+2025-11-18 15:48:59 | INFO | ============================================================
+2025-11-18 15:48:59 | INFO | IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:48:59 | INFO | ============================================================
+2025-11-18 15:48:59 | INFO | TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:48:59 | INFO | TSDuck installation verified
+2025-11-18 15:48:59 | INFO | Database schema initialized
+2025-11-18 15:48:59 | INFO | Database initialized: database\sessions.db
+2025-11-18 15:48:59 | INFO | Stream service initialized
+2025-11-18 15:48:59 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:48:59 | INFO | Profile: default
+2025-11-18 15:48:59 | INFO | Last event ID: 10023
+2025-11-18 15:48:59 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:48:59 | INFO | SCTE-35 Monitor service initialized
+2025-11-18 15:48:59 | INFO | Monitoring service initialized
+2025-11-18 15:48:59 | INFO | Loaded 3 profiles
+2025-11-18 15:48:59 | INFO | Profile service initialized with 3 profiles
+2025-11-18 15:48:59 | INFO | Stream Analyzer service initialized
+2025-11-18 15:48:59 | INFO | Bitrate Monitor service initialized
+2025-11-18 15:48:59 | INFO | EPG service initialized with directory: epg
+2025-11-18 15:48:59 | INFO | Services initialized
+2025-11-18 15:49:01 | INFO | Main window initialized
+2025-11-18 15:49:01 | INFO | Application ready
+2025-11-18 15:49:01 | INFO | Starting application...
+2025-11-18 15:49:18 | INFO | Generated SCTE-35 marker: cue_out_10024_1763461158.xml (Event ID: 10024)
+2025-11-18 15:49:18 | INFO | Generated SCTE-35 marker: cue_in_10025_1763461158.xml (Event ID: 10025)
+2025-11-18 15:49:18 | INFO | Generated CUE pair: OUT=10024, IN=10025
+2025-11-18 15:49:30 | INFO | Starting stream session: bc932e4c-e812-4d8e-b133-c028131d6ab7
+2025-11-18 15:49:31 | INFO | TSDuck process started: PID 27456
+2025-11-18 15:51:49 | INFO | Application exited with code 0
+2025-11-18 15:51:49 | INFO | Application shutting down...
+2025-11-20 16:16:39 | INFO | Initializing IBE-100 Enterprise v3.0.0
+2025-11-20 16:16:39 | INFO | Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\logo.ico
+2025-11-20 16:16:39 | INFO | Qt application initialized
+2025-11-20 16:16:39 | INFO | ============================================================
+2025-11-20 16:16:39 | INFO | IBE-210 v2.1.0 Enterprise Starting...
+2025-11-20 16:16:39 | INFO | ============================================================
+2025-11-20 16:16:39 | INFO | Using bundled TSDuck: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\bin\tsp.exe
+2025-11-20 16:16:39 | INFO | TSDuck service initialized (source: bundled)
+2025-11-20 16:16:39 | INFO | TSDuck installation verified
+2025-11-20 16:16:39 | INFO | Database schema initialized
+2025-11-20 16:16:39 | INFO | Database initialized: database\sessions.db
+2025-11-20 16:16:39 | INFO | Telegram service initialized (disabled - no token/chat_id)
+2025-11-20 16:16:39 | INFO | Stream service initialized
+2025-11-20 16:16:39 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-20 16:16:39 | INFO | Profile: default
+2025-11-20 16:16:39 | INFO | Last event ID: 10025
+2025-11-20 16:16:39 | INFO | SCTE-35 Monitor service initialized
+2025-11-20 16:16:39 | INFO | Monitoring service initialized
+2025-11-20 16:16:39 | INFO | Loaded 3 profiles
+2025-11-20 16:16:39 | INFO | Profile service initialized with 3 profiles
+2025-11-20 16:16:39 | INFO | Stream Analyzer service initialized
+2025-11-20 16:16:39 | INFO | Bitrate Monitor service initialized
+2025-11-20 16:16:39 | INFO | EPG service initialized with directory: epg
+2025-11-20 16:16:39 | INFO | Backup manager initialized
+2025-11-20 16:16:39 | INFO | Services initialized
+2025-11-20 16:16:41 | INFO | Main window initialized
+2025-11-20 16:16:42 | INFO | Application ready
+2025-11-20 16:16:42 | INFO | Starting application...
+2025-11-20 16:18:53 | INFO | Generated SCTE-35 marker: cue_out_10026_1763635733.xml (Event ID: 10026)
+2025-11-20 16:18:53 | INFO | Generated SCTE-35 marker: cue_in_10027_1763635733.xml (Event ID: 10027)
+2025-11-20 16:18:53 | INFO | Generated CUE pair: OUT=10026, IN=10027
+2025-11-20 16:19:03 | INFO | Starting stream session: 93dae787-cea5-44b7-8fbb-e067aaf46acb
+2025-11-20 16:19:03 | INFO | TSDuck command: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10027_1763635733.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-20 16:19:04 | INFO | TSDuck process started: PID 50044
+2025-11-20 16:19:30 | INFO | Stopping stream...
+2025-11-20 16:19:30 | INFO | Stream session ended: 93dae787-cea5-44b7-8fbb-e067aaf46acb
+2025-11-20 16:19:31 | INFO | Stream stopped
+2025-11-20 16:19:38 | INFO | Application exited with code 0
+2025-11-20 16:19:38 | INFO | Application shutting down...

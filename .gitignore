@@ -1,0 +1,5 @@
+﻿# TSDuck binaries
+tsduck/bin/
+tsduck/plugins/
+tsduck/libs/
+downloads/

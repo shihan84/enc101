@@ -1,0 +1,38 @@
+2025-11-18 15:56:53 - StreamService - ERROR - logger - error:136 - Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "E:\NEW DOWNLOADS\Enc-100\Encoder-100\IBE-100_v3.0_ENTERPRISE\src\services\stream_service.py", line 123, in _run_stream
+    exit_code = self._process.returncode
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 17:24:40 - StreamService - ERROR - logger - error:136 - Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "src\services\stream_service.py", line 147, in _run_stream
+    self._process = None
+                ^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:04:19 - StreamService - ERROR - logger - error:136 - Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:36:19 - StreamService - ERROR - logger - error:136 - Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-18 18:49:04 - StreamService - ERROR - logger - error:136 - Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-19 17:01:45 - StreamService - ERROR - logger - error:136 - Error waiting for process: 'NoneType' object has no attribute 'returncode'
+2025-11-19 17:06:19 - TelegramService - ERROR - logger - error:136 - Telegram send error: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+Traceback (most recent call last):
+  File "src\services\telegram_service.py", line 94, in send_message
+    response = requests.post(url, json=payload, timeout=10)
+  File "requests\api.py", line 115, in post
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 616, in send
+  File "requests\adapters.py", line 303, in cert_verify
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+2025-11-19 17:06:21 - TelegramService - ERROR - logger - error:136 - Telegram send error: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem
+Traceback (most recent call last):
+  File "src\services\telegram_service.py", line 94, in send_message
+    response = requests.post(url, json=payload, timeout=10)
+  File "requests\api.py", line 115, in post
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 616, in send
+  File "requests\adapters.py", line 303, in cert_verify
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI355162\certifi\cacert.pem

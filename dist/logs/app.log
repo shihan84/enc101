@@ -1,0 +1,174 @@
+2025-11-18 15:34:54 - IBE100 - INFO - logger - info:128 - Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:34:54 - IBE100 - INFO - logger - info:128 - Qt application initialized
+2025-11-18 15:34:54 - Main - INFO - logger - info:128 - ============================================================
+2025-11-18 15:34:54 - Main - INFO - logger - info:128 - IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:34:54 - Main - INFO - logger - info:128 - ============================================================
+2025-11-18 15:34:54 - TSDuckService - INFO - logger - info:128 - TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:34:54 - TSDuckService - INFO - logger - info:128 - TSDuck installation verified
+2025-11-18 15:34:54 - Database - INFO - logger - info:128 - Database schema initialized
+2025-11-18 15:34:54 - Database - INFO - logger - info:128 - Database initialized: database\sessions.db
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: database
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: session_repo
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: tsduck
+2025-11-18 15:34:54 - StreamService - INFO - logger - info:128 - Stream service initialized
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream
+2025-11-18 15:34:54 - SCTE35Service - INFO - logger - info:128 - SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:34:54 - SCTE35Service - INFO - logger - info:128 - Profile: default
+2025-11-18 15:34:54 - SCTE35Service - INFO - logger - info:128 - Last event ID: 10023
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35
+2025-11-18 15:34:54 - TelegramService - INFO - logger - info:128 - Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: telegram
+2025-11-18 15:34:54 - SCTE35Monitor - INFO - logger - info:128 - SCTE-35 Monitor service initialized
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35_monitor
+2025-11-18 15:34:54 - MonitoringService - INFO - logger - info:128 - Monitoring service initialized
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: monitoring
+2025-11-18 15:34:54 - ProfileService - INFO - logger - info:128 - Loaded 3 profiles
+2025-11-18 15:34:54 - ProfileService - INFO - logger - info:128 - Profile service initialized with 3 profiles
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: profile
+2025-11-18 15:34:54 - StreamAnalyzer - INFO - logger - info:128 - Stream Analyzer service initialized
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream_analyzer
+2025-11-18 15:34:54 - BitrateMonitor - INFO - logger - info:128 - Bitrate Monitor service initialized
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: bitrate_monitor
+2025-11-18 15:34:54 - EPGService - INFO - logger - info:128 - EPG service initialized with directory: epg
+2025-11-18 15:34:54 - IBE100 - DEBUG - logger - debug:124 - Registered service: epg
+2025-11-18 15:34:54 - Main - INFO - logger - info:128 - Services initialized
+2025-11-18 15:34:57 - IBE100 - INFO - logger - info:128 - Main window initialized
+2025-11-18 15:34:57 - Main - INFO - logger - info:128 - Application ready
+2025-11-18 15:34:57 - IBE100 - INFO - logger - info:128 - Starting application...
+2025-11-18 15:35:07 - StreamService - INFO - logger - info:128 - Starting stream session: b7f04fa3-02c6-4a74-8346-367deb7a2bca
+2025-11-18 15:35:07 - StreamService - DEBUG - logger - debug:124 - TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 15:35:08 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 35676
+2025-11-18 15:35:14 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 30808
+2025-11-18 15:35:21 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 32372
+2025-11-18 15:35:27 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 17132
+2025-11-18 15:35:33 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29272
+2025-11-18 15:35:39 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29040
+2025-11-18 15:35:45 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29436
+2025-11-18 15:35:51 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 33692
+2025-11-18 15:35:58 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 24268
+2025-11-18 15:36:04 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 23392
+2025-11-18 15:36:10 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29596
+2025-11-18 15:36:16 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 26616
+2025-11-18 15:36:22 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 9272
+2025-11-18 15:36:29 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29552
+2025-11-18 15:36:35 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 34296
+2025-11-18 15:36:41 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 28316
+2025-11-18 15:36:47 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 32348
+2025-11-18 15:36:54 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 32692
+2025-11-18 15:37:00 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 2540
+2025-11-18 15:37:06 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 11372
+2025-11-18 15:37:13 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 21424
+2025-11-18 15:37:19 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 8880
+2025-11-18 15:37:26 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 25596
+2025-11-18 15:37:32 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 29288
+2025-11-18 15:37:38 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 22132
+2025-11-18 15:37:45 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 20356
+2025-11-18 15:37:51 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 32676
+2025-11-18 15:39:55 - StreamService - INFO - logger - info:128 - Stopping stream...
+2025-11-18 15:39:55 - StreamService - ERROR - logger - error:136 - Stream error: 'NoneType' object has no attribute 'returncode'
+Traceback (most recent call last):
+  File "src\services\stream_service.py", line 123, in _run_stream
+AttributeError: 'NoneType' object has no attribute 'returncode'
+2025-11-18 15:39:55 - StreamService - INFO - logger - info:128 - Stream session ended: b7f04fa3-02c6-4a74-8346-367deb7a2bca
+2025-11-18 15:39:56 - StreamService - INFO - logger - info:128 - Stream stopped
+2025-11-18 15:43:05 - IBE100 - INFO - logger - info:128 - Application exited with code 0
+2025-11-18 15:43:05 - Main - INFO - logger - info:128 - Application shutting down...
+2025-11-18 15:48:58 - IBE100 - INFO - logger - info:128 - Initializing IBE-100 Enterprise v3.0.0
+2025-11-18 15:48:59 - IBE100 - INFO - logger - info:128 - Qt application initialized
+2025-11-18 15:48:59 - Main - INFO - logger - info:128 - ============================================================
+2025-11-18 15:48:59 - Main - INFO - logger - info:128 - IBE-100 v3.0 Enterprise Starting...
+2025-11-18 15:48:59 - Main - INFO - logger - info:128 - ============================================================
+2025-11-18 15:48:59 - TSDuckService - INFO - logger - info:128 - TSDuck service initialized with path: C:\Program Files\TSDuck\bin\tsp.exe
+2025-11-18 15:48:59 - TSDuckService - INFO - logger - info:128 - TSDuck installation verified
+2025-11-18 15:48:59 - Database - INFO - logger - info:128 - Database schema initialized
+2025-11-18 15:48:59 - Database - INFO - logger - info:128 - Database initialized: database\sessions.db
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: database
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: session_repo
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: tsduck
+2025-11-18 15:48:59 - StreamService - INFO - logger - info:128 - Stream service initialized
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream
+2025-11-18 15:48:59 - SCTE35Service - INFO - logger - info:128 - SCTE-35 service initialized with directory: scte35_final
+2025-11-18 15:48:59 - SCTE35Service - INFO - logger - info:128 - Profile: default
+2025-11-18 15:48:59 - SCTE35Service - INFO - logger - info:128 - Last event ID: 10023
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35
+2025-11-18 15:48:59 - TelegramService - INFO - logger - info:128 - Telegram service initialized (disabled - no token/chat_id)
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: telegram
+2025-11-18 15:48:59 - SCTE35Monitor - INFO - logger - info:128 - SCTE-35 Monitor service initialized
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35_monitor
+2025-11-18 15:48:59 - MonitoringService - INFO - logger - info:128 - Monitoring service initialized
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: monitoring
+2025-11-18 15:48:59 - ProfileService - INFO - logger - info:128 - Loaded 3 profiles
+2025-11-18 15:48:59 - ProfileService - INFO - logger - info:128 - Profile service initialized with 3 profiles
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: profile
+2025-11-18 15:48:59 - StreamAnalyzer - INFO - logger - info:128 - Stream Analyzer service initialized
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream_analyzer
+2025-11-18 15:48:59 - BitrateMonitor - INFO - logger - info:128 - Bitrate Monitor service initialized
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: bitrate_monitor
+2025-11-18 15:48:59 - EPGService - INFO - logger - info:128 - EPG service initialized with directory: epg
+2025-11-18 15:48:59 - IBE100 - DEBUG - logger - debug:124 - Registered service: epg
+2025-11-18 15:48:59 - Main - INFO - logger - info:128 - Services initialized
+2025-11-18 15:49:01 - IBE100 - INFO - logger - info:128 - Main window initialized
+2025-11-18 15:49:01 - Main - INFO - logger - info:128 - Application ready
+2025-11-18 15:49:01 - IBE100 - INFO - logger - info:128 - Starting application...
+2025-11-18 15:49:18 - SCTE35Service - INFO - logger - info:128 - Generated SCTE-35 marker: cue_out_10024_1763461158.xml (Event ID: 10024)
+2025-11-18 15:49:18 - SCTE35Service - INFO - logger - info:128 - Generated SCTE-35 marker: cue_in_10025_1763461158.xml (Event ID: 10025)
+2025-11-18 15:49:18 - SCTE35Service - INFO - logger - info:128 - Generated CUE pair: OUT=10024, IN=10025
+2025-11-18 15:49:30 - StreamService - INFO - logger - info:128 - Starting stream session: bc932e4c-e812-4d8e-b133-c028131d6ab7
+2025-11-18 15:49:30 - StreamService - DEBUG - logger - debug:124 - TSDuck command: C:\Program Files\TSDuck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10025_1763461158.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-18 15:49:31 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 27456
+2025-11-18 15:51:49 - IBE100 - INFO - logger - info:128 - Application exited with code 0
+2025-11-18 15:51:49 - Main - INFO - logger - info:128 - Application shutting down...
+2025-11-20 16:16:39 - IBE100 - INFO - logger - info:128 - Initializing IBE-100 Enterprise v3.0.0
+2025-11-20 16:16:39 - IBE100 - INFO - logger - info:128 - Application icon set: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\logo.ico
+2025-11-20 16:16:39 - IBE100 - INFO - logger - info:128 - Qt application initialized
+2025-11-20 16:16:39 - Main - INFO - logger - info:128 - ============================================================
+2025-11-20 16:16:39 - Main - INFO - logger - info:128 - IBE-210 v2.1.0 Enterprise Starting...
+2025-11-20 16:16:39 - Main - INFO - logger - info:128 - ============================================================
+2025-11-20 16:16:39 - TSDuckService - INFO - logger - info:128 - Using bundled TSDuck: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\bin\tsp.exe
+2025-11-20 16:16:39 - TSDuckService - DEBUG - logger - debug:124 - Added TSDuck plugin path to PATH: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\plugins
+2025-11-20 16:16:39 - TSDuckService - DEBUG - logger - debug:124 - Set TSDUCK_PLUGIN_PATH: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\plugins
+2025-11-20 16:16:39 - TSDuckService - INFO - logger - info:128 - TSDuck service initialized (source: bundled)
+2025-11-20 16:16:39 - TSDuckService - INFO - logger - info:128 - TSDuck installation verified
+2025-11-20 16:16:39 - Database - INFO - logger - info:128 - Database schema initialized
+2025-11-20 16:16:39 - Database - INFO - logger - info:128 - Database initialized: database\sessions.db
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: database
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: session_repo
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: tsduck
+2025-11-20 16:16:39 - TelegramService - INFO - logger - info:128 - Telegram service initialized (disabled - no token/chat_id)
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: telegram
+2025-11-20 16:16:39 - StreamService - INFO - logger - info:128 - Stream service initialized
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream
+2025-11-20 16:16:39 - SCTE35Service - INFO - logger - info:128 - SCTE-35 service initialized with directory: scte35_final
+2025-11-20 16:16:39 - SCTE35Service - INFO - logger - info:128 - Profile: default
+2025-11-20 16:16:39 - SCTE35Service - INFO - logger - info:128 - Last event ID: 10025
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35
+2025-11-20 16:16:39 - SCTE35Monitor - INFO - logger - info:128 - SCTE-35 Monitor service initialized
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: scte35_monitor
+2025-11-20 16:16:39 - MonitoringService - INFO - logger - info:128 - Monitoring service initialized
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: monitoring
+2025-11-20 16:16:39 - ProfileService - INFO - logger - info:128 - Loaded 3 profiles
+2025-11-20 16:16:39 - ProfileService - INFO - logger - info:128 - Profile service initialized with 3 profiles
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: profile
+2025-11-20 16:16:39 - StreamAnalyzer - INFO - logger - info:128 - Stream Analyzer service initialized
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: stream_analyzer
+2025-11-20 16:16:39 - BitrateMonitor - INFO - logger - info:128 - Bitrate Monitor service initialized
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: bitrate_monitor
+2025-11-20 16:16:39 - EPGService - INFO - logger - info:128 - EPG service initialized with directory: epg
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: epg
+2025-11-20 16:16:39 - IBE100 - DEBUG - logger - debug:124 - Registered service: backup
+2025-11-20 16:16:39 - Main - INFO - logger - info:128 - Backup manager initialized
+2025-11-20 16:16:39 - Main - INFO - logger - info:128 - Services initialized
+2025-11-20 16:16:41 - IBE100 - INFO - logger - info:128 - Main window initialized
+2025-11-20 16:16:42 - Main - INFO - logger - info:128 - Application ready
+2025-11-20 16:16:42 - IBE100 - INFO - logger - info:128 - Starting application...
+2025-11-20 16:18:53 - SCTE35Service - INFO - logger - info:128 - Generated SCTE-35 marker: cue_out_10026_1763635733.xml (Event ID: 10026)
+2025-11-20 16:18:53 - SCTE35Service - INFO - logger - info:128 - Generated SCTE-35 marker: cue_in_10027_1763635733.xml (Event ID: 10027)
+2025-11-20 16:18:53 - SCTE35Service - INFO - logger - info:128 - Generated CUE pair: OUT=10026, IN=10027
+2025-11-20 16:19:03 - StreamService - INFO - logger - info:128 - Starting stream session: 93dae787-cea5-44b7-8fbb-e067aaf46acb
+2025-11-20 16:19:03 - StreamService - INFO - logger - info:128 - TSDuck command: C:\Users\LIVEPC~1\AppData\Local\Temp\_MEI312922\tsduck\bin\tsp.exe -I hls https://cdn.itassist.one/BREAKING/NEWS/index.m3u8 -P sdt --service 1 --name SCTE-35 Stream --provider ITAssist -P remap 211=256 221=257 -P pmt --service 1 --add-pid 256/0x1b --add-pid 257/0x0f --add-pid 500/0x86 -P spliceinject --pid 500 --pts-pid 256 --files scte35_final\cue_in_10027_1763635733.xml --inject-count 1 --inject-interval 1000 --start-delay 2000 -P splicemonitor --json -P analyze --interval 1 -O srt --caller cdn.itassist.one:8888 --latency 2000 --streamid #!::r=scte/scte,m=publish
+2025-11-20 16:19:04 - TSDuckService - INFO - logger - info:128 - TSDuck process started: PID 50044
+2025-11-20 16:19:30 - StreamService - INFO - logger - info:128 - Stopping stream...
+2025-11-20 16:19:30 - StreamService - INFO - logger - info:128 - Stream session ended: 93dae787-cea5-44b7-8fbb-e067aaf46acb
+2025-11-20 16:19:31 - StreamService - INFO - logger - info:128 - Stream stopped
+2025-11-20 16:19:38 - IBE100 - INFO - logger - info:128 - Application exited with code 0
+2025-11-20 16:19:38 - Main - INFO - logger - info:128 - Application shutting down...
