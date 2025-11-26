@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-IBE-210 v2.2.3 Enterprise - Main Entry Point
+IBE-210 v2.2.5 Enterprise - Main Entry Point
 Enterprise-grade broadcast encoder with bundled TSDuck support
 """
 

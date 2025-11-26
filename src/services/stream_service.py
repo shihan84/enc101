@@ -126,15 +126,24 @@ class StreamService:
             )
             
             if use_dynamic_generation:
-                # Ensure profile is synced with SCTE35Service before starting generation
-                # The dynamic marker service should sync with SCTE35Service profile
+                # CRITICAL: Ensure profile is synced with SCTE35Service BEFORE starting generation
+                # The dynamic marker service must use the same profile as SCTE35Service
                 if hasattr(self.dynamic_marker_service, 'scte35_service'):
                     scte35_service = self.dynamic_marker_service.scte35_service
                     if hasattr(scte35_service, 'profile_name'):
                         current_profile = scte35_service.profile_name
-                        if current_profile != self.dynamic_marker_service.profile_name:
-                            self.logger.info(f"Syncing dynamic marker service profile to: {current_profile}")
+                        old_profile = self.dynamic_marker_service.profile_name
+                        self.logger.info(f"Checking profile sync: SCTE35Service='{current_profile}', DynamicMarkerService='{old_profile}'")
+                        if current_profile != old_profile:
+                            self.logger.warning(f"Profile mismatch detected! Syncing dynamic marker service profile from '{old_profile}' to '{current_profile}'")
                             self.dynamic_marker_service.set_profile(current_profile)
+                            self.logger.info(f"Profile sync complete. New directory: {self.dynamic_marker_service.get_dynamic_markers_dir()}")
+                        else:
+                            self.logger.info(f"Profile already synced: '{current_profile}'")
+                    else:
+                        self.logger.warning("SCTE35Service does not have profile_name attribute")
+                else:
+                    self.logger.warning("Dynamic marker service does not have scte35_service attribute")
                 
                 # Start dynamic marker generation
                 self.logger.info("Starting dynamic marker generation for continuous injection")
@@ -149,21 +158,39 @@ class StreamService:
                 )
                 # Use dynamic markers directory instead of single file
                 # Get directory AFTER generation starts to ensure it's the correct profile directory
+                # CRITICAL: Re-resolve directory to ensure we have the latest path
                 marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
                 profile_dir = self.dynamic_marker_service.get_profile_directory()
                 
                 # Verify the path is correct (should include profile name if not default)
                 expected_path_str = str(marker_path)
                 profile_name = self.dynamic_marker_service.profile_name
+                
+                # CRITICAL CHECK: Verify profile is in path
                 if profile_name and profile_name != "default":
                     # Check if profile name (sanitized) is in the path
                     safe_name = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
                     safe_name = safe_name.replace(' ', '_')
-                    if safe_name.lower() not in expected_path_str.lower():
-                        self.logger.warning(f"Profile directory path may be incorrect!")
-                        self.logger.warning(f"Expected profile '{profile_name}' (sanitized: '{safe_name}') in path")
-                        self.logger.warning(f"Current path: {expected_path_str}")
-                        self.logger.warning(f"This may cause markers to be generated in wrong directory!")
+                    path_lower = expected_path_str.lower()
+                    safe_name_lower = safe_name.lower()
+                    
+                    if safe_name_lower not in path_lower:
+                        self.logger.error(f"❌ CRITICAL ERROR: PROFILE DIRECTORY PATH IS INCORRECT!")
+                        self.logger.error(f"Profile: '{profile_name}' (sanitized: '{safe_name}')")
+                        self.logger.error(f"Current path: {expected_path_str}")
+                        self.logger.error(f"Expected path to contain: '{safe_name}'")
+                        self.logger.error(f"This will cause markers to be generated in wrong directory!")
+                        self.logger.error(f"TSDuck will NOT find markers in this path!")
+                        self.logger.error(f"")
+                        self.logger.error(f"SOLUTION:")
+                        self.logger.error(f"1. Stop the stream")
+                        self.logger.error(f"2. Load profile '{profile_name}' in Configuration tab")
+                        self.logger.error(f"3. Wait for confirmation message")
+                        self.logger.error(f"4. Then start stream again")
+                        if output_callback:
+                            output_callback(f"[ERROR] Profile directory path incorrect! Please load profile '{profile_name}' first.")
+                    else:
+                        self.logger.info(f"✅ Profile directory path verified: contains '{safe_name}'")
                 
                 self.logger.info(f"Profile: {profile_name}")
                 self.logger.info(f"Profile directory: {profile_dir}")
