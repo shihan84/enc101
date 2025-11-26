@@ -47,16 +47,199 @@
   'src.utils.crash_handler',
   'cryptography',
   'cryptography.fernet',
+  'cryptography.hazmat',
+  'cryptography.hazmat.primitives',
+  'cryptography.hazmat.primitives.ciphers',
+  'cryptography.hazmat.primitives.kdf',
+  'cryptography.hazmat.backends',
+  'cryptography.hazmat.backends.openssl',
+  'cryptography.hazmat.backends.openssl.backend',
+  'cryptography.hazmat.bindings',
+  'cryptography.hazmat.bindings.openssl',
+  'cryptography.utils',
   'psutil',
   'PyQt6',
   'PyQt6.QtCore',
   'PyQt6.QtWidgets',
-  'PyQt6.QtGui'],
- [('E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks',
+  'PyQt6.QtGui',
+  'src',
+  'src.api',
+  'src.api.prometheus_metrics',
+  'src.api.routes',
+  'src.api.server',
+  'src.core',
+  'src.core.application',
+  'src.core.config',
+  'src.core.logger',
+  'src.database',
+  'src.database.database',
+  'src.models',
+  'src.models.profile',
+  'src.models.scte35_marker',
+  'src.models.session',
+  'src.models.stream_config',
+  'src.services',
+  'src.services.bitrate_monitor_service',
+  'src.services.dynamic_marker_service',
+  'src.services.epg_service',
+  'src.services.monitoring_service',
+  'src.services.profile_service',
+  'src.services.scte35_monitor_service',
+  'src.services.scte35_service',
+  'src.services.stream_analyzer_service',
+  'src.services.stream_service',
+  'src.services.telegram_service',
+  'src.services.tsduck_service',
+  'src.ui',
+  'src.ui.main_window',
+  'src.ui.themes',
+  'src.ui.themes.glassmorphism',
+  'src.ui.themes.modern_theme',
+  'src.ui.widgets',
+  'src.ui.widgets.bitrate_monitor_widget',
+  'src.ui.widgets.dashboard_widget',
+  'src.ui.widgets.epg_editor_widget',
+  'src.ui.widgets.modern_button',
+  'src.ui.widgets.modern_stat_card',
+  'src.ui.widgets.monitoring_widget',
+  'src.ui.widgets.scte35_monitor_widget',
+  'src.ui.widgets.scte35_widget',
+  'src.ui.widgets.stream_config_widget',
+  'src.ui.widgets.stream_quality_widget',
+  'src.utils',
+  'src.utils.backup_manager',
+  'src.utils.crash_handler',
+  'src.utils.exceptions',
+  'src.utils.helpers',
+  'src.utils.profile_config_manager',
+  'src.utils.rate_limiter',
+  'src.utils.validators',
+  'src.services',
+  'src.services.bitrate_monitor_service',
+  'src.services.dynamic_marker_service',
+  'src.services.epg_service',
+  'src.services.monitoring_service',
+  'src.services.profile_service',
+  'src.services.scte35_monitor_service',
+  'src.services.scte35_service',
+  'src.services.stream_analyzer_service',
+  'src.services.stream_service',
+  'src.services.telegram_service',
+  'src.services.tsduck_service',
+  'src.models',
+  'src.models.profile',
+  'src.models.scte35_marker',
+  'src.models.session',
+  'src.models.stream_config',
+  'src.ui',
+  'src.ui.main_window',
+  'src.ui.themes',
+  'src.ui.themes.glassmorphism',
+  'src.ui.themes.modern_theme',
+  'src.ui.widgets',
+  'src.ui.widgets.bitrate_monitor_widget',
+  'src.ui.widgets.dashboard_widget',
+  'src.ui.widgets.epg_editor_widget',
+  'src.ui.widgets.modern_button',
+  'src.ui.widgets.modern_stat_card',
+  'src.ui.widgets.monitoring_widget',
+  'src.ui.widgets.scte35_monitor_widget',
+  'src.ui.widgets.scte35_widget',
+  'src.ui.widgets.stream_config_widget',
+  'src.ui.widgets.stream_quality_widget',
+  'src.ui.widgets',
+  'src.ui.widgets.bitrate_monitor_widget',
+  'src.ui.widgets.dashboard_widget',
+  'src.ui.widgets.epg_editor_widget',
+  'src.ui.widgets.modern_button',
+  'src.ui.widgets.modern_stat_card',
+  'src.ui.widgets.monitoring_widget',
+  'src.ui.widgets.scte35_monitor_widget',
+  'src.ui.widgets.scte35_widget',
+  'src.ui.widgets.stream_config_widget',
+  'src.ui.widgets.stream_quality_widget',
+  'cryptography',
+  'cryptography.__about__',
+  'cryptography.exceptions',
+  'cryptography.fernet',
+  'cryptography.hazmat',
+  'cryptography.hazmat._oid',
+  'cryptography.hazmat.asn1',
+  'cryptography.hazmat.asn1.asn1',
+  'cryptography.hazmat.backends',
+  'cryptography.hazmat.backends.openssl',
+  'cryptography.hazmat.backends.openssl.backend',
+  'cryptography.hazmat.bindings',
+  'cryptography.hazmat.bindings._rust',
+  'cryptography.hazmat.bindings.openssl',
+  'cryptography.hazmat.bindings.openssl._conditional',
+  'cryptography.hazmat.bindings.openssl.binding',
+  'cryptography.hazmat.decrepit',
+  'cryptography.hazmat.decrepit.ciphers',
+  'cryptography.hazmat.decrepit.ciphers.algorithms',
+  'cryptography.hazmat.primitives',
+  'cryptography.hazmat.primitives._asymmetric',
+  'cryptography.hazmat.primitives._cipheralgorithm',
+  'cryptography.hazmat.primitives._serialization',
+  'cryptography.hazmat.primitives.asymmetric',
+  'cryptography.hazmat.primitives.asymmetric.dh',
+  'cryptography.hazmat.primitives.asymmetric.dsa',
+  'cryptography.hazmat.primitives.asymmetric.ec',
+  'cryptography.hazmat.primitives.asymmetric.ed25519',
+  'cryptography.hazmat.primitives.asymmetric.ed448',
+  'cryptography.hazmat.primitives.asymmetric.padding',
+  'cryptography.hazmat.primitives.asymmetric.rsa',
+  'cryptography.hazmat.primitives.asymmetric.types',
+  'cryptography.hazmat.primitives.asymmetric.utils',
+  'cryptography.hazmat.primitives.asymmetric.x25519',
+  'cryptography.hazmat.primitives.asymmetric.x448',
+  'cryptography.hazmat.primitives.ciphers',
+  'cryptography.hazmat.primitives.ciphers.aead',
+  'cryptography.hazmat.primitives.ciphers.algorithms',
+  'cryptography.hazmat.primitives.ciphers.base',
+  'cryptography.hazmat.primitives.ciphers.modes',
+  'cryptography.hazmat.primitives.cmac',
+  'cryptography.hazmat.primitives.constant_time',
+  'cryptography.hazmat.primitives.hashes',
+  'cryptography.hazmat.primitives.hmac',
+  'cryptography.hazmat.primitives.kdf',
+  'cryptography.hazmat.primitives.kdf.argon2',
+  'cryptography.hazmat.primitives.kdf.concatkdf',
+  'cryptography.hazmat.primitives.kdf.hkdf',
+  'cryptography.hazmat.primitives.kdf.kbkdf',
+  'cryptography.hazmat.primitives.kdf.pbkdf2',
+  'cryptography.hazmat.primitives.kdf.scrypt',
+  'cryptography.hazmat.primitives.kdf.x963kdf',
+  'cryptography.hazmat.primitives.keywrap',
+  'cryptography.hazmat.primitives.padding',
+  'cryptography.hazmat.primitives.poly1305',
+  'cryptography.hazmat.primitives.serialization',
+  'cryptography.hazmat.primitives.serialization.base',
+  'cryptography.hazmat.primitives.serialization.pkcs12',
+  'cryptography.hazmat.primitives.serialization.pkcs7',
+  'cryptography.hazmat.primitives.serialization.ssh',
+  'cryptography.hazmat.primitives.twofactor',
+  'cryptography.hazmat.primitives.twofactor.hotp',
+  'cryptography.hazmat.primitives.twofactor.totp',
+  'cryptography.utils',
+  'cryptography.x509',
+  'cryptography.x509.base',
+  'cryptography.x509.certificate_transparency',
+  'cryptography.x509.extensions',
+  'cryptography.x509.general_name',
+  'cryptography.x509.name',
+  'cryptography.x509.ocsp',
+  'cryptography.x509.oid',
+  'cryptography.x509.verification'],
+ [('hooks', 1000),
+  ('C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_pyinstaller',
+   0),
+  ('C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks',
    -1000),
-  ('E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib',
+  ('C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pyinstaller_hooks_contrib',
    -1000)],
  {},
  [],
@@ -73,6 +256,118 @@
    'DATA'),
   ('config\\config.json.bak',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\config\\config.json.bak',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'DATA'),
+  ('cryptography\\py.typed',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\py.typed',
    'DATA'),
   ('logo.ico', 'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\logo.ico', 'DATA'),
   ('logo.png', 'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\logo.png', 'DATA'),
@@ -830,60 +1125,33 @@
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\runtime_hook.py',
    'PYSOURCE'),
   ('pyi_rth_inspect',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
-   'PYSOURCE'),
-  ('pyi_rth_pyqt6',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt6.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('pyi_rth_pkgutil',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
-   'PYSOURCE'),
-  ('pyi_rth_cryptography_openssl',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_cryptography_openssl.py',
-   'PYSOURCE'),
-  ('pyi_rth_setuptools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
    'PYSOURCE'),
   ('pyi_rth_multiprocessing',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyqt6',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt6.py',
+   'PYSOURCE'),
+  ('pyi_rth_cryptography_openssl',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_cryptography_openssl.py',
    'PYSOURCE'),
   ('main_enterprise',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\main_enterprise.py',
    'PYSOURCE')],
- [('subprocess', 'C:\\Python313\\Lib\\subprocess.py', 'PYMODULE'),
-  ('selectors', 'C:\\Python313\\Lib\\selectors.py', 'PYMODULE'),
-  ('contextlib', 'C:\\Python313\\Lib\\contextlib.py', 'PYMODULE'),
-  ('threading', 'C:\\Python313\\Lib\\threading.py', 'PYMODULE'),
-  ('_threading_local', 'C:\\Python313\\Lib\\_threading_local.py', 'PYMODULE'),
-  ('signal', 'C:\\Python313\\Lib\\signal.py', 'PYMODULE'),
-  ('_strptime', 'C:\\Python313\\Lib\\_strptime.py', 'PYMODULE'),
-  ('datetime', 'C:\\Python313\\Lib\\datetime.py', 'PYMODULE'),
-  ('_pydatetime', 'C:\\Python313\\Lib\\_pydatetime.py', 'PYMODULE'),
-  ('calendar', 'C:\\Python313\\Lib\\calendar.py', 'PYMODULE'),
-  ('argparse', 'C:\\Python313\\Lib\\argparse.py', 'PYMODULE'),
-  ('textwrap', 'C:\\Python313\\Lib\\textwrap.py', 'PYMODULE'),
-  ('shutil', 'C:\\Python313\\Lib\\shutil.py', 'PYMODULE'),
-  ('zipfile', 'C:\\Python313\\Lib\\zipfile\\__init__.py', 'PYMODULE'),
-  ('zipfile._path',
-   'C:\\Python313\\Lib\\zipfile\\_path\\__init__.py',
-   'PYMODULE'),
-  ('zipfile._path.glob',
-   'C:\\Python313\\Lib\\zipfile\\_path\\glob.py',
-   'PYMODULE'),
-  ('py_compile', 'C:\\Python313\\Lib\\py_compile.py', 'PYMODULE'),
-  ('importlib.machinery',
-   'C:\\Python313\\Lib\\importlib\\machinery.py',
+ [('_pyi_rth_utils.qt',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\qt.py',
    'PYMODULE'),
   ('importlib', 'C:\\Python313\\Lib\\importlib\\__init__.py', 'PYMODULE'),
-  ('importlib._bootstrap',
-   'C:\\Python313\\Lib\\importlib\\_bootstrap.py',
-   'PYMODULE'),
   ('importlib._bootstrap_external',
    'C:\\Python313\\Lib\\importlib\\_bootstrap_external.py',
    'PYMODULE'),
@@ -913,7 +1181,18 @@
   ('urllib', 'C:\\Python313\\Lib\\urllib\\__init__.py', 'PYMODULE'),
   ('email.iterators', 'C:\\Python313\\Lib\\email\\iterators.py', 'PYMODULE'),
   ('email.generator', 'C:\\Python313\\Lib\\email\\generator.py', 'PYMODULE'),
+  ('copy', 'C:\\Python313\\Lib\\copy.py', 'PYMODULE'),
   ('random', 'C:\\Python313\\Lib\\random.py', 'PYMODULE'),
+  ('argparse', 'C:\\Python313\\Lib\\argparse.py', 'PYMODULE'),
+  ('shutil', 'C:\\Python313\\Lib\\shutil.py', 'PYMODULE'),
+  ('tarfile', 'C:\\Python313\\Lib\\tarfile.py', 'PYMODULE'),
+  ('gzip', 'C:\\Python313\\Lib\\gzip.py', 'PYMODULE'),
+  ('_compression', 'C:\\Python313\\Lib\\_compression.py', 'PYMODULE'),
+  ('struct', 'C:\\Python313\\Lib\\struct.py', 'PYMODULE'),
+  ('lzma', 'C:\\Python313\\Lib\\lzma.py', 'PYMODULE'),
+  ('bz2', 'C:\\Python313\\Lib\\bz2.py', 'PYMODULE'),
+  ('fnmatch', 'C:\\Python313\\Lib\\fnmatch.py', 'PYMODULE'),
+  ('gettext', 'C:\\Python313\\Lib\\gettext.py', 'PYMODULE'),
   ('statistics', 'C:\\Python313\\Lib\\statistics.py', 'PYMODULE'),
   ('decimal', 'C:\\Python313\\Lib\\decimal.py', 'PYMODULE'),
   ('_pydecimal', 'C:\\Python313\\Lib\\_pydecimal.py', 'PYMODULE'),
@@ -926,7 +1205,13 @@
   ('pprint', 'C:\\Python313\\Lib\\pprint.py', 'PYMODULE'),
   ('dataclasses', 'C:\\Python313\\Lib\\dataclasses.py', 'PYMODULE'),
   ('_compat_pickle', 'C:\\Python313\\Lib\\_compat_pickle.py', 'PYMODULE'),
+  ('threading', 'C:\\Python313\\Lib\\threading.py', 'PYMODULE'),
+  ('_threading_local', 'C:\\Python313\\Lib\\_threading_local.py', 'PYMODULE'),
   ('bisect', 'C:\\Python313\\Lib\\bisect.py', 'PYMODULE'),
+  ('_strptime', 'C:\\Python313\\Lib\\_strptime.py', 'PYMODULE'),
+  ('datetime', 'C:\\Python313\\Lib\\datetime.py', 'PYMODULE'),
+  ('_pydatetime', 'C:\\Python313\\Lib\\_pydatetime.py', 'PYMODULE'),
+  ('calendar', 'C:\\Python313\\Lib\\calendar.py', 'PYMODULE'),
   ('email._encoded_words',
    'C:\\Python313\\Lib\\email\\_encoded_words.py',
    'PYMODULE'),
@@ -942,6 +1227,7 @@
   ('email.errors', 'C:\\Python313\\Lib\\email\\errors.py', 'PYMODULE'),
   ('email.utils', 'C:\\Python313\\Lib\\email\\utils.py', 'PYMODULE'),
   ('socket', 'C:\\Python313\\Lib\\socket.py', 'PYMODULE'),
+  ('selectors', 'C:\\Python313\\Lib\\selectors.py', 'PYMODULE'),
   ('email._parseaddr', 'C:\\Python313\\Lib\\email\\_parseaddr.py', 'PYMODULE'),
   ('urllib.parse', 'C:\\Python313\\Lib\\urllib\\parse.py', 'PYMODULE'),
   ('ipaddress', 'C:\\Python313\\Lib\\ipaddress.py', 'PYMODULE'),
@@ -965,6 +1251,10 @@
    'PYMODULE'),
   ('tempfile', 'C:\\Python313\\Lib\\tempfile.py', 'PYMODULE'),
   ('importlib._abc', 'C:\\Python313\\Lib\\importlib\\_abc.py', 'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Python313\\Lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('contextlib', 'C:\\Python313\\Lib\\contextlib.py', 'PYMODULE'),
   ('importlib.metadata._itertools',
    'C:\\Python313\\Lib\\importlib\\metadata\\_itertools.py',
    'PYMODULE'),
@@ -977,6 +1267,16 @@
   ('importlib.metadata._meta',
    'C:\\Python313\\Lib\\importlib\\metadata\\_meta.py',
    'PYMODULE'),
+  ('textwrap', 'C:\\Python313\\Lib\\textwrap.py', 'PYMODULE'),
+  ('zipfile', 'C:\\Python313\\Lib\\zipfile\\__init__.py', 'PYMODULE'),
+  ('zipfile._path',
+   'C:\\Python313\\Lib\\zipfile\\_path\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path.glob',
+   'C:\\Python313\\Lib\\zipfile\\_path\\glob.py',
+   'PYMODULE'),
+  ('py_compile', 'C:\\Python313\\Lib\\py_compile.py', 'PYMODULE'),
+  ('importlib.util', 'C:\\Python313\\Lib\\importlib\\util.py', 'PYMODULE'),
   ('inspect', 'C:\\Python313\\Lib\\inspect.py', 'PYMODULE'),
   ('token', 'C:\\Python313\\Lib\\token.py', 'PYMODULE'),
   ('dis', 'C:\\Python313\\Lib\\dis.py', 'PYMODULE'),
@@ -1001,16 +1301,15 @@
    'C:\\Python313\\Lib\\importlib\\resources\\_itertools.py',
    'PYMODULE'),
   ('tokenize', 'C:\\Python313\\Lib\\tokenize.py', 'PYMODULE'),
-  ('struct', 'C:\\Python313\\Lib\\struct.py', 'PYMODULE'),
-  ('importlib.util', 'C:\\Python313\\Lib\\importlib\\util.py', 'PYMODULE'),
-  ('tarfile', 'C:\\Python313\\Lib\\tarfile.py', 'PYMODULE'),
-  ('gzip', 'C:\\Python313\\Lib\\gzip.py', 'PYMODULE'),
-  ('_compression', 'C:\\Python313\\Lib\\_compression.py', 'PYMODULE'),
-  ('lzma', 'C:\\Python313\\Lib\\lzma.py', 'PYMODULE'),
-  ('bz2', 'C:\\Python313\\Lib\\bz2.py', 'PYMODULE'),
-  ('fnmatch', 'C:\\Python313\\Lib\\fnmatch.py', 'PYMODULE'),
-  ('copy', 'C:\\Python313\\Lib\\copy.py', 'PYMODULE'),
-  ('gettext', 'C:\\Python313\\Lib\\gettext.py', 'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Python313\\Lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('_pyi_rth_utils',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\__init__.py',
+   'PYMODULE'),
+  ('subprocess', 'C:\\Python313\\Lib\\subprocess.py', 'PYMODULE'),
+  ('signal', 'C:\\Python313\\Lib\\signal.py', 'PYMODULE'),
   ('multiprocessing.spawn',
    'C:\\Python313\\Lib\\multiprocessing\\spawn.py',
    'PYMODULE'),
@@ -1133,103 +1432,237 @@
   ('multiprocessing',
    'C:\\Python313\\Lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
-  ('_distutils_hack',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_distutils_hack\\__init__.py',
+  ('cryptography.x509.verification',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\verification.py',
    'PYMODULE'),
-  ('setuptools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\__init__.py',
+  ('cryptography.x509.oid',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\oid.py',
    'PYMODULE'),
-  ('setuptools.msvc',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\msvc.py',
+  ('cryptography.x509.ocsp',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\ocsp.py',
    'PYMODULE'),
-  ('setuptools._vendor.typing_extensions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\typing_extensions.py',
+  ('cryptography.x509.name',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\name.py',
    'PYMODULE'),
-  ('setuptools._vendor', '-', 'PYMODULE'),
-  ('setuptools._distutils.errors',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\errors.py',
+  ('cryptography.x509.general_name',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\general_name.py',
    'PYMODULE'),
-  ('setuptools._distutils.sysconfig',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
+  ('cryptography.x509.extensions',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\extensions.py',
    'PYMODULE'),
-  ('setuptools._distutils.text_file',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\text_file.py',
+  ('cryptography.x509.certificate_transparency',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\certificate_transparency.py',
    'PYMODULE'),
-  ('setuptools._distutils.util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\util.py',
+  ('cryptography.x509.base',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\base.py',
    'PYMODULE'),
-  ('setuptools._distutils.spawn',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\spawn.py',
+  ('cryptography.x509',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\x509\\__init__.py',
    'PYMODULE'),
-  ('setuptools._distutils.debug',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\debug.py',
+  ('cryptography.hazmat.primitives.twofactor.totp',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\totp.py',
    'PYMODULE'),
-  ('setuptools._distutils._modified',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_modified.py',
+  ('cryptography.hazmat.primitives.twofactor.hotp',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\hotp.py',
    'PYMODULE'),
-  ('setuptools._distutils._log',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_log.py',
+  ('cryptography.hazmat.primitives.twofactor',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\__init__.py',
    'PYMODULE'),
-  ('setuptools._distutils.compat.py39',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py39.py',
+  ('cryptography.hazmat.primitives.serialization.ssh',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
    'PYMODULE'),
-  ('setuptools._distutils.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\__init__.py',
+  ('cryptography.hazmat.primitives.serialization.pkcs7',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs7.py',
    'PYMODULE'),
-  ('setuptools._distutils.ccompiler',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
+  ('cryptography.hazmat.primitives.serialization.pkcs12',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs12.py',
    'PYMODULE'),
-  ('setuptools._distutils.compilers.C.base',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\base.py',
+  ('cryptography.hazmat.primitives.serialization.base',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
    'PYMODULE'),
-  ('setuptools._distutils.fancy_getopt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
+  ('cryptography.hazmat.primitives.serialization',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
    'PYMODULE'),
-  ('setuptools._distutils.file_util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\file_util.py',
+  ('cryptography.hazmat.primitives.poly1305',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\poly1305.py',
    'PYMODULE'),
-  ('setuptools._distutils.dir_util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
+  ('cryptography.hazmat.primitives.padding',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\padding.py',
    'PYMODULE'),
-  ('setuptools._distutils.compilers.C', '-', 'PYMODULE'),
-  ('setuptools._distutils.compilers.C.msvc',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\msvc.py',
+  ('cryptography.hazmat.primitives.keywrap',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\keywrap.py',
    'PYMODULE'),
-  ('unittest.mock', 'C:\\Python313\\Lib\\unittest\\mock.py', 'PYMODULE'),
-  ('unittest', 'C:\\Python313\\Lib\\unittest\\__init__.py', 'PYMODULE'),
-  ('unittest.async_case',
-   'C:\\Python313\\Lib\\unittest\\async_case.py',
+  ('cryptography.hazmat.primitives.kdf.x963kdf',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\x963kdf.py',
    'PYMODULE'),
-  ('unittest.signals', 'C:\\Python313\\Lib\\unittest\\signals.py', 'PYMODULE'),
-  ('unittest.main', 'C:\\Python313\\Lib\\unittest\\main.py', 'PYMODULE'),
-  ('unittest.runner', 'C:\\Python313\\Lib\\unittest\\runner.py', 'PYMODULE'),
-  ('unittest.loader', 'C:\\Python313\\Lib\\unittest\\loader.py', 'PYMODULE'),
-  ('unittest.suite', 'C:\\Python313\\Lib\\unittest\\suite.py', 'PYMODULE'),
-  ('unittest.case', 'C:\\Python313\\Lib\\unittest\\case.py', 'PYMODULE'),
-  ('unittest._log', 'C:\\Python313\\Lib\\unittest\\_log.py', 'PYMODULE'),
-  ('difflib', 'C:\\Python313\\Lib\\difflib.py', 'PYMODULE'),
-  ('unittest.result', 'C:\\Python313\\Lib\\unittest\\result.py', 'PYMODULE'),
-  ('unittest.util', 'C:\\Python313\\Lib\\unittest\\util.py', 'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.scrypt',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\scrypt.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.pbkdf2',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\pbkdf2.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.kbkdf',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\kbkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.hkdf',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\hkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.concatkdf',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\concatkdf.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf.argon2',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\argon2.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.hmac',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\hmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.hashes',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.constant_time',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.cmac',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\cmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.modes',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.base',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.algorithms',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.aead',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x448',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x25519',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.utils',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.types',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.rsa',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.padding',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed25519',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ec',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dsa',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dh',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._serialization',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._cipheralgorithm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._asymmetric',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.decrepit.ciphers.algorithms',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\algorithms.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.decrepit.ciphers',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.decrepit',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\decrepit\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl.binding',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl._conditional',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.asn1.asn1',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\asn1\\asn1.py',
+   'PYMODULE'),
+  ('typing_extensions',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\typing_extensions.py',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'C:\\Python313\\Lib\\asyncio\\coroutines.py',
+   'PYMODULE'),
   ('asyncio', 'C:\\Python313\\Lib\\asyncio\\__init__.py', 'PYMODULE'),
   ('asyncio.unix_events',
    'C:\\Python313\\Lib\\asyncio\\unix_events.py',
@@ -1305,923 +1738,118 @@
   ('asyncio.format_helpers',
    'C:\\Python313\\Lib\\asyncio\\format_helpers.py',
    'PYMODULE'),
-  ('asyncio.coroutines',
-   'C:\\Python313\\Lib\\asyncio\\coroutines.py',
-   'PYMODULE'),
   ('asyncio.constants',
    'C:\\Python313\\Lib\\asyncio\\constants.py',
    'PYMODULE'),
-  ('setuptools._distutils.compilers', '-', 'PYMODULE'),
-  ('setuptools._distutils.compat.numpy',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\numpy.py',
+  ('cryptography.hazmat.asn1',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\asn1\\__init__.py',
    'PYMODULE'),
-  ('jaraco', '-', 'PYMODULE'),
-  ('setuptools._vendor.jaraco.functools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__init__.py',
+  ('cryptography.hazmat._oid',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\_oid.py',
    'PYMODULE'),
-  ('setuptools._vendor.jaraco', '-', 'PYMODULE'),
-  ('sysconfig', 'C:\\Python313\\Lib\\sysconfig\\__init__.py', 'PYMODULE'),
-  ('_aix_support', 'C:\\Python313\\Lib\\_aix_support.py', 'PYMODULE'),
-  ('setuptools._distutils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\__init__.py',
+  ('cryptography.exceptions',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\exceptions.py',
    'PYMODULE'),
-  ('setuptools._distutils.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py',
+  ('cryptography.__about__',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\__about__.py',
    'PYMODULE'),
-  ('setuptools._distutils.archive_util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
+  ('src.utils.rate_limiter',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\rate_limiter.py',
    'PYMODULE'),
-  ('setuptools._distutils.compilers.C.errors',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compilers\\C\\errors.py',
+  ('src.utils.profile_config_manager',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\profile_config_manager.py',
    'PYMODULE'),
-  ('setuptools._vendor.more_itertools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
+  ('src.ui.widgets.modern_stat_card',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\modern_stat_card.py',
    'PYMODULE'),
-  ('setuptools._vendor.more_itertools.recipes',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
+  ('src.ui.widgets.modern_button',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\modern_button.py',
    'PYMODULE'),
-  ('setuptools._vendor.more_itertools.more',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
+  ('src.ui.themes.modern_theme',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\modern_theme.py',
+   'PYMODULE'),
+  ('src.ui.themes.glassmorphism',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\glassmorphism.py',
+   'PYMODULE'),
+  ('src.ui.themes',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\__init__.py',
+   'PYMODULE'),
+  ('src.api.prometheus_metrics',
+   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\api\\prometheus_metrics.py',
+   'PYMODULE'),
+  ('PyQt6',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\__init__.py',
+   'PYMODULE'),
+  ('psutil',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\psutil\\__init__.py',
+   'PYMODULE'),
+  ('psutil._pswindows',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\psutil\\_pswindows.py',
+   'PYMODULE'),
+  ('psutil._compat',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\psutil\\_compat.py',
    'PYMODULE'),
   ('platform', 'C:\\Python313\\Lib\\platform.py', 'PYMODULE'),
   ('_ios_support', 'C:\\Python313\\Lib\\_ios_support.py', 'PYMODULE'),
-  ('setuptools._distutils.command.build_ext',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
-   'PYMODULE'),
-  ('setuptools._distutils.command',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._distutils._msvccompiler',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
-   'PYMODULE'),
-  ('setuptools._distutils.extension',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\extension.py',
-   'PYMODULE'),
-  ('site', 'C:\\Python313\\Lib\\site.py', 'PYMODULE'),
-  ('_pyrepl.main', 'C:\\Python313\\Lib\\_pyrepl\\main.py', 'PYMODULE'),
-  ('_pyrepl', 'C:\\Python313\\Lib\\_pyrepl\\__init__.py', 'PYMODULE'),
-  ('_pyrepl.curses', 'C:\\Python313\\Lib\\_pyrepl\\curses.py', 'PYMODULE'),
-  ('curses', 'C:\\Python313\\Lib\\curses\\__init__.py', 'PYMODULE'),
-  ('curses.has_key', 'C:\\Python313\\Lib\\curses\\has_key.py', 'PYMODULE'),
-  ('_pyrepl._minimal_curses',
-   'C:\\Python313\\Lib\\_pyrepl\\_minimal_curses.py',
-   'PYMODULE'),
-  ('_pyrepl.input', 'C:\\Python313\\Lib\\_pyrepl\\input.py', 'PYMODULE'),
-  ('_pyrepl.keymap', 'C:\\Python313\\Lib\\_pyrepl\\keymap.py', 'PYMODULE'),
-  ('_pyrepl.types', 'C:\\Python313\\Lib\\_pyrepl\\types.py', 'PYMODULE'),
-  ('_pyrepl.commands', 'C:\\Python313\\Lib\\_pyrepl\\commands.py', 'PYMODULE'),
-  ('_pyrepl.pager', 'C:\\Python313\\Lib\\_pyrepl\\pager.py', 'PYMODULE'),
-  ('tty', 'C:\\Python313\\Lib\\tty.py', 'PYMODULE'),
-  ('_pyrepl.historical_reader',
-   'C:\\Python313\\Lib\\_pyrepl\\historical_reader.py',
-   'PYMODULE'),
-  ('_pyrepl.reader', 'C:\\Python313\\Lib\\_pyrepl\\reader.py', 'PYMODULE'),
-  ('_pyrepl._threading_handler',
-   'C:\\Python313\\Lib\\_pyrepl\\_threading_handler.py',
-   'PYMODULE'),
-  ('_pyrepl.utils', 'C:\\Python313\\Lib\\_pyrepl\\utils.py', 'PYMODULE'),
-  ('_colorize', 'C:\\Python313\\Lib\\_colorize.py', 'PYMODULE'),
-  ('_pyrepl.console', 'C:\\Python313\\Lib\\_pyrepl\\console.py', 'PYMODULE'),
-  ('code', 'C:\\Python313\\Lib\\code.py', 'PYMODULE'),
-  ('codeop', 'C:\\Python313\\Lib\\codeop.py', 'PYMODULE'),
-  ('_pyrepl.trace', 'C:\\Python313\\Lib\\_pyrepl\\trace.py', 'PYMODULE'),
-  ('_pyrepl.simple_interact',
-   'C:\\Python313\\Lib\\_pyrepl\\simple_interact.py',
-   'PYMODULE'),
-  ('_pyrepl.unix_console',
-   'C:\\Python313\\Lib\\_pyrepl\\unix_console.py',
-   'PYMODULE'),
-  ('_pyrepl.unix_eventqueue',
-   'C:\\Python313\\Lib\\_pyrepl\\unix_eventqueue.py',
-   'PYMODULE'),
-  ('_pyrepl.base_eventqueue',
-   'C:\\Python313\\Lib\\_pyrepl\\base_eventqueue.py',
-   'PYMODULE'),
-  ('_pyrepl.fancy_termios',
-   'C:\\Python313\\Lib\\_pyrepl\\fancy_termios.py',
-   'PYMODULE'),
-  ('_pyrepl.windows_console',
-   'C:\\Python313\\Lib\\_pyrepl\\windows_console.py',
-   'PYMODULE'),
-  ('_pyrepl.windows_eventqueue',
-   'C:\\Python313\\Lib\\_pyrepl\\windows_eventqueue.py',
-   'PYMODULE'),
-  ('ctypes.wintypes', 'C:\\Python313\\Lib\\ctypes\\wintypes.py', 'PYMODULE'),
-  ('_pyrepl.readline', 'C:\\Python313\\Lib\\_pyrepl\\readline.py', 'PYMODULE'),
-  ('_pyrepl.completing_reader',
-   'C:\\Python313\\Lib\\_pyrepl\\completing_reader.py',
-   'PYMODULE'),
-  ('rlcompleter', 'C:\\Python313\\Lib\\rlcompleter.py', 'PYMODULE'),
-  ('_sitebuiltins', 'C:\\Python313\\Lib\\_sitebuiltins.py', 'PYMODULE'),
-  ('pydoc', 'C:\\Python313\\Lib\\pydoc.py', 'PYMODULE'),
-  ('webbrowser', 'C:\\Python313\\Lib\\webbrowser.py', 'PYMODULE'),
-  ('shlex', 'C:\\Python313\\Lib\\shlex.py', 'PYMODULE'),
-  ('http.server', 'C:\\Python313\\Lib\\http\\server.py', 'PYMODULE'),
-  ('socketserver', 'C:\\Python313\\Lib\\socketserver.py', 'PYMODULE'),
-  ('html', 'C:\\Python313\\Lib\\html\\__init__.py', 'PYMODULE'),
-  ('html.entities', 'C:\\Python313\\Lib\\html\\entities.py', 'PYMODULE'),
-  ('pydoc_data.topics',
-   'C:\\Python313\\Lib\\pydoc_data\\topics.py',
-   'PYMODULE'),
-  ('pydoc_data', 'C:\\Python313\\Lib\\pydoc_data\\__init__.py', 'PYMODULE'),
-  ('setuptools._distutils.core',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\core.py',
-   'PYMODULE'),
-  ('setuptools._distutils.dist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py',
-   'PYMODULE'),
-  ('setuptools._distutils.versionpredicate',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
-   'PYMODULE'),
-  ('configparser', 'C:\\Python313\\Lib\\configparser.py', 'PYMODULE'),
-  ('packaging.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\utils.py',
-   'PYMODULE'),
-  ('packaging',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('packaging._musllinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_musllinux.py',
-   'PYMODULE'),
-  ('packaging._elffile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_elffile.py',
-   'PYMODULE'),
-  ('packaging._manylinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_manylinux.py',
-   'PYMODULE'),
-  ('packaging.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\version.py',
-   'PYMODULE'),
-  ('packaging._structures',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('packaging.tags',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\tags.py',
-   'PYMODULE'),
-  ('setuptools._distutils.cmd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\cmd.py',
-   'PYMODULE'),
-  ('setuptools.warnings',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\warnings.py',
-   'PYMODULE'),
-  ('setuptools.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\version.py',
-   'PYMODULE'),
-  ('setuptools._importlib',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_importlib.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._adapters',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._text',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._itertools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._functools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._collections',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata.compat.py311',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py311.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata.compat.py39',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py39.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.importlib_metadata._meta',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
-   'PYMODULE'),
-  ('setuptools._vendor.zipp',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.zipp.glob',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\glob.py',
-   'PYMODULE'),
-  ('setuptools._vendor.zipp.compat.py310',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py310.py',
-   'PYMODULE'),
-  ('setuptools._vendor.zipp.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.extension',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\extension.py',
-   'PYMODULE'),
-  ('setuptools._path',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_path.py',
-   'PYMODULE'),
-  ('setuptools.dist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\dist.py',
-   'PYMODULE'),
-  ('setuptools.command.bdist_wheel',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\bdist_wheel.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.macosx_libfile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\macosx_libfile.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.command.egg_info',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\egg_info.py',
-   'PYMODULE'),
-  ('setuptools._distutils.filelist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\filelist.py',
-   'PYMODULE'),
-  ('setuptools.command._requirestxt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\_requirestxt.py',
-   'PYMODULE'),
-  ('setuptools._vendor.jaraco.text',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.jaraco.context',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context.py',
-   'PYMODULE'),
-  ('setuptools._vendor.backports.tarfile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.backports',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.backports.tarfile.compat.py38',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\py38.py',
-   'PYMODULE'),
-  ('setuptools._vendor.backports.tarfile.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\__init__.py',
-   'PYMODULE'),
-  ('backports',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.glob',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\glob.py',
-   'PYMODULE'),
-  ('setuptools.command.setopt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\setopt.py',
-   'PYMODULE'),
-  ('setuptools.command.sdist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\sdist.py',
-   'PYMODULE'),
-  ('setuptools._distutils.command.sdist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
-   'PYMODULE'),
-  ('setuptools.command.build',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\build.py',
-   'PYMODULE'),
-  ('setuptools._distutils.command.build',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
-   'PYMODULE'),
-  ('setuptools.command.bdist_egg',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\bdist_egg.py',
-   'PYMODULE'),
-  ('setuptools.unicode_utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\unicode_utils.py',
-   'PYMODULE'),
-  ('setuptools.compat.py39',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\compat\\py39.py',
-   'PYMODULE'),
-  ('setuptools.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\compat\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.compat.py311',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\compat\\py311.py',
-   'PYMODULE'),
-  ('packaging.requirements',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('packaging._tokenizer',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_tokenizer.py',
-   'PYMODULE'),
-  ('packaging._parser',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\_parser.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.wheelfile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\wheelfile.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\util.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.cli',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.cli.tags',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\tags.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.cli.convert',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\convert.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.tags',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\tags.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._musllinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_musllinux.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._elffile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_elffile.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._manylinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_manylinux.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.metadata',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\metadata.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.requirements',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\utils.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\version.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._structures',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.specifiers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging.markers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\markers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._tokenizer',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_tokenizer.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.vendored.packaging._parser',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_parser.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.cli.pack',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\pack.py',
-   'PYMODULE'),
-  ('setuptools._vendor.wheel.cli.unpack',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\unpack.py',
-   'PYMODULE'),
-  ('setuptools.installer',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\installer.py',
-   'PYMODULE'),
-  ('setuptools.wheel',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\wheel.py',
-   'PYMODULE'),
-  ('setuptools._discovery',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_discovery.py',
-   'PYMODULE'),
-  ('setuptools.archive_util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\archive_util.py',
-   'PYMODULE'),
-  ('setuptools._distutils.log',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\log.py',
-   'PYMODULE'),
-  ('setuptools.errors',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\errors.py',
-   'PYMODULE'),
-  ('setuptools.config.setupcfg',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\setupcfg.py',
-   'PYMODULE'),
-  ('setuptools.config.expand',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\expand.py',
-   'PYMODULE'),
-  ('setuptools.config.pyprojecttoml',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject.fastjsonschema_validations',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject.fastjsonschema_exceptions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject.extra_validations',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject.error_reporting',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
-   'PYMODULE'),
-  ('setuptools.config._validate_pyproject.formats',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
-   'PYMODULE'),
-  ('packaging.licenses',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
-   'PYMODULE'),
-  ('packaging.licenses._spdx',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.requirements',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._structures',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.tags',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._musllinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._elffile',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._manylinux',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.specifiers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.markers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._tokenizer',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._parser',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('setuptools.compat.py310',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\compat\\py310.py',
-   'PYMODULE'),
-  ('setuptools._vendor.tomli',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.tomli._parser',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
-   'PYMODULE'),
-  ('setuptools._vendor.tomli._types',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
-   'PYMODULE'),
-  ('setuptools._vendor.tomli._re',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
-   'PYMODULE'),
-  ('tomllib', 'C:\\Python313\\Lib\\tomllib\\__init__.py', 'PYMODULE'),
-  ('tomllib._parser', 'C:\\Python313\\Lib\\tomllib\\_parser.py', 'PYMODULE'),
-  ('tomllib._types', 'C:\\Python313\\Lib\\tomllib\\_types.py', 'PYMODULE'),
-  ('tomllib._re', 'C:\\Python313\\Lib\\tomllib\\_re.py', 'PYMODULE'),
-  ('setuptools.config._apply_pyprojecttoml',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
-   'PYMODULE'),
-  ('setuptools.config',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\config\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._static',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_static.py',
-   'PYMODULE'),
-  ('packaging.specifiers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('packaging.markers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\packaging\\markers.py',
-   'PYMODULE'),
-  ('glob', 'C:\\Python313\\Lib\\glob.py', 'PYMODULE'),
-  ('setuptools._shutil',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_shutil.py',
-   'PYMODULE'),
-  ('setuptools.windows_support',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\windows_support.py',
-   'PYMODULE'),
-  ('setuptools.command',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\command\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._distutils.command.bdist',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
-   'PYMODULE'),
-  ('setuptools._entry_points',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_entry_points.py',
-   'PYMODULE'),
-  ('setuptools._itertools',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_itertools.py',
-   'PYMODULE'),
-  ('setuptools.discovery',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\discovery.py',
-   'PYMODULE'),
-  ('setuptools.depends',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\depends.py',
-   'PYMODULE'),
-  ('setuptools._imp',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_imp.py',
-   'PYMODULE'),
-  ('setuptools.logging',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\logging.py',
-   'PYMODULE'),
-  ('setuptools.monkey',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\monkey.py',
-   'PYMODULE'),
-  ('setuptools._core_metadata',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_core_metadata.py',
-   'PYMODULE'),
-  ('setuptools._reqs',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_reqs.py',
-   'PYMODULE'),
-  ('setuptools._normalization',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_normalization.py',
-   'PYMODULE'),
-  ('_distutils_hack.override',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_distutils_hack\\override.py',
-   'PYMODULE'),
-  ('_pyi_rth_utils.qt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\qt.py',
-   'PYMODULE'),
-  ('_pyi_rth_utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\__init__.py',
-   'PYMODULE'),
-  ('PyQt6',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\__init__.py',
-   'PYMODULE'),
-  ('psutil',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\psutil\\__init__.py',
-   'PYMODULE'),
-  ('psutil._pswindows',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\psutil\\_pswindows.py',
-   'PYMODULE'),
   ('psutil._common',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\psutil\\_common.py',
-   'PYMODULE'),
-  ('cryptography.fernet',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\fernet.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.hmac',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hmac.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.bindings',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers.modes',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives._cipheralgorithm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers.algorithms',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.decrepit.ciphers.algorithms',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\algorithms.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.decrepit.ciphers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.decrepit',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.ciphers.base',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.padding',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\padding.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.hashes',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization.ssh',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.rsa',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives._asymmetric',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.padding',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed25519',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.backend',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.backends',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl.binding',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl._conditional',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.bindings.openssl',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ec',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
-   'PYMODULE'),
-  ('cryptography.hazmat._oid',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\_oid.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dsa',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.dh',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x25519',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.x448',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed448',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization.base',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.constant_time',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives._serialization',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
-   'PYMODULE'),
-  ('cryptography.exceptions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\exceptions.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\psutil\\_common.py',
    'PYMODULE'),
   ('cryptography.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\utils.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.backend',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.kdf',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.fernet',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\fernet.py',
    'PYMODULE'),
   ('cryptography',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.x509',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.x509.oid',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\oid.py',
-   'PYMODULE'),
-  ('cryptography.x509.name',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\name.py',
-   'PYMODULE'),
-  ('cryptography.x509.general_name',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\general_name.py',
-   'PYMODULE'),
-  ('cryptography.x509.extensions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\extensions.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.types',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
-   'PYMODULE'),
-  ('cryptography.x509.base',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\base.py',
-   'PYMODULE'),
-  ('cryptography.x509.verification',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\verification.py',
-   'PYMODULE'),
-  ('cryptography.x509.certificate_transparency',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
-   'PYMODULE'),
-  ('cryptography.__about__',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\__about__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\__init__.py',
    'PYMODULE'),
   ('src.utils.exceptions',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\exceptions.py',
@@ -2238,21 +1866,21 @@
   ('src.api.routes',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\api\\routes.py',
    'PYMODULE'),
-  ('src.api.prometheus_metrics',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\api\\prometheus_metrics.py',
-   'PYMODULE'),
   ('src.api.server',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\api\\server.py',
    'PYMODULE'),
-  ('src.utils.rate_limiter',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\rate_limiter.py',
-   'PYMODULE'),
+  ('http.server', 'C:\\Python313\\Lib\\http\\server.py', 'PYMODULE'),
+  ('socketserver', 'C:\\Python313\\Lib\\socketserver.py', 'PYMODULE'),
+  ('html', 'C:\\Python313\\Lib\\html\\__init__.py', 'PYMODULE'),
+  ('html.entities', 'C:\\Python313\\Lib\\html\\entities.py', 'PYMODULE'),
   ('src.database.database',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\database\\database.py',
    'PYMODULE'),
   ('sqlite3', 'C:\\Python313\\Lib\\sqlite3\\__init__.py', 'PYMODULE'),
   ('sqlite3.dump', 'C:\\Python313\\Lib\\sqlite3\\dump.py', 'PYMODULE'),
   ('sqlite3.__main__', 'C:\\Python313\\Lib\\sqlite3\\__main__.py', 'PYMODULE'),
+  ('code', 'C:\\Python313\\Lib\\code.py', 'PYMODULE'),
+  ('codeop', 'C:\\Python313\\Lib\\codeop.py', 'PYMODULE'),
   ('sqlite3.dbapi2', 'C:\\Python313\\Lib\\sqlite3\\dbapi2.py', 'PYMODULE'),
   ('src.ui.widgets.epg_editor_widget',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\epg_editor_widget.py',
@@ -2267,21 +1895,6 @@
    'PYMODULE'),
   ('src.ui.widgets.dashboard_widget',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\dashboard_widget.py',
-   'PYMODULE'),
-  ('src.ui.widgets.modern_button',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\modern_button.py',
-   'PYMODULE'),
-  ('src.ui.widgets.modern_stat_card',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\modern_stat_card.py',
-   'PYMODULE'),
-  ('src.ui.themes.glassmorphism',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\glassmorphism.py',
-   'PYMODULE'),
-  ('src.ui.themes',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\__init__.py',
-   'PYMODULE'),
-  ('src.ui.themes.modern_theme',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\themes\\modern_theme.py',
    'PYMODULE'),
   ('src.ui.widgets.monitoring_widget',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\ui\\widgets\\monitoring_widget.py',
@@ -2336,6 +1949,7 @@
   ('_py_abc', 'C:\\Python313\\Lib\\_py_abc.py', 'PYMODULE'),
   ('tracemalloc', 'C:\\Python313\\Lib\\tracemalloc.py', 'PYMODULE'),
   ('stringprep', 'C:\\Python313\\Lib\\stringprep.py', 'PYMODULE'),
+  ('_colorize', 'C:\\Python313\\Lib\\_colorize.py', 'PYMODULE'),
   ('src.utils.backup_manager',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\backup_manager.py',
    'PYMODULE'),
@@ -2378,9 +1992,6 @@
   ('src.services.profile_service',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\services\\profile_service.py',
    'PYMODULE'),
-  ('src.utils.profile_config_manager',
-   'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\utils\\profile_config_manager.py',
-   'PYMODULE'),
   ('src.services.monitoring_service',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\services\\monitoring_service.py',
    'PYMODULE'),
@@ -2388,281 +1999,281 @@
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\src\\services\\telegram_service.py',
    'PYMODULE'),
   ('requests',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\__init__.py',
    'PYMODULE'),
   ('requests.status_codes',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\status_codes.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\status_codes.py',
    'PYMODULE'),
   ('requests.structures',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\structures.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\structures.py',
    'PYMODULE'),
   ('requests.compat',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\compat.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\compat.py',
    'PYMODULE'),
   ('http.cookies', 'C:\\Python313\\Lib\\http\\cookies.py', 'PYMODULE'),
   ('requests.models',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\models.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\models.py',
    'PYMODULE'),
   ('idna',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\__init__.py',
    'PYMODULE'),
   ('idna.package_data',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\package_data.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\package_data.py',
    'PYMODULE'),
   ('idna.intranges',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\intranges.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\intranges.py',
    'PYMODULE'),
   ('idna.core',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\core.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\core.py',
    'PYMODULE'),
   ('idna.uts46data',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\uts46data.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\uts46data.py',
    'PYMODULE'),
   ('idna.idnadata',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\idna\\idnadata.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\idnadata.py',
    'PYMODULE'),
   ('requests.hooks',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\hooks.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\hooks.py',
    'PYMODULE'),
   ('requests.cookies',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\cookies.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\cookies.py',
    'PYMODULE'),
   ('requests.auth',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\auth.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\auth.py',
    'PYMODULE'),
   ('requests._internal_utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\_internal_utils.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\_internal_utils.py',
    'PYMODULE'),
   ('urllib3.util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\__init__.py',
    'PYMODULE'),
   ('urllib3.util.wait',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\wait.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\wait.py',
    'PYMODULE'),
   ('urllib3.util.url',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\url.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\url.py',
    'PYMODULE'),
   ('urllib3.util.util',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\util.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\util.py',
    'PYMODULE'),
   ('urllib3.util.timeout',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\timeout.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\timeout.py',
    'PYMODULE'),
   ('urllib3.util.ssl_',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\ssl_.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\ssl_.py',
    'PYMODULE'),
   ('urllib3.util.ssltransport',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\ssltransport.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\ssltransport.py',
    'PYMODULE'),
   ('urllib3.util.retry',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\retry.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\retry.py',
    'PYMODULE'),
   ('urllib3.response',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\response.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\response.py',
    'PYMODULE'),
   ('urllib3.connection',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\connection.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\connection.py',
    'PYMODULE'),
   ('urllib3.util.ssl_match_hostname',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\ssl_match_hostname.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\ssl_match_hostname.py',
    'PYMODULE'),
   ('urllib3._version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\_version.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\_version.py',
    'PYMODULE'),
   ('urllib3.http2.probe',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\http2\\probe.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\http2\\probe.py',
    'PYMODULE'),
   ('urllib3.http2',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\http2\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\http2\\__init__.py',
    'PYMODULE'),
   ('urllib3.http2.connection',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\http2\\connection.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\http2\\connection.py',
    'PYMODULE'),
   ('urllib3._collections',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\_collections.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\_collections.py',
    'PYMODULE'),
   ('urllib3._base_connection',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\_base_connection.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\_base_connection.py',
    'PYMODULE'),
   ('urllib3.connectionpool',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\connectionpool.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\connectionpool.py',
    'PYMODULE'),
   ('urllib3.util.proxy',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\proxy.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\proxy.py',
    'PYMODULE'),
   ('urllib3._request_methods',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\_request_methods.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\_request_methods.py',
    'PYMODULE'),
   ('urllib3.util.response',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\response.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\response.py',
    'PYMODULE'),
   ('urllib3.util.request',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\request.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\request.py',
    'PYMODULE'),
   ('urllib3.util.connection',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\util\\connection.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\util\\connection.py',
    'PYMODULE'),
   ('urllib3.filepost',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\filepost.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\filepost.py',
    'PYMODULE'),
   ('urllib3.fields',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\fields.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\fields.py',
    'PYMODULE'),
   ('requests.api',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\api.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\api.py',
    'PYMODULE'),
   ('requests.sessions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\sessions.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\sessions.py',
    'PYMODULE'),
   ('requests.adapters',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\adapters.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\adapters.py',
    'PYMODULE'),
   ('urllib3.contrib.socks',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\socks.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\socks.py',
    'PYMODULE'),
   ('urllib3.poolmanager',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\poolmanager.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\poolmanager.py',
    'PYMODULE'),
   ('requests.__version__',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\__version__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\__version__.py',
    'PYMODULE'),
   ('requests.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\utils.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\utils.py',
    'PYMODULE'),
   ('requests.certs',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\certs.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\certs.py',
    'PYMODULE'),
   ('certifi',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\certifi\\__init__.py',
    'PYMODULE'),
   ('certifi.core',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\core.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\certifi\\core.py',
    'PYMODULE'),
   ('requests.packages',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\packages.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\packages.py',
    'PYMODULE'),
   ('urllib3.exceptions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\exceptions.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\exceptions.py',
    'PYMODULE'),
   ('urllib3.contrib.pyopenssl',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\pyopenssl.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\pyopenssl.py',
    'PYMODULE'),
   ('urllib3.contrib',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\__init__.py',
    'PYMODULE'),
   ('charset_normalizer',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\__init__.py',
    'PYMODULE'),
   ('charset_normalizer.version',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\version.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\version.py',
    'PYMODULE'),
   ('charset_normalizer.utils',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\utils.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\utils.py',
    'PYMODULE'),
   ('charset_normalizer.constant',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\constant.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\constant.py',
    'PYMODULE'),
   ('charset_normalizer.models',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\models.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\models.py',
    'PYMODULE'),
   ('charset_normalizer.cd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\cd.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\cd.py',
    'PYMODULE'),
   ('charset_normalizer.legacy',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\legacy.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\legacy.py',
    'PYMODULE'),
   ('charset_normalizer.api',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\api.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\api.py',
    'PYMODULE'),
   ('requests.exceptions',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\requests\\exceptions.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\exceptions.py',
    'PYMODULE'),
   ('urllib3',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\__init__.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\__init__.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\emscripten\\__init__.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.connection',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\connection.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\emscripten\\connection.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.response',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\response.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\emscripten\\response.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.request',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\request.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\emscripten\\request.py',
    'PYMODULE'),
   ('urllib3.contrib.emscripten.fetch',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\fetch.py',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\urllib3\\contrib\\emscripten\\fetch.py',
    'PYMODULE'),
   ('src.services.dynamic_marker_service',
    'E:\\NEW '
@@ -2687,6 +2298,7 @@
    'PYMODULE'),
   ('pathlib', 'C:\\Python313\\Lib\\pathlib\\__init__.py', 'PYMODULE'),
   ('pathlib._local', 'C:\\Python313\\Lib\\pathlib\\_local.py', 'PYMODULE'),
+  ('glob', 'C:\\Python313\\Lib\\glob.py', 'PYMODULE'),
   ('pathlib._abc', 'C:\\Python313\\Lib\\pathlib\\_abc.py', 'PYMODULE')],
  [('tsduck\\bin\\tscore.dll',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\bin\\tscore.dll',
@@ -2979,81 +2591,81 @@
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\plugins\\tsplugin_zap.dll',
    'BINARY'),
   ('python313.dll', 'C:\\Python313\\python313.dll', 'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
-   'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+  ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\opengl32sw.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\opengl32sw.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\opengl32sw.dll',
    'BINARY'),
-  ('select.pyd', 'C:\\Python313\\DLLs\\select.pyd', 'EXTENSION'),
-  ('_decimal.pyd', 'C:\\Python313\\DLLs\\_decimal.pyd', 'EXTENSION'),
-  ('_hashlib.pyd', 'C:\\Python313\\DLLs\\_hashlib.pyd', 'EXTENSION'),
-  ('_socket.pyd', 'C:\\Python313\\DLLs\\_socket.pyd', 'EXTENSION'),
-  ('unicodedata.pyd', 'C:\\Python313\\DLLs\\unicodedata.pyd', 'EXTENSION'),
   ('_lzma.pyd', 'C:\\Python313\\DLLs\\_lzma.pyd', 'EXTENSION'),
   ('_bz2.pyd', 'C:\\Python313\\DLLs\\_bz2.pyd', 'EXTENSION'),
+  ('_decimal.pyd', 'C:\\Python313\\DLLs\\_decimal.pyd', 'EXTENSION'),
+  ('_hashlib.pyd', 'C:\\Python313\\DLLs\\_hashlib.pyd', 'EXTENSION'),
+  ('select.pyd', 'C:\\Python313\\DLLs\\select.pyd', 'EXTENSION'),
+  ('_socket.pyd', 'C:\\Python313\\DLLs\\_socket.pyd', 'EXTENSION'),
+  ('unicodedata.pyd', 'C:\\Python313\\DLLs\\unicodedata.pyd', 'EXTENSION'),
   ('_multiprocessing.pyd',
    'C:\\Python313\\DLLs\\_multiprocessing.pyd',
    'EXTENSION'),
@@ -3061,51 +2673,47 @@
   ('_ssl.pyd', 'C:\\Python313\\DLLs\\_ssl.pyd', 'EXTENSION'),
   ('_ctypes.pyd', 'C:\\Python313\\DLLs\\_ctypes.pyd', 'EXTENSION'),
   ('_queue.pyd', 'C:\\Python313\\DLLs\\_queue.pyd', 'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
   ('_overlapped.pyd', 'C:\\Python313\\DLLs\\_overlapped.pyd', 'EXTENSION'),
   ('_asyncio.pyd', 'C:\\Python313\\DLLs\\_asyncio.pyd', 'EXTENSION'),
-  ('_wmi.pyd', 'C:\\Python313\\DLLs\\_wmi.pyd', 'EXTENSION'),
   ('PyQt6\\QtGui.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtGui.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\QtGui.pyd',
    'EXTENSION'),
   ('PyQt6\\sip.cp313-win_amd64.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\sip.cp313-win_amd64.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\sip.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('PyQt6\\QtWidgets.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtWidgets.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\QtWidgets.pyd',
    'EXTENSION'),
   ('PyQt6\\QtCore.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtCore.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\QtCore.pyd',
    'EXTENSION'),
   ('psutil\\_psutil_windows.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\psutil\\_psutil_windows.pyd',
    'EXTENSION'),
-  ('cryptography\\hazmat\\bindings\\_rust.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
-   'EXTENSION'),
-  ('_cffi_backend.cp313-win_amd64.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd',
-   'EXTENSION'),
+  ('_wmi.pyd', 'C:\\Python313\\DLLs\\_wmi.pyd', 'EXTENSION'),
   ('_sqlite3.pyd', 'C:\\Python313\\DLLs\\_sqlite3.pyd', 'EXTENSION'),
   ('_elementtree.pyd', 'C:\\Python313\\DLLs\\_elementtree.pyd', 'EXTENSION'),
   ('charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md.cp313-win_amd64.pyd',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('_uuid.pyd', 'C:\\Python313\\DLLs\\_uuid.pyd', 'EXTENSION'),
   ('PyQt6\\Qt6\\bin\\MSVCP140.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
    'BINARY'),
   ('VCRUNTIME140_1.dll', 'C:\\Python313\\VCRUNTIME140_1.dll', 'BINARY'),
   ('VCRUNTIME140.dll', 'C:\\Python313\\VCRUNTIME140.dll', 'BINARY'),
@@ -3117,49 +2725,49 @@
    'BINARY'),
   ('tsdektec.dll', 'C:\\Program Files\\TSDuck\\bin\\tsdektec.dll', 'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Gui.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Core.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Core.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\bin\\Qt6Svg.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Svg.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Core.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Svg.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Svg.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Network.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Network.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Network.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
    'BINARY'),
   ('libcrypto-3.dll', 'C:\\Python313\\DLLs\\libcrypto-3.dll', 'BINARY'),
   ('libssl-3.dll', 'C:\\Python313\\DLLs\\libssl-3.dll', 'BINARY'),
   ('libffi-8.dll', 'C:\\Python313\\DLLs\\libffi-8.dll', 'BINARY'),
   ('python3.dll', 'C:\\Python313\\python3.dll', 'BINARY'),
   ('PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
    'BINARY'),
   ('sqlite3.dll', 'C:\\Python313\\DLLs\\sqlite3.dll', 'BINARY'),
   ('PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
    'BINARY')],
  [],
  [],
@@ -3171,6 +2779,118 @@
    'DATA'),
   ('config\\config.json.bak',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\config\\config.json.bak',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'DATA'),
+  ('cryptography\\py.typed',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\cryptography\\py.typed',
    'DATA'),
   ('logo.ico', 'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\logo.ico', 'DATA'),
   ('logo.png', 'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\logo.png', 'DATA'),
@@ -3632,490 +3352,431 @@
   ('tsduck\\libs\\Release-Win64\\tsduck.lib',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\libs\\Release-Win64\\tsduck.lib',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_it.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_gl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_he.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_da.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_hu.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_en.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_lg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_hu.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
+  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lg.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_it.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_de.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\licenses\\LICENSE.APACHE',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.APACHE',
+  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\licenses\\LICENSE.BSD',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.BSD',
+  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\WHEEL',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\WHEEL',
+  ('PyQt6\\Qt6\\translations\\qt_ar.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\RECORD',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\RECORD',
+  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\INSTALLER',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\INSTALLER',
+  ('PyQt6\\Qt6\\translations\\qt_gl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\METADATA',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\METADATA',
+  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\licenses\\LICENSE',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE',
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\REQUESTED',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\REQUESTED',
+  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+  ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
    'DATA'),
-  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
-   'ipsum.txt',
+  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
    'DATA'),
-  ('certifi\\cacert.pem',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\cacert.pem',
+  ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_da.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_en.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_he.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
    'DATA'),
   ('certifi\\py.typed',
-   'E:\\NEW '
-   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\py.typed',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\LIVE '
+   'PC\\AppData\\Roaming\\Python\\Python313\\site-packages\\certifi\\cacert.pem',
    'DATA'),
   ('base_library.zip',
    'E:\\NEW '
    'DOWNLOADS\\FINAL\\IBE-210\\build\\IBE-210_Enterprise\\base_library.zip',
    'DATA')],
- [('abc', 'C:\\Python313\\Lib\\abc.py', 'PYMODULE'),
-  ('stat', 'C:\\Python313\\Lib\\stat.py', 'PYMODULE'),
-  ('_collections_abc', 'C:\\Python313\\Lib\\_collections_abc.py', 'PYMODULE'),
+ [('_weakrefset', 'C:\\Python313\\Lib\\_weakrefset.py', 'PYMODULE'),
+  ('functools', 'C:\\Python313\\Lib\\functools.py', 'PYMODULE'),
+  ('collections', 'C:\\Python313\\Lib\\collections\\__init__.py', 'PYMODULE'),
+  ('types', 'C:\\Python313\\Lib\\types.py', 'PYMODULE'),
+  ('heapq', 'C:\\Python313\\Lib\\heapq.py', 'PYMODULE'),
+  ('linecache', 'C:\\Python313\\Lib\\linecache.py', 'PYMODULE'),
+  ('reprlib', 'C:\\Python313\\Lib\\reprlib.py', 'PYMODULE'),
+  ('locale', 'C:\\Python313\\Lib\\locale.py', 'PYMODULE'),
+  ('abc', 'C:\\Python313\\Lib\\abc.py', 'PYMODULE'),
   ('re._parser', 'C:\\Python313\\Lib\\re\\_parser.py', 'PYMODULE'),
   ('re._constants', 'C:\\Python313\\Lib\\re\\_constants.py', 'PYMODULE'),
   ('re._compiler', 'C:\\Python313\\Lib\\re\\_compiler.py', 'PYMODULE'),
   ('re._casefix', 'C:\\Python313\\Lib\\re\\_casefix.py', 'PYMODULE'),
   ('re', 'C:\\Python313\\Lib\\re\\__init__.py', 'PYMODULE'),
   ('posixpath', 'C:\\Python313\\Lib\\posixpath.py', 'PYMODULE'),
-  ('collections', 'C:\\Python313\\Lib\\collections\\__init__.py', 'PYMODULE'),
-  ('operator', 'C:\\Python313\\Lib\\operator.py', 'PYMODULE'),
-  ('warnings', 'C:\\Python313\\Lib\\warnings.py', 'PYMODULE'),
-  ('ntpath', 'C:\\Python313\\Lib\\ntpath.py', 'PYMODULE'),
-  ('functools', 'C:\\Python313\\Lib\\functools.py', 'PYMODULE'),
-  ('heapq', 'C:\\Python313\\Lib\\heapq.py', 'PYMODULE'),
-  ('sre_compile', 'C:\\Python313\\Lib\\sre_compile.py', 'PYMODULE'),
-  ('locale', 'C:\\Python313\\Lib\\locale.py', 'PYMODULE'),
-  ('io', 'C:\\Python313\\Lib\\io.py', 'PYMODULE'),
-  ('enum', 'C:\\Python313\\Lib\\enum.py', 'PYMODULE'),
   ('weakref', 'C:\\Python313\\Lib\\weakref.py', 'PYMODULE'),
+  ('stat', 'C:\\Python313\\Lib\\stat.py', 'PYMODULE'),
   ('codecs', 'C:\\Python313\\Lib\\codecs.py', 'PYMODULE'),
+  ('sre_constants', 'C:\\Python313\\Lib\\sre_constants.py', 'PYMODULE'),
+  ('copyreg', 'C:\\Python313\\Lib\\copyreg.py', 'PYMODULE'),
   ('sre_parse', 'C:\\Python313\\Lib\\sre_parse.py', 'PYMODULE'),
-  ('_weakrefset', 'C:\\Python313\\Lib\\_weakrefset.py', 'PYMODULE'),
+  ('warnings', 'C:\\Python313\\Lib\\warnings.py', 'PYMODULE'),
+  ('genericpath', 'C:\\Python313\\Lib\\genericpath.py', 'PYMODULE'),
+  ('io', 'C:\\Python313\\Lib\\io.py', 'PYMODULE'),
+  ('operator', 'C:\\Python313\\Lib\\operator.py', 'PYMODULE'),
+  ('sre_compile', 'C:\\Python313\\Lib\\sre_compile.py', 'PYMODULE'),
+  ('enum', 'C:\\Python313\\Lib\\enum.py', 'PYMODULE'),
+  ('keyword', 'C:\\Python313\\Lib\\keyword.py', 'PYMODULE'),
+  ('ntpath', 'C:\\Python313\\Lib\\ntpath.py', 'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Python313\\Lib\\encodings\\zlib_codec.py',
    'PYMODULE'),
@@ -4358,12 +4019,6 @@
    'C:\\Python313\\Lib\\encodings\\aliases.py',
    'PYMODULE'),
   ('encodings', 'C:\\Python313\\Lib\\encodings\\__init__.py', 'PYMODULE'),
-  ('types', 'C:\\Python313\\Lib\\types.py', 'PYMODULE'),
-  ('sre_constants', 'C:\\Python313\\Lib\\sre_constants.py', 'PYMODULE'),
-  ('genericpath', 'C:\\Python313\\Lib\\genericpath.py', 'PYMODULE'),
-  ('linecache', 'C:\\Python313\\Lib\\linecache.py', 'PYMODULE'),
-  ('reprlib', 'C:\\Python313\\Lib\\reprlib.py', 'PYMODULE'),
-  ('keyword', 'C:\\Python313\\Lib\\keyword.py', 'PYMODULE'),
-  ('copyreg', 'C:\\Python313\\Lib\\copyreg.py', 'PYMODULE'),
+  ('_collections_abc', 'C:\\Python313\\Lib\\_collections_abc.py', 'PYMODULE'),
   ('traceback', 'C:\\Python313\\Lib\\traceback.py', 'PYMODULE'),
   ('os', 'C:\\Python313\\Lib\\os.py', 'PYMODULE')])

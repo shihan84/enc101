@@ -43,6 +43,13 @@ models_submodules = collect_submodules('src.models')
 ui_submodules = collect_submodules('src.ui')
 widgets_submodules = collect_submodules('src.ui.widgets')
 
+# Collect cryptography submodules (required for encryption)
+try:
+    cryptography_submodules = collect_submodules('cryptography')
+except Exception as e:
+    print(f"[WARNING] Failed to collect cryptography submodules: {e}")
+    cryptography_submodules = []
+
 # Add all Python files from src directory
 hiddenimports = [
     'src',
@@ -98,20 +105,44 @@ hiddenimports = [
     # External dependencies
     'cryptography',
     'cryptography.fernet',
+    'cryptography.hazmat',
+    'cryptography.hazmat.primitives',
+    'cryptography.hazmat.primitives.ciphers',
+    'cryptography.hazmat.primitives.kdf',
+    'cryptography.hazmat.backends',
+    'cryptography.hazmat.backends.openssl',
+    'cryptography.hazmat.backends.openssl.backend',
+    'cryptography.hazmat.bindings',
+    'cryptography.hazmat.bindings.openssl',
+    'cryptography.utils',
     'psutil',
     'PyQt6',
     'PyQt6.QtCore',
     'PyQt6.QtWidgets',
     'PyQt6.QtGui',
-] + src_submodules + services_submodules + models_submodules + ui_submodules + widgets_submodules
+] + src_submodules + services_submodules + models_submodules + ui_submodules + widgets_submodules + cryptography_submodules
+
+# Collect cryptography binaries and data files
+cryptography_binaries = []
+cryptography_datas = []
+try:
+    from PyInstaller.utils.hooks import collect_dynamic_libs, collect_data_files
+    cryptography_binaries = collect_dynamic_libs('cryptography')
+    cryptography_datas = collect_data_files('cryptography')
+    if cryptography_binaries:
+        print(f"[INFO] Collected {len(cryptography_binaries)} cryptography binaries")
+    if cryptography_datas:
+        print(f"[INFO] Collected {len(cryptography_datas)} cryptography data files")
+except Exception as e:
+    print(f"[WARNING] Failed to collect cryptography binaries/data: {e}")
 
 a = Analysis(
     ['main_enterprise.py'],
     pathex=[str(Path('.').absolute()), str(Path('src').absolute())],  # Add current dir and src to path
-    binaries=[],
-    datas=datas,
+    binaries=cryptography_binaries,
+    datas=datas + cryptography_datas,
     hiddenimports=hiddenimports,
-    hookspath=[],
+    hookspath=['hooks'] if Path('hooks').exists() else [],
     hooksconfig={},
     runtime_hooks=['runtime_hook.py'],
     excludes=[],

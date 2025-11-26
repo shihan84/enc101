@@ -1,106 +1,115 @@
 #!/usr/bin/env python3
 """
-Create GitHub Release for IBE-210 v2.1.0
+Create GitHub Release for IBE-210
+Usage: python create_release.py <tag> [release_notes_file]
+Example: python create_release.py v2.2.5 RELEASE_NOTES_v2.2.5.md
 """
 
 import requests
 import json
 import os
+import sys
 from pathlib import Path
 
 # GitHub API configuration
-# Note: Set GITHUB_TOKEN environment variable or replace with your token
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "YOUR_GITHUB_TOKEN_HERE")
 REPO_OWNER = "shihan84"
 REPO_NAME = "enc101"
-TAG = "v2.2.0"
-RELEASE_NAME = "IBE-210 v2.2.0 Enterprise"
-RELEASE_BODY = """# IBE-210 v2.2.0 Enterprise Release
 
-## 🎉 What's New
+def read_release_notes(file_path: Path) -> str:
+    """Read release notes from file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    except Exception as e:
+        print(f"[WARNING] Failed to read release notes file: {e}")
+        return ""
 
-**IBE-210** is the next generation of the IBE broadcast encoder with **bundled TSDuck support**.
+def create_release(tag: str, release_notes_file: str = None, token: str = None):
+    """Create GitHub release"""
+    # Get GitHub token from multiple sources (priority order):
+    # 1. Command-line argument
+    # 2. Environment variable
+    # 3. Config file (.github_token in script directory)
+    GITHUB_TOKEN = None
+    
+    if token:
+        GITHUB_TOKEN = token
+    else:
+        GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+    
+    # Try reading from config file if still not found
+    if not GITHUB_TOKEN or GITHUB_TOKEN == "YOUR_GITHUB_TOKEN_HERE":
+        script_dir = Path(__file__).parent
+        token_file = script_dir / ".github_token"
+        if token_file.exists():
+            try:
+                with open(token_file, 'r', encoding='utf-8') as f:
+                    GITHUB_TOKEN = f.read().strip()
+            except Exception as e:
+                print(f"[WARNING] Failed to read token from file: {e}")
+    
+    if not GITHUB_TOKEN or GITHUB_TOKEN == "YOUR_GITHUB_TOKEN_HERE":
+        print("[ERROR] GitHub token not found!")
+        print()
+        print("Please provide the token in one of these ways:")
+        print()
+        print("1. Command-line argument:")
+        print("   python create_release.py v2.2.5 RELEASE_NOTES.md --token YOUR_TOKEN")
+        print()
+        print("2. Environment variable:")
+        print("   Windows PowerShell: $env:GITHUB_TOKEN='your_token_here'")
+        print("   Windows CMD: set GITHUB_TOKEN=your_token_here")
+        print("   Linux/Mac: export GITHUB_TOKEN='your_token_here'")
+        print()
+        print("3. Config file:")
+        print("   Create .github_token file in scripts/ directory with your token")
+        print()
+        print("To create a GitHub token:")
+        print("1. Go to https://github.com/settings/tokens")
+        print("2. Click 'Generate new token (classic)'")
+        print("3. Select 'repo' scope")
+        print("4. Copy the token")
+        return None
+    
+    # Extract version from tag (e.g., v2.2.5 -> 2.2.5)
+    version = tag.lstrip('v')
+    release_name = f"IBE-210 v{version} Enterprise"
+    
+    # Read release notes if file provided
+    release_body = ""
+    if release_notes_file:
+        notes_path = Path(release_notes_file)
+        if not notes_path.is_absolute():
+            # Try relative to script directory
+            script_dir = Path(__file__).parent.parent
+            notes_path = script_dir / release_notes_file
+        
+        if notes_path.exists():
+            release_body = read_release_notes(notes_path)
+        else:
+            print(f"[WARNING] Release notes file not found: {notes_path}")
+    
+    # Default release body if no file provided
+    if not release_body:
+        release_body = f"""# IBE-210 v{version} Enterprise Release
 
-### ✨ Key Features
+## 🎉 Release {tag}
 
-1. **Bundled TSDuck** 🎁
-   - TSDuck binaries included in the application package
-   - No separate TSDuck installation required
-   - Works out of the box
-   - Hybrid approach: Uses bundled TSDuck first, falls back to system TSDuck
-
-2. **All Features from IBE-100 v3.0**
-   - SCTE-35 marker injection and monitoring
-   - Real-time stream analysis
-   - EPG/EIT generation
-   - Telegram notifications
-   - Profile management
-   - REST API
-   - And more...
+**IBE-210 Enterprise** - Professional Broadcast Encoding
 
 ## 📦 Installation
 
-### Download
-
 Download `IBE-210_Enterprise.exe` from the assets below.
 
-### Quick Start
+## 📋 Changes
 
-1. **Launch IBE-210**
-2. **Configure your stream** (Input/Output settings)
-3. **Start streaming** - TSDuck is ready to use!
-
-No need to install TSDuck separately!
-
-## 📋 System Requirements
-
-- **Windows 10/11** (64-bit)
-- **TSDuck**: Included (bundled) or install separately
-
-## 🔄 How Bundled TSDuck Works
-
-IBE-210 uses a **hybrid approach**:
-
-1. **First Priority**: Bundled TSDuck (included in package)
-2. **Second Priority**: System TSDuck (if installed)
-3. **Third Priority**: Custom path (user-specified)
-
-This ensures maximum compatibility and flexibility.
-
-## 📝 Version History
-
-### v2.1.0 (IBE-210)
-- ✨ Added bundled TSDuck support
-- ✨ Hybrid TSDuck detection (bundled → system → custom)
-- 🔧 Improved TSDuck environment setup
-- 📦 Larger package size (~88 MB with TSDuck)
-
-### v3.0.0 (IBE-100)
-- All previous features
-- Production-ready
-- Comprehensive testing
-
-## ⚖️ Licensing
-
-**Important**: TSDuck is licensed under **GNU GPL v2**.
-
-If you bundle TSDuck:
-- Your application must be GPL (open-source), OR
-- Purchase commercial license from TSDuck developers
-
-## 🆘 Support
-
-For issues, questions, or contributions:
-- Check documentation in the repository
-- Review troubleshooting guides
+See the release notes for detailed changelog.
 
 ---
 
 **IBE-210 Enterprise** - Professional Broadcast Encoding Made Easy 🚀
 """
-
-def create_release():
-    """Create GitHub release"""
+    
     url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/releases"
     
     headers = {
@@ -109,15 +118,18 @@ def create_release():
     }
     
     data = {
-        "tag_name": TAG,
-        "name": RELEASE_NAME,
-        "body": RELEASE_BODY,
+        "tag_name": tag,
+        "name": release_name,
+        "body": release_body,
         "draft": False,
         "prerelease": False
     }
     
-    print(f"Creating release {TAG}...")
+    print(f"Creating release {tag}...")
     print(f"Repository: {REPO_OWNER}/{REPO_NAME}")
+    print(f"Release name: {release_name}")
+    if release_notes_file:
+        print(f"Release notes: {release_notes_file}")
     print()
     
     try:
@@ -135,10 +147,31 @@ def create_release():
         return release_data
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to create release: {e}")
-        if hasattr(e.response, 'text'):
+        if hasattr(e, 'response') and e.response is not None:
             print(f"Response: {e.response.text}")
         return None
 
 if __name__ == "__main__":
-    create_release()
+    if len(sys.argv) < 2:
+        print("Usage: python create_release.py <tag> [release_notes_file] [--token TOKEN]")
+        print("Example: python create_release.py v2.2.5 RELEASE_NOTES_v2.2.5.md")
+        print("Example: python create_release.py v2.2.5 RELEASE_NOTES_v2.2.5.md --token YOUR_TOKEN")
+        sys.exit(1)
+    
+    tag = sys.argv[1]
+    release_notes_file = None
+    token = None
+    
+    # Parse arguments
+    i = 2
+    while i < len(sys.argv):
+        if sys.argv[i] == "--token" and i + 1 < len(sys.argv):
+            token = sys.argv[i + 1]
+            i += 2
+        else:
+            if not release_notes_file:
+                release_notes_file = sys.argv[i]
+            i += 1
+    
+    create_release(tag, release_notes_file, token)
 
