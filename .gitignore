@@ -4,8 +4,20 @@ tsduck/plugins/
 tsduck/libs/
 downloads/
 
+# Build artifacts
+build/
+dist/
+*.spec.bak
+
 # Secrets and tokens
 scripts/create_release.py
 *.token
 *.secret
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
