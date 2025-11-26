@@ -1534,3 +1534,6 @@
 {"timestamp": "2025-11-19T19:33:01.764715", "level": "INFO", "logger": "IBE100", "message": "Starting application...", "module": "logger", "function": "info", "line": 128}
 {"timestamp": "2025-11-20T14:04:35.074533", "level": "INFO", "logger": "IBE100", "message": "Application exited with code 0", "module": "logger", "function": "info", "line": 128}
 {"timestamp": "2025-11-20T14:04:35.075331", "level": "INFO", "logger": "Main", "message": "Application shutting down...", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-26T18:58:07.175560", "level": "INFO", "logger": "SCTE35Service", "message": "SCTE-35 service initialized with directory: scte35_final", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-26T18:58:07.200329", "level": "INFO", "logger": "SCTE35Service", "message": "Profile: default", "module": "logger", "function": "info", "line": 128}
+{"timestamp": "2025-11-26T18:58:07.200977", "level": "INFO", "logger": "SCTE35Service", "message": "Last event ID: 10054", "module": "logger", "function": "info", "line": 128}

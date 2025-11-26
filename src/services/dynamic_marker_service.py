@@ -243,17 +243,17 @@ class DynamicMarkerService:
         self.logger.info(f"Directory exists: {markers_dir.exists()}")
         self.logger.info(f"Directory is absolute: {markers_dir.is_absolute()}")
         
-        # Generate marker
-        marker = self.scte35_service.generate_marker(
+        # Generate marker XML content directly (don't create file in scte35_final)
+        # Access the private method to generate XML content
+        xml_content = self.scte35_service._generate_xml(
             event_id=event_id,
             cue_type=self._current_cue_type,
-            preroll_seconds=self._current_preroll,
-            ad_duration_seconds=self._current_ad_duration,
-            immediate=self._current_immediate,
-            auto_increment=False  # We manage incrementing manually
+            preroll=self._current_preroll,
+            ad_duration=self._current_ad_duration,
+            immediate=self._current_immediate
         )
         
-        # Save to dynamic directory with consistent naming
+        # Save directly to dynamic directory with consistent naming
         # Use zero-padded event ID for proper ordering - TSDuck expects splice*.xml
         target_filename = f"splice_{event_id:05d}.xml"
         
@@ -262,9 +262,13 @@ class DynamicMarkerService:
         
         target_path = markers_dir / target_filename
         
-        # Copy marker file to dynamic directory
-        self.logger.info(f"Copying marker from {marker.xml_path} to {target_path}")
-        shutil.copy(marker.xml_path, target_path)
+        # Write marker file directly to dynamic_markers directory
+        self.logger.info(f"Writing marker directly to: {target_path}")
+        target_path.write_text(xml_content, encoding='utf-8')
+        
+        # Verify the file was written
+        if not target_path.exists():
+            raise SCTE35Error(f"Failed to create marker file: {target_path}")
         
         # Ensure file is written and stable
         # TSDuck's min-stable-delay is 500ms, and poll-interval is 500ms

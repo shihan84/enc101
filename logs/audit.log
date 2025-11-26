@@ -1564,3 +1564,6 @@ OSError: Could not find a suitable TLS CA certificate bundle, invalid path: C:\U
 2025-11-19 19:33:01 | INFO | Starting application...
 2025-11-20 14:04:35 | INFO | Application exited with code 0
 2025-11-20 14:04:35 | INFO | Application shutting down...
+2025-11-26 18:58:07 | INFO | SCTE-35 service initialized with directory: scte35_final
+2025-11-26 18:58:07 | INFO | Profile: default
+2025-11-26 18:58:07 | INFO | Last event ID: 10054
