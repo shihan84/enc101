@@ -211,6 +211,13 @@ class MainWindow(QMainWindow):
                 if hasattr(self, 'scte35_widget'):
                     self.scte35_widget.update_profile(profile_name)
             
+            # Update Dynamic Marker Service to use profile-specific directory
+            dynamic_marker_service = self.app.get_service("dynamic_marker")
+            if dynamic_marker_service:
+                dynamic_marker_service.set_profile(profile_name)
+                self.logger.info(f"Dynamic marker service switched to profile: {profile_name}")
+                self.monitoring_widget.append(f"[INFO] Dynamic markers directory: {dynamic_marker_service.get_dynamic_markers_dir()}")
+            
             # Load profile-specific Telegram settings
             if self.profile_service:
                 telegram_settings = self.profile_service.get_telegram_settings(profile_name)

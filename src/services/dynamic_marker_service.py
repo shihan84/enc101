@@ -22,17 +22,30 @@ class DynamicMarkerService:
     def __init__(
         self,
         scte35_service: SCTE35Service,
-        dynamic_markers_dir: Optional[Path] = None
+        dynamic_markers_dir: Optional[Path] = None,
+        profile_name: Optional[str] = None
     ):
         self.logger = get_logger("DynamicMarkerService")
         self.scte35_service = scte35_service
+        self.profile_name = profile_name or "default"
         
         # Directory for dynamic markers (TSDuck monitors this)
+        # Use profile-specific directory if profile is provided
         if dynamic_markers_dir:
-            self.dynamic_markers_dir = dynamic_markers_dir
+            self.dynamic_markers_dir = Path(dynamic_markers_dir)
         else:
-            self.dynamic_markers_dir = Path("scte35_final/dynamic_markers")
+            # Use profile-specific directory structure: scte35_final/{profile_name}/dynamic_markers/
+            base_dir = Path("scte35_final")
+            if self.profile_name and self.profile_name != "default":
+                # Sanitize profile name for filesystem (same logic as SCTE35Service)
+                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
+                safe_name = safe_name.replace(' ', '_')
+                self.dynamic_markers_dir = base_dir / safe_name / "dynamic_markers"
+            else:
+                self.dynamic_markers_dir = base_dir / "dynamic_markers"
         
+        # Convert to absolute path to ensure TSDuck can find it
+        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         
         # Thread management
@@ -253,4 +266,33 @@ class DynamicMarkerService:
     def get_markers_generated(self) -> int:
         """Get the number of markers generated (injected)"""
         return self._markers_generated
+    
+    def set_profile(self, profile_name: str):
+        """Update profile and switch to profile-specific directory"""
+        if profile_name == self.profile_name:
+            return  # No change needed
+        
+        if self._running:
+            self.logger.warning("Cannot change profile while dynamic generation is running")
+            return
+        
+        old_dir = self.dynamic_markers_dir
+        self.profile_name = profile_name or "default"
+        
+        # Create new profile-specific directory
+        base_dir = Path("scte35_final")
+        if profile_name and profile_name != "default":
+            # Sanitize profile name for filesystem (same logic as SCTE35Service)
+            safe_name = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
+            safe_name = safe_name.replace(' ', '_')
+            self.dynamic_markers_dir = base_dir / safe_name / "dynamic_markers"
+        else:
+            self.dynamic_markers_dir = base_dir / "dynamic_markers"
+        
+        # Convert to absolute path
+        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.logger.info(f"Switched to profile: {self.profile_name}")
+        self.logger.info(f"New dynamic markers directory: {self.dynamic_markers_dir}")
 

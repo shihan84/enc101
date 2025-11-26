@@ -195,7 +195,10 @@ class TSDuckService:
             # Check if marker_path is a directory (for dynamic generation) or a file
             if marker_path.is_dir():
                 # Dynamic marker generation mode: use wildcard pattern
-                wildcard_pattern = str(marker_path / "splice*.xml")
+                # Convert to absolute path to ensure TSDuck can find it
+                abs_marker_path = marker_path.resolve()
+                wildcard_pattern = str(abs_marker_path / "splice*.xml")
+                self.logger.info(f"Using absolute path for dynamic markers: {wildcard_pattern}")
                 command.extend(["-P", "spliceinject",
                     "--pid", str(config.scte35_pid),
                     "--pts-pid", str(config.vpid),
