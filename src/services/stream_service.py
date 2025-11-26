@@ -115,10 +115,13 @@ class StreamService:
                 self._output_callbacks.append(output_callback)
             
             # Determine marker path: use dynamic directory if dynamic generation is enabled
-            # Dynamic generation is enabled if inject_count > 1 (for continuous injection with incrementing IDs)
+            # Dynamic generation is enabled if:
+            #   1. Dynamic marker service is available
+            #   2. Marker is provided
+            #   3. Either inject_count > 1 OR we want continuous injection (24/7 streaming)
+            # For 24/7 streaming, we always use dynamic generation to ensure incrementing event IDs
             use_dynamic_generation = (
                 self.dynamic_marker_service is not None and 
-                config.inject_count > 1 and
                 marker is not None
             )
             
@@ -131,13 +134,16 @@ class StreamService:
                     preroll_seconds=marker.preroll_seconds,
                     ad_duration_seconds=marker.ad_duration_seconds,
                     immediate=marker.immediate,
+                    start_event_id=marker.event_id,  # Start with the marker's event ID
                     output_callback=output_callback
                 )
                 # Use dynamic markers directory instead of single file
                 marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
+                self.logger.info(f"Using dynamic marker directory: {marker_path}")
             else:
-                # Use single marker file (traditional mode)
+                # Use single marker file (traditional mode - only if dynamic service not available)
                 marker_path = marker.xml_path if marker else None
+                self.logger.info(f"Using single marker file: {marker_path}")
             
             # Build command
             command = self.tsduck_service.build_command(config, marker_path)
