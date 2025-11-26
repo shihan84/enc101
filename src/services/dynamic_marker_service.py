@@ -251,6 +251,22 @@ class DynamicMarkerService:
         self.logger.info(f"Directory exists: {markers_dir.exists()}")
         self.logger.info(f"Directory is absolute: {markers_dir.is_absolute()}")
         
+        # CRITICAL: Delete old splice*.xml files BEFORE creating new one
+        # This ensures only one file exists at a time, and TSDuck can process it
+        # Keep the current file until the next one is generated
+        try:
+            old_files = list(markers_dir.glob("splice*.xml"))
+            if old_files:
+                self.logger.info(f"Deleting {len(old_files)} old marker file(s) before creating new one")
+                for old_file in old_files:
+                    try:
+                        old_file.unlink()
+                        self.logger.debug(f"Deleted old marker: {old_file.name}")
+                    except Exception as e:
+                        self.logger.warning(f"Failed to delete old marker {old_file.name}: {e}")
+        except Exception as e:
+            self.logger.warning(f"Failed to clean old markers: {e}")
+        
         if output_callback:
             output_callback(f"[INFO] Marker directory: {markers_dir}")
         

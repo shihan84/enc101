@@ -212,7 +212,8 @@ class TSDuckService:
                     "--pid", str(config.scte35_pid),
                     "--pts-pid", str(config.vpid),
                     "--files", wildcard_pattern,
-                    "--delete-files",  # Delete files after injection
+                    # DO NOT use --delete-files - we manage file deletion manually
+                    # Keep files until next marker is generated to ensure TSDuck can inject them
                     "--poll-interval", "500",  # Poll every 500ms (default)
                     "--min-stable-delay", "500",  # File must be stable for 500ms
                     "--inject-count", "1"])  # Each file injected once
