@@ -232,8 +232,23 @@ class DynamicMarkerService:
         
         # Get the correct directory path (ensure it's initialized)
         # CRITICAL: Always rebuild path to ensure it's correct
-        base_dir = Path("scte35_final").resolve()
-        markers_dir = base_dir / "dynamic_markers"
+        # Use get_dynamic_markers_dir() which handles path resolution properly
+        markers_dir = self.get_dynamic_markers_dir()
+        
+        # Verify it's the correct path
+        markers_dir_str = str(markers_dir)
+        if "dynamic_markers" not in markers_dir_str:
+            self.logger.error(f"ERROR: Path does not contain 'dynamic_markers': {markers_dir}")
+            # Force correct path
+            import os
+            cwd = Path(os.getcwd())
+            base_dir = cwd / "scte35_final"
+            markers_dir = base_dir / "dynamic_markers"
+            markers_dir.mkdir(parents=True, exist_ok=True)
+            self.dynamic_markers_dir = markers_dir.resolve()
+            self.logger.warning(f"Corrected path to: {markers_dir}")
+        
+        # Ensure directory exists
         markers_dir.mkdir(parents=True, exist_ok=True)
         
         # Update instance variable
@@ -242,6 +257,9 @@ class DynamicMarkerService:
         self.logger.info(f"Using markers directory: {markers_dir}")
         self.logger.info(f"Directory exists: {markers_dir.exists()}")
         self.logger.info(f"Directory is absolute: {markers_dir.is_absolute()}")
+        
+        if output_callback:
+            output_callback(f"[INFO] Marker directory: {markers_dir}")
         
         # Generate marker XML content directly (don't create file in scte35_final)
         # Access the private method to generate XML content
@@ -264,11 +282,29 @@ class DynamicMarkerService:
         
         # Write marker file directly to dynamic_markers directory
         self.logger.info(f"Writing marker directly to: {target_path}")
-        target_path.write_text(xml_content, encoding='utf-8')
+        try:
+            # Write file with explicit encoding
+            with open(target_path, 'w', encoding='utf-8') as f:
+                f.write(xml_content)
+                f.flush()
+                import os
+                os.fsync(f.fileno())  # Force write to disk
+        except Exception as e:
+            self.logger.error(f"Failed to write marker file: {e}", exc_info=True)
+            raise SCTE35Error(f"Failed to create marker file: {target_path} - {e}")
         
         # Verify the file was written
         if not target_path.exists():
+            self.logger.error(f"CRITICAL: File does not exist after write: {target_path}")
+            self.logger.error(f"Parent directory: {target_path.parent}")
+            self.logger.error(f"Parent exists: {target_path.parent.exists()}")
             raise SCTE35Error(f"Failed to create marker file: {target_path}")
+        
+        # Verify file has content
+        file_size = target_path.stat().st_size
+        if file_size == 0:
+            self.logger.error(f"CRITICAL: File is empty: {target_path}")
+            raise SCTE35Error(f"Marker file is empty: {target_path}")
         
         # Ensure file is written and stable
         # TSDuck's min-stable-delay is 500ms, and poll-interval is 500ms
@@ -298,10 +334,13 @@ class DynamicMarkerService:
         self.logger.info(f"Generated dynamic marker: {target_filename} (Event ID: {event_id}, Total generated: {self._markers_generated})")
         self.logger.info(f"Marker saved to: {target_path}")
         self.logger.info(f"File exists: {target_path.exists()}")
+        self.logger.info(f"File size: {file_size} bytes")
+        self.logger.info(f"Full path: {target_path.resolve()}")
         
         if output_callback:
             output_callback(f"[SUCCESS] New marker generated: {target_filename}")
             output_callback(f"[INFO] Marker saved to: {target_path}")
+            output_callback(f"[INFO] File verified: {file_size} bytes")
     
     def _clear_directory(self):
         """Clear all files from dynamic markers directory"""
