@@ -180,11 +180,21 @@ class DynamicMarkerService:
     
     def _generation_loop(self, interval_seconds: float, output_callback: Optional[Callable[[str], None]]):
         """Main generation loop running in background thread"""
+        # Ensure directory is initialized and exists
+        markers_dir = self.get_dynamic_markers_dir()
         self.logger.info(f"Generation loop started (interval: {interval_seconds}s)")
+        self.logger.info(f"Dynamic markers directory: {markers_dir}")
+        self.logger.info(f"Directory exists: {markers_dir.exists()}")
+        
+        if output_callback:
+            output_callback(f"[INFO] Generation loop started")
+            output_callback(f"[INFO] Directory: {markers_dir}")
         
         # Generate first marker immediately
         try:
+            self.logger.info("Generating first marker...")
             self._generate_and_save_marker(output_callback)
+            self.logger.info("First marker generated successfully")
         except Exception as e:
             self.logger.error(f"Failed to generate first marker: {e}", exc_info=True)
             if output_callback:
@@ -216,6 +226,10 @@ class DynamicMarkerService:
         
         event_id = self._next_event_id
         
+        # Get the correct directory path (ensure it's initialized)
+        markers_dir = self.get_dynamic_markers_dir()
+        self.logger.debug(f"Using markers directory: {markers_dir}")
+        
         # Generate marker
         marker = self.scte35_service.generate_marker(
             event_id=event_id,
@@ -227,15 +241,16 @@ class DynamicMarkerService:
         )
         
         # Save to dynamic directory with consistent naming
-        # Use zero-padded event ID for proper ordering
+        # Use zero-padded event ID for proper ordering - TSDuck expects splice*.xml
         target_filename = f"splice_{event_id:05d}.xml"
         
-        # Ensure directory exists (profile-specific structure)
-        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+        # Ensure directory exists
+        markers_dir.mkdir(parents=True, exist_ok=True)
         
-        target_path = self.dynamic_markers_dir / target_filename
+        target_path = markers_dir / target_filename
         
-        # Copy marker file to dynamic directory (profile-specific location)
+        # Copy marker file to dynamic directory
+        self.logger.info(f"Copying marker from {marker.xml_path} to {target_path}")
         shutil.copy(marker.xml_path, target_path)
         
         # Ensure file is written (wait for stability)
@@ -254,9 +269,12 @@ class DynamicMarkerService:
         self._markers_generated += 1
         
         self.logger.info(f"Generated dynamic marker: {target_filename} (Event ID: {event_id}, Total generated: {self._markers_generated})")
+        self.logger.info(f"Marker saved to: {target_path}")
+        self.logger.info(f"File exists: {target_path.exists()}")
         
         if output_callback:
-            output_callback(f"[SCTE-35] Generated marker: Event ID={event_id} (Total: {self._markers_generated})")
+            output_callback(f"[SUCCESS] New marker generated: {target_filename}")
+            output_callback(f"[INFO] Marker saved to: {target_path}")
     
     def _clear_directory(self):
         """Clear all files from dynamic markers directory"""
