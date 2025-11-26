@@ -17,7 +17,7 @@ class Config:
     """Application configuration"""
     # Application settings
     app_name: str = "IBE-210 Enterprise"
-    app_version: str = "2.1.0"
+    app_version: str = "2.2.3"
     log_level: str = "INFO"
     log_dir: str = "logs"
     

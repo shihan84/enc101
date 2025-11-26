@@ -80,7 +80,7 @@ class MainWindow(QMainWindow):
             logo_label.setText("🏠")
             logo_label.setStyleSheet("font-size: 40px;")
         
-        title_label = QLabel("Broadcast Encoder 110")
+        title_label = QLabel("IBE-210 Enterprise")
         title_label.setStyleSheet("font-size: 24px; font-weight: bold; color: #4CAF50;")
         
         header_layout.addWidget(logo_label)
@@ -162,9 +162,24 @@ class MainWindow(QMainWindow):
         main_layout.addLayout(control_layout)
         
         # Footer
-        footer = QLabel(f"© 2024 Broadcast Encoder 110 | v{config.app_version}")
-        footer.setStyleSheet("color: #888; font-size: 10px; padding: 5px;")
-        main_layout.addWidget(footer)
+        footer_layout = QHBoxLayout()
+        footer_layout.setContentsMargins(10, 5, 10, 5)
+        
+        # Left side - Company info
+        company_label = QLabel("© 2024 ITAssist Broadcast Solutions | Dubai • Mumbai • Gurugram")
+        company_label.setStyleSheet("color: #888; font-size: 10px;")
+        footer_layout.addWidget(company_label)
+        
+        # Right side - Version
+        version_label = QLabel(f"IBE-210 Enterprise v{config.app_version}")
+        version_label.setStyleSheet("color: #4CAF50; font-size: 11px; font-weight: bold;")
+        version_label.setAlignment(Qt.AlignmentFlag.AlignRight)
+        footer_layout.addWidget(version_label)
+        
+        footer_widget = QWidget()
+        footer_widget.setLayout(footer_layout)
+        footer_widget.setStyleSheet("background-color: #1a1a1a; border-top: 1px solid #444;")
+        main_layout.addWidget(footer_widget)
         
         # Apply modern theme
         apply_modern_theme(self.app.qt_app)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-IBE-210 v2.1.0 Enterprise - Main Entry Point
+IBE-210 v2.2.3 Enterprise - Main Entry Point
 Enterprise-grade broadcast encoder with bundled TSDuck support
 """
 
@@ -64,7 +64,7 @@ def main():
         
         logger = get_logger("Main")
         logger.info("=" * 60)
-        logger.info("IBE-210 v2.1.0 Enterprise Starting...")
+        logger.info("IBE-210 v2.2.3 Enterprise Starting...")
         logger.info("=" * 60)
         
         # Initialize services

@@ -27,7 +27,13 @@ class DynamicMarkerService:
     ):
         self.logger = get_logger("DynamicMarkerService")
         self.scte35_service = scte35_service
-        self.profile_name = profile_name or "default"
+        
+        # Get profile name from SCTE35Service if not provided (sync with SCTE35Service)
+        if profile_name is None:
+            # Use the same profile as SCTE35Service
+            self.profile_name = getattr(scte35_service, 'profile_name', 'default')
+        else:
+            self.profile_name = profile_name
         
         # Directory for dynamic markers (TSDuck monitors this)
         # Use profile-specific directory if profile is provided
@@ -35,6 +41,7 @@ class DynamicMarkerService:
             self.dynamic_markers_dir = Path(dynamic_markers_dir)
         else:
             # Use profile-specific directory structure: scte35_final/{profile_name}/dynamic_markers/
+            # This matches the SCTE35Service directory structure
             base_dir = Path("scte35_final")
             if self.profile_name and self.profile_name != "default":
                 # Sanitize profile name for filesystem (same logic as SCTE35Service)
@@ -46,7 +53,11 @@ class DynamicMarkerService:
         
         # Convert to absolute path to ensure TSDuck can find it
         self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        # Create directory structure (including parent profile directory if needed)
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+        
+        self.logger.info(f"Dynamic marker service initialized with profile: {self.profile_name}")
+        self.logger.info(f"Dynamic markers directory: {self.dynamic_markers_dir}")
         
         # Thread management
         self._generation_thread: Optional[threading.Thread] = None
@@ -215,9 +226,13 @@ class DynamicMarkerService:
         # Save to dynamic directory with consistent naming
         # Use zero-padded event ID for proper ordering
         target_filename = f"splice_{event_id:05d}.xml"
+        
+        # Ensure directory exists (profile-specific structure)
+        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+        
         target_path = self.dynamic_markers_dir / target_filename
         
-        # Copy marker file to dynamic directory
+        # Copy marker file to dynamic directory (profile-specific location)
         shutil.copy(marker.xml_path, target_path)
         
         # Ensure file is written (wait for stability)
@@ -269,6 +284,8 @@ class DynamicMarkerService:
     
     def set_profile(self, profile_name: str):
         """Update profile and switch to profile-specific directory"""
+        profile_name = profile_name or "default"
+        
         if profile_name == self.profile_name:
             return  # No change needed
         
@@ -277,22 +294,28 @@ class DynamicMarkerService:
             return
         
         old_dir = self.dynamic_markers_dir
-        self.profile_name = profile_name or "default"
+        self.profile_name = profile_name
         
-        # Create new profile-specific directory
+        # Create new profile-specific directory structure
+        # This matches the SCTE35Service directory structure: scte35_final/{profile_name}/dynamic_markers/
         base_dir = Path("scte35_final")
         if profile_name and profile_name != "default":
             # Sanitize profile name for filesystem (same logic as SCTE35Service)
             safe_name = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
             safe_name = safe_name.replace(' ', '_')
-            self.dynamic_markers_dir = base_dir / safe_name / "dynamic_markers"
+            # Create profile directory structure: scte35_final/{profile_name}/dynamic_markers/
+            profile_dir = base_dir / safe_name
+            self.dynamic_markers_dir = profile_dir / "dynamic_markers"
         else:
+            # Default profile: scte35_final/dynamic_markers/
             self.dynamic_markers_dir = base_dir / "dynamic_markers"
         
         # Convert to absolute path
         self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        # Create directory structure (including parent profile directory if needed)
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         
         self.logger.info(f"Switched to profile: {self.profile_name}")
         self.logger.info(f"New dynamic markers directory: {self.dynamic_markers_dir}")
+        self.logger.info(f"Profile directory structure created: {self.dynamic_markers_dir.parent}")
 
