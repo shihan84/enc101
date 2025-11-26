@@ -50,6 +50,9 @@ class DynamicMarkerService:
         # Event ID tracking
         self._next_event_id: Optional[int] = None
         
+        # Injection tracking
+        self._markers_generated: int = 0  # Count of markers generated (injected)
+        
         self.logger.info(f"Dynamic marker service initialized with directory: {self.dynamic_markers_dir}")
     
     def start_generation(
@@ -109,6 +112,9 @@ class DynamicMarkerService:
         
         # Clear directory (remove any old files)
         self._clear_directory()
+        
+        # Reset injection counter
+        self._markers_generated = 0
         
         # Start generation thread
         self._running = True
@@ -213,10 +219,13 @@ class DynamicMarkerService:
         # Save last event ID to service state
         self.scte35_service._save_last_event_id(event_id)
         
-        self.logger.info(f"Generated dynamic marker: {target_filename} (Event ID: {event_id})")
+        # Increment injection counter (file generated = will be injected by TSDuck)
+        self._markers_generated += 1
+        
+        self.logger.info(f"Generated dynamic marker: {target_filename} (Event ID: {event_id}, Total generated: {self._markers_generated})")
         
         if output_callback:
-            output_callback(f"[SCTE-35] Generated marker: Event ID={event_id}")
+            output_callback(f"[SCTE-35] Generated marker: Event ID={event_id} (Total: {self._markers_generated})")
     
     def _clear_directory(self):
         """Clear all files from dynamic markers directory"""
@@ -240,4 +249,8 @@ class DynamicMarkerService:
     def get_next_event_id(self) -> Optional[int]:
         """Get the next event ID that will be used"""
         return self._next_event_id
+    
+    def get_markers_generated(self) -> int:
+        """Get the number of markers generated (injected)"""
+        return self._markers_generated
 

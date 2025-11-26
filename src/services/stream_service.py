@@ -269,6 +269,12 @@ class StreamService:
                         # Parse splicemonitor output for SCTE-35 marker detection
                         self._parse_splicemonitor_output(line_text, session)
                         
+                        # Sync injection count from dynamic marker service (if using dynamic generation)
+                        if self.dynamic_marker_service and self.dynamic_marker_service.is_running():
+                            markers_generated = self.dynamic_marker_service.get_markers_generated()
+                            if markers_generated > session.scte35_injected:
+                                session.scte35_injected = markers_generated
+                        
                         # Parse real metrics from TSDuck analyze plugin
                         self._parse_metrics_from_output(line_text, session)
                 except (ValueError, AttributeError, OSError) as e:
@@ -525,24 +531,41 @@ class StreamService:
     def _parse_splicemonitor_output(self, line: str, session: StreamSession):
         """Parse splicemonitor JSON output for SCTE-35 marker detection"""
         try:
+            line_lower = line.lower()
+            
+            # Check for splicemonitor output (JSON or text format)
             # splicemonitor outputs JSON when --json flag is used
-            # Look for JSON lines containing splice information
-            if '{' in line and ('splice' in line.lower() or 'event_id' in line.lower()):
+            if '{' in line and ('splice' in line_lower or 'event_id' in line_lower or 'splicemonitor' in line_lower):
                 import json
                 try:
                     # Try to parse as JSON
                     data = json.loads(line)
                     
-                    # Check for splice_insert detection
-                    if 'splice_insert' in data or 'event_id' in data:
+                    # Check for splice_insert detection (various JSON formats)
+                    if 'splice_insert' in data or 'event_id' in data or 'splice' in str(data).lower():
                         event_id = None
                         if 'splice_insert' in data:
-                            event_id = data['splice_insert'].get('event_id') or data['splice_insert'].get('splice_event_id')
+                            splice_data = data['splice_insert']
+                            event_id = splice_data.get('event_id') or splice_data.get('splice_event_id')
                         elif 'event_id' in data:
                             event_id = data['event_id']
+                        elif isinstance(data, dict):
+                            # Try to find event_id anywhere in the dict
+                            for key, value in data.items():
+                                if 'event' in key.lower() and 'id' in key.lower():
+                                    event_id = value
+                                    break
                         
-                        # Increment counter
-                        session.scte35_injected += 1
+                        # Only increment if we haven't already counted this (avoid double counting)
+                        # Use dynamic marker service count if available (more accurate)
+                        if self.dynamic_marker_service and self.dynamic_marker_service.is_running():
+                            # Sync from dynamic service instead (more reliable)
+                            markers_generated = self.dynamic_marker_service.get_markers_generated()
+                            if markers_generated > session.scte35_injected:
+                                session.scte35_injected = markers_generated
+                        else:
+                            # Fallback: increment counter
+                            session.scte35_injected += 1
                         
                         self.logger.info(f"SCTE-35 marker detected by splicemonitor: Event ID={event_id}, Total={session.scte35_injected}")
                         self._notify_output(f"[SCTE-35] Marker detected: Event ID={event_id} (Total: {session.scte35_injected})")
@@ -588,14 +611,20 @@ class StreamService:
                 except json.JSONDecodeError:
                     # Not valid JSON, might be text format
                     # Check for text patterns like "splicemonitor: splice_insert detected"
-                    line_lower = line.lower()
                     if 'splicemonitor' in line_lower and ('splice_insert' in line_lower or 'splice' in line_lower):
                         # Extract event ID if present
                         import re
                         event_match = re.search(r'event[_\s]*id[=:\s]+(\d+)', line_lower)
                         event_id = event_match.group(1) if event_match else "unknown"
                         
-                        session.scte35_injected += 1
+                        # Use dynamic marker service count if available (more accurate)
+                        if self.dynamic_marker_service and self.dynamic_marker_service.is_running():
+                            markers_generated = self.dynamic_marker_service.get_markers_generated()
+                            if markers_generated > session.scte35_injected:
+                                session.scte35_injected = markers_generated
+                        else:
+                            session.scte35_injected += 1
+                        
                         self.logger.info(f"SCTE-35 marker detected by splicemonitor (text): Event ID={event_id}, Total={session.scte35_injected}")
                         self._notify_output(f"[SCTE-35] Marker detected: Event ID={event_id} (Total: {session.scte35_injected})")
                         
