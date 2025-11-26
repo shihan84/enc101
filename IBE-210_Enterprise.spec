@@ -144,5 +144,6 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     icon=str(Path('logo.ico').absolute()) if Path('logo.ico').exists() else None,
+    version=str(Path('version_info.txt').absolute()) if Path('version_info.txt').exists() else None,
 )
 
