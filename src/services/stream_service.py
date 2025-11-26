@@ -14,6 +14,7 @@ from ..models.stream_config import StreamConfig
 from ..models.session import StreamSession
 from ..models.scte35_marker import SCTE35Marker
 from .tsduck_service import TSDuckService
+from .dynamic_marker_service import DynamicMarkerService
 from ..utils.exceptions import StreamError
 import uuid
 
@@ -29,10 +30,11 @@ except ImportError:
 class StreamService:
     """Service for managing stream processing"""
     
-    def __init__(self, tsduck_service: TSDuckService, telegram_service=None):
+    def __init__(self, tsduck_service: TSDuckService, telegram_service=None, dynamic_marker_service: Optional[DynamicMarkerService] = None):
         self.logger = get_logger("StreamService")
         self.tsduck_service = tsduck_service
         self.telegram_service = telegram_service  # Optional Telegram service
+        self.dynamic_marker_service = dynamic_marker_service  # Optional dynamic marker service
         self._current_session: Optional[StreamSession] = None
         self._process: Optional[subprocess.Popen] = None
         self._running = False
@@ -112,8 +114,32 @@ class StreamService:
             if output_callback:
                 self._output_callbacks.append(output_callback)
             
+            # Determine marker path: use dynamic directory if dynamic generation is enabled
+            # Dynamic generation is enabled if inject_count > 1 (for continuous injection with incrementing IDs)
+            use_dynamic_generation = (
+                self.dynamic_marker_service is not None and 
+                config.inject_count > 1 and
+                marker is not None
+            )
+            
+            if use_dynamic_generation:
+                # Start dynamic marker generation
+                self.logger.info("Starting dynamic marker generation for continuous injection")
+                self.dynamic_marker_service.start_generation(
+                    config=config,
+                    cue_type=marker.cue_type,
+                    preroll_seconds=marker.preroll_seconds,
+                    ad_duration_seconds=marker.ad_duration_seconds,
+                    immediate=marker.immediate,
+                    output_callback=output_callback
+                )
+                # Use dynamic markers directory instead of single file
+                marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
+            else:
+                # Use single marker file (traditional mode)
+                marker_path = marker.xml_path if marker else None
+            
             # Build command
-            marker_path = marker.xml_path if marker else None
             command = self.tsduck_service.build_command(config, marker_path)
             
             self.logger.info(f"Starting stream session: {session.session_id}")
@@ -424,13 +450,18 @@ class StreamService:
             except Exception as e:
                 self.logger.error(f"Output callback error: {e}")
     
-    def stop_stream(self):
+    def stop_stream(self, output_callback: Optional[Callable[[str], None]] = None):
         """Stop stream processing"""
         if not self._running:
             return
         
         self.logger.info("Stopping stream...")
         self._running = False
+        
+        # Stop dynamic marker generation if running
+        if self.dynamic_marker_service and self.dynamic_marker_service.is_running():
+            self.logger.info("Stopping dynamic marker generation")
+            self.dynamic_marker_service.stop_generation(output_callback=output_callback)
         
         if self._process:
             try:

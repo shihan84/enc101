@@ -353,7 +353,7 @@ class StreamConfigWidget(QWidget):
         inject_count_layout = QHBoxLayout()
         inject_count_layout.addWidget(QLabel("Inject Count:"))
         self.inject_count = QSpinBox()
-        self.inject_count.setRange(1, 1000)
+        self.inject_count.setRange(1, 100000)  # Increased from 1000 to 100000 for long streams
         self.inject_count.setValue(1)
         inject_count_layout.addWidget(self.inject_count)
         injection_layout.addLayout(inject_count_layout)

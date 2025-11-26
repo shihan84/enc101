@@ -57,6 +57,7 @@ hiddenimports = [
     'src.services.stream_service',
     'src.services.scte35_service',
     'src.services.scte35_monitor_service',
+    'src.services.dynamic_marker_service',
     'src.services.telegram_service',
     'src.services.monitoring_service',
     'src.services.profile_service',

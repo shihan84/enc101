@@ -34,6 +34,7 @@ from src.services.tsduck_service import TSDuckService
 from src.services.stream_service import StreamService
 from src.services.scte35_service import SCTE35Service
 from src.services.scte35_monitor_service import SCTE35MonitorService
+from src.services.dynamic_marker_service import DynamicMarkerService
 from src.services.telegram_service import TelegramService
 from src.services.monitoring_service import MonitoringService
 from src.services.profile_service import ProfileService
@@ -89,9 +90,21 @@ def main():
         )
         app_framework.register_service("telegram", telegram_service)
         
-        stream_service = StreamService(tsduck_service, telegram_service)  # Pass telegram service
+        # SCTE-35 Service
+        scte35_service = SCTE35Service()
+        app_framework.register_service("scte35", scte35_service)
+        
+        # Dynamic Marker Service (for 24/7 streaming with incrementing event IDs)
+        dynamic_marker_service = DynamicMarkerService(scte35_service)
+        app_framework.register_service("dynamic_marker", dynamic_marker_service)
+        
+        # Stream Service (with dynamic marker support)
+        stream_service = StreamService(
+            tsduck_service=tsduck_service,
+            telegram_service=telegram_service,
+            dynamic_marker_service=dynamic_marker_service
+        )
         app_framework.register_service("stream", stream_service)
-        app_framework.register_service("scte35", SCTE35Service())
         
         # Crash Handler (with Telegram integration) - setup early
         crash_handler = CrashHandler(telegram_service)

@@ -3,3 +3,9 @@ tsduck/bin/
 tsduck/plugins/
 tsduck/libs/
 downloads/
+
+# Secrets and tokens
+scripts/create_release.py
+*.token
+*.secret
+.env

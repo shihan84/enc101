@@ -35,34 +35,34 @@
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('runtime_hook',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\runtime_hook.py',
    'PYSOURCE'),
   ('pyi_rth_inspect',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('pyi_rth_pyqt6',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt6.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt6.py',
    'PYSOURCE'),
   ('pyi_rth_pkgutil',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
    'PYSOURCE'),
   ('pyi_rth_cryptography_openssl',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_cryptography_openssl.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks\\pyi_rth_cryptography_openssl.py',
    'PYSOURCE'),
   ('pyi_rth_setuptools',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
    'PYSOURCE'),
   ('pyi_rth_multiprocessing',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('main_enterprise',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\main_enterprise.py',
@@ -358,73 +358,73 @@
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\plugins\\tsplugin_zap.dll',
    'BINARY'),
   ('python313.dll', 'C:\\Python313\\python313.dll', 'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
-   'BINARY'),
   ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\opengl32sw.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\opengl32sw.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\opengl32sw.dll',
    'BINARY'),
   ('select.pyd', 'C:\\Python313\\DLLs\\select.pyd', 'EXTENSION'),
   ('_decimal.pyd', 'C:\\Python313\\DLLs\\_decimal.pyd', 'EXTENSION'),
@@ -445,46 +445,46 @@
   ('_wmi.pyd', 'C:\\Python313\\DLLs\\_wmi.pyd', 'EXTENSION'),
   ('PyQt6\\QtGui.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\QtGui.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtGui.pyd',
    'EXTENSION'),
   ('PyQt6\\sip.cp313-win_amd64.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\sip.cp313-win_amd64.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\sip.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('PyQt6\\QtWidgets.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\QtWidgets.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtWidgets.pyd',
    'EXTENSION'),
   ('PyQt6\\QtCore.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\QtCore.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\QtCore.pyd',
    'EXTENSION'),
   ('psutil\\_psutil_windows.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
    'EXTENSION'),
   ('cryptography\\hazmat\\bindings\\_rust.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
    'EXTENSION'),
   ('_cffi_backend.cp313-win_amd64.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\_cffi_backend.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('_sqlite3.pyd', 'C:\\Python313\\DLLs\\_sqlite3.pyd', 'EXTENSION'),
   ('_elementtree.pyd', 'C:\\Python313\\DLLs\\_elementtree.pyd', 'EXTENSION'),
   ('charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\md__mypyc.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md.cp313-win_amd64.pyd',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\charset_normalizer\\md.cp313-win_amd64.pyd',
    'EXTENSION'),
   ('_uuid.pyd', 'C:\\Python313\\DLLs\\_uuid.pyd', 'EXTENSION'),
   ('PyQt6\\Qt6\\bin\\MSVCP140.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
    'BINARY'),
   ('VCRUNTIME140_1.dll', 'C:\\Python313\\VCRUNTIME140_1.dll', 'BINARY'),
   ('VCRUNTIME140.dll', 'C:\\Python313\\VCRUNTIME140.dll', 'BINARY'),
@@ -495,29 +495,29 @@
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\bin\\tscore.dll',
    'BINARY'),
   ('tsdektec.dll', 'C:\\Program Files\\TSDuck\\bin\\tsdektec.dll', 'BINARY'),
-  ('PyQt6\\Qt6\\bin\\Qt6Core.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Core.dll',
-   'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Gui.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Core.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Core.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Svg.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Svg.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\bin\\Qt6Network.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Network.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Svg.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Pdf.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Network.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Network.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
    'BINARY'),
   ('libcrypto-3.dll', 'C:\\Python313\\DLLs\\libcrypto-3.dll', 'BINARY'),
   ('libssl-3.dll', 'C:\\Python313\\DLLs\\libssl-3.dll', 'BINARY'),
@@ -525,20 +525,20 @@
   ('python3.dll', 'C:\\Python313\\python3.dll', 'BINARY'),
   ('PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_2.dll',
    'BINARY'),
   ('sqlite3.dll', 'C:\\Python313\\DLLs\\sqlite3.dll', 'BINARY'),
-  ('PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
-   'BINARY'),
   ('PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\VCRUNTIME140.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140_1.dll',
    'BINARY'),
   ('config\\.encryption_key',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\config\\.encryption_key',
@@ -1009,462 +1009,462 @@
   ('tsduck\\libs\\Release-Win64\\tsduck.lib',
    'E:\\NEW DOWNLOADS\\FINAL\\IBE-210\\tsduck\\libs\\Release-Win64\\tsduck.lib',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_gl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_it.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_lg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_he.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
+  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_gl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_he.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_da.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_en.qm',
+  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_de.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_hu.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\licenses\\LICENSE',
+  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\INSTALLER',
+  ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\INSTALLER',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\WHEEL',
+  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\WHEEL',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\METADATA',
+  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\METADATA',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\RECORD',
+  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\RECORD',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
    'DATA'),
-  ('cryptography-46.0.3.dist-info\\REQUESTED',
+  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\REQUESTED',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_en.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ar.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lg.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_es.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
    'DATA'),
   ('cryptography-46.0.3.dist-info\\licenses\\LICENSE.APACHE',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.APACHE',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.APACHE',
    'DATA'),
   ('cryptography-46.0.3.dist-info\\licenses\\LICENSE.BSD',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.BSD',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE.BSD',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+  ('cryptography-46.0.3.dist-info\\WHEEL',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\WHEEL',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+  ('cryptography-46.0.3.dist-info\\RECORD',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\RECORD',
+   'DATA'),
+  ('cryptography-46.0.3.dist-info\\INSTALLER',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-46.0.3.dist-info\\METADATA',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\METADATA',
+   'DATA'),
+  ('cryptography-46.0.3.dist-info\\licenses\\LICENSE',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('cryptography-46.0.3.dist-info\\REQUESTED',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\cryptography-46.0.3.dist-info\\REQUESTED',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
-   'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'E:\\NEW '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
    'DATA'),
   ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
   ('certifi\\cacert.pem',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\certifi\\cacert.pem',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\cacert.pem',
    'DATA'),
   ('certifi\\py.typed',
    'E:\\NEW '
-   'DOWNLOADS\\FINAL\\IBE-210\\venv\\Lib\\site-packages\\certifi\\py.typed',
+   'DOWNLOADS\\Enc-100\\Encoder-100\\IBE-100_v2.0_CLEAN\\venv\\Lib\\site-packages\\certifi\\py.typed',
    'DATA'),
   ('base_library.zip',
    'E:\\NEW '

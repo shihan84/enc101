@@ -191,14 +191,27 @@ class TSDuckService:
             "--add-pid", f"{config.scte35_pid}/0x86"])  # SCTE-35 PID
         
         # SpliceInject Plugin (if marker provided)
-        if marker_path and marker_path.exists():
-            command.extend(["-P", "spliceinject",
-                "--pid", str(config.scte35_pid),
-                "--pts-pid", str(config.vpid),
-                "--files", str(marker_path),
-                "--inject-count", str(config.inject_count),
-                "--inject-interval", str(config.inject_interval),
-                "--start-delay", str(config.start_delay)])
+        if marker_path:
+            # Check if marker_path is a directory (for dynamic generation) or a file
+            if marker_path.is_dir():
+                # Dynamic marker generation mode: use wildcard pattern
+                wildcard_pattern = str(marker_path / "splice*.xml")
+                command.extend(["-P", "spliceinject",
+                    "--pid", str(config.scte35_pid),
+                    "--pts-pid", str(config.vpid),
+                    "--files", wildcard_pattern,
+                    "--delete-files",  # Delete files after injection
+                    "--poll-interval", "500",  # Poll every 500ms (default)
+                    "--inject-count", "1"])  # Each file injected once
+            elif marker_path.exists():
+                # Single file mode: traditional injection
+                command.extend(["-P", "spliceinject",
+                    "--pid", str(config.scte35_pid),
+                    "--pts-pid", str(config.vpid),
+                    "--files", str(marker_path),
+                    "--inject-count", str(config.inject_count),
+                    "--inject-interval", str(config.inject_interval),
+                    "--start-delay", str(config.start_delay)])
             
             # SpliceMonitor Plugin - detect injected markers (after spliceinject, before analyze)
             # This verifies that markers are actually in the stream before sending to distributor
