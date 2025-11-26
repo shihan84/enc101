@@ -126,7 +126,15 @@ class StreamService:
             )
             
             if use_dynamic_generation:
-                # Start dynamic marker generation
+                # CRITICAL: Generate first marker BEFORE starting TSDuck
+                # TSDuck needs at least one file to exist when it starts polling
+                self.logger.info("Preparing dynamic marker generation...")
+                
+                # Get the directory first
+                marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
+                self.logger.info(f"Dynamic markers directory: {marker_path}")
+                
+                # Start dynamic marker generation (this generates the first marker immediately)
                 self.logger.info("Starting dynamic marker generation for continuous injection")
                 self.dynamic_marker_service.start_generation(
                     config=config,
@@ -137,9 +145,11 @@ class StreamService:
                     start_event_id=marker.event_id,  # Start with the marker's event ID
                     output_callback=output_callback
                 )
-                # Use dynamic markers directory (general directory: scte35_final/dynamic_markers/)
-                marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
-                self.logger.info(f"Dynamic markers directory: {marker_path}")
+                
+                # Wait a bit to ensure first marker file is stable before TSDuck starts
+                import time
+                time.sleep(1.0)  # Wait 1 second for file to be stable
+                self.logger.info("First marker ready, TSDuck can now start")
                 self.logger.info(f"TSDuck will use: {marker_path / 'splice*.xml'}")
             else:
                 # Use single marker file (traditional mode - only if dynamic service not available)

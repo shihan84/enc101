@@ -143,6 +143,19 @@ class DynamicMarkerService:
         # Reset injection counter
         self._markers_generated = 0
         
+        # CRITICAL: Generate first marker BEFORE starting TSDuck
+        # TSDuck needs at least one file to exist when it starts polling
+        self.logger.info("Generating initial marker before starting generation thread...")
+        try:
+            self._generate_and_save_marker(output_callback)
+            self.logger.info("Initial marker generated successfully")
+            if output_callback:
+                output_callback(f"[INFO] Initial marker ready for TSDuck")
+        except Exception as e:
+            self.logger.error(f"Failed to generate initial marker: {e}", exc_info=True)
+            if output_callback:
+                output_callback(f"[ERROR] Failed to generate initial marker: {e}")
+        
         # Start generation thread
         self._running = True
         self._stop_event.clear()
@@ -190,17 +203,8 @@ class DynamicMarkerService:
             output_callback(f"[INFO] Generation loop started")
             output_callback(f"[INFO] Directory: {markers_dir}")
         
-        # Generate first marker immediately
-        try:
-            self.logger.info("Generating first marker...")
-            self._generate_and_save_marker(output_callback)
-            self.logger.info("First marker generated successfully")
-        except Exception as e:
-            self.logger.error(f"Failed to generate first marker: {e}", exc_info=True)
-            if output_callback:
-                output_callback(f"[ERROR] Failed to generate first marker: {e}")
-        
-        # Wait for interval before next generation
+        # NOTE: First marker is already generated in start_generation() before this thread starts
+        # Wait for interval before generating next marker
         while self._running:
             # Wait for interval (or stop event)
             if self._stop_event.wait(timeout=interval_seconds):
@@ -253,9 +257,19 @@ class DynamicMarkerService:
         self.logger.info(f"Copying marker from {marker.xml_path} to {target_path}")
         shutil.copy(marker.xml_path, target_path)
         
-        # Ensure file is written (wait for stability)
-        # TSDuck's min-stable-delay is 500ms, so wait 600ms to be safe
-        time.sleep(0.6)
+        # Ensure file is written and stable
+        # TSDuck's min-stable-delay is 500ms, and poll-interval is 500ms
+        # Wait 1 second to ensure file is stable and TSDuck can detect it
+        time.sleep(1.0)
+        
+        # Verify file exists and has content
+        if not target_path.exists():
+            self.logger.error(f"CRITICAL: Marker file was not created: {target_path}")
+            if output_callback:
+                output_callback(f"[ERROR] Marker file not created: {target_path}")
+        else:
+            file_size = target_path.stat().st_size
+            self.logger.info(f"Marker file verified: {target_path} (size: {file_size} bytes)")
         
         # Increment event ID for next marker
         self._next_event_id = event_id + 1
