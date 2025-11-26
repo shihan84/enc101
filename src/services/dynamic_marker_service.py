@@ -47,8 +47,14 @@ class DynamicMarkerService:
                 # Sanitize profile name for filesystem (same logic as SCTE35Service)
                 safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
                 safe_name = safe_name.replace(' ', '_')
-                self.dynamic_markers_dir = base_dir / safe_name / "dynamic_markers"
+                # Create profile directory first: scte35_final/{profile_name}/
+                profile_dir = base_dir / safe_name
+                profile_dir.mkdir(parents=True, exist_ok=True)
+                self.logger.info(f"Created profile directory: {profile_dir.resolve()}")
+                # Then create dynamic_markers subdirectory: scte35_final/{profile_name}/dynamic_markers/
+                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
             else:
+                # Default profile: scte35_final/dynamic_markers/
                 self.dynamic_markers_dir = base_dir / "dynamic_markers"
         
         # Convert to absolute path to ensure TSDuck can find it
@@ -57,7 +63,9 @@ class DynamicMarkerService:
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         
         self.logger.info(f"Dynamic marker service initialized with profile: {self.profile_name}")
+        self.logger.info(f"Profile directory: {self.dynamic_markers_dir.parent}")
         self.logger.info(f"Dynamic markers directory: {self.dynamic_markers_dir}")
+        self.logger.info(f"TSDuck will use: {self.dynamic_markers_dir / 'splice*.xml'}")
         
         # Thread management
         self._generation_thread: Optional[threading.Thread] = None
@@ -268,7 +276,16 @@ class DynamicMarkerService:
     
     def get_dynamic_markers_dir(self) -> Path:
         """Get the dynamic markers directory path"""
+        # Ensure directory exists before returning
+        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         return self.dynamic_markers_dir
+    
+    def get_profile_directory(self) -> Path:
+        """Get the profile directory path (parent of dynamic_markers)"""
+        # Profile directory is the parent of dynamic_markers_dir
+        profile_dir = self.dynamic_markers_dir.parent
+        profile_dir.mkdir(parents=True, exist_ok=True)
+        return profile_dir
     
     def is_running(self) -> bool:
         """Check if generation is running"""
@@ -287,6 +304,8 @@ class DynamicMarkerService:
         profile_name = profile_name or "default"
         
         if profile_name == self.profile_name:
+            # Even if same profile, ensure directory exists
+            self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
             return  # No change needed
         
         if self._running:
@@ -306,6 +325,10 @@ class DynamicMarkerService:
             # Create profile directory structure: scte35_final/{profile_name}/dynamic_markers/
             profile_dir = base_dir / safe_name
             self.dynamic_markers_dir = profile_dir / "dynamic_markers"
+            
+            # Ensure profile directory exists first (scte35_final/{profile_name}/)
+            profile_dir.mkdir(parents=True, exist_ok=True)
+            self.logger.info(f"Created profile directory: {profile_dir.resolve()}")
         else:
             # Default profile: scte35_final/dynamic_markers/
             self.dynamic_markers_dir = base_dir / "dynamic_markers"
@@ -316,6 +339,7 @@ class DynamicMarkerService:
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         
         self.logger.info(f"Switched to profile: {self.profile_name}")
-        self.logger.info(f"New dynamic markers directory: {self.dynamic_markers_dir}")
-        self.logger.info(f"Profile directory structure created: {self.dynamic_markers_dir.parent}")
+        self.logger.info(f"Profile directory: {self.dynamic_markers_dir.parent}")
+        self.logger.info(f"Dynamic markers directory: {self.dynamic_markers_dir}")
+        self.logger.info(f"TSDuck will use: {self.dynamic_markers_dir / 'splice*.xml'}")
 

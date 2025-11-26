@@ -139,7 +139,11 @@ class StreamService:
                 )
                 # Use dynamic markers directory instead of single file
                 marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
-                self.logger.info(f"Using dynamic marker directory: {marker_path}")
+                profile_dir = self.dynamic_marker_service.get_profile_directory()
+                self.logger.info(f"Profile: {self.dynamic_marker_service.profile_name}")
+                self.logger.info(f"Profile directory: {profile_dir}")
+                self.logger.info(f"Dynamic markers directory: {marker_path}")
+                self.logger.info(f"TSDuck will use: {marker_path / 'splice*.xml'}")
             else:
                 # Use single marker file (traditional mode - only if dynamic service not available)
                 marker_path = marker.xml_path if marker else None
