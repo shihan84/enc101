@@ -131,15 +131,24 @@ class DynamicMarkerService:
         inject_interval_ms = config.inject_interval
         interval_seconds = inject_interval_ms / 1000.0
         
+        # Warn if interval is too short (less than 30 seconds)
+        if interval_seconds < 30:
+            self.logger.warning(f"Inject interval is very short ({interval_seconds} seconds)!")
+            self.logger.warning(f"Recommended: 60 seconds (60000 ms) for standard streaming")
+            self.logger.warning(f"Current: {inject_interval_ms} ms = {interval_seconds} seconds")
+            if output_callback:
+                output_callback(f"[WARNING] Inject interval is very short: {interval_seconds} seconds")
+                output_callback(f"[WARNING] Recommended: 60 seconds (60000 ms) for standard streaming")
+        
         self.logger.info(f"Starting dynamic marker generation:")
         self.logger.info(f"  Directory: {self.dynamic_markers_dir}")
-        self.logger.info(f"  Interval: {interval_seconds} seconds")
+        self.logger.info(f"  Interval: {interval_seconds} seconds ({inject_interval_ms} ms)")
         self.logger.info(f"  Starting Event ID: {self._next_event_id}")
         self.logger.info(f"  Cue Type: {cue_type.value}")
         
         if output_callback:
             output_callback(f"[INFO] Starting dynamic marker generation")
-            output_callback(f"[INFO] Interval: {interval_seconds} seconds")
+            output_callback(f"[INFO] Interval: {interval_seconds} seconds ({inject_interval_ms} ms)")
             output_callback(f"[INFO] Starting Event ID: {self._next_event_id}")
         
         # Clear directory (remove any old files)

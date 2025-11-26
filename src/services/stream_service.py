@@ -126,6 +126,16 @@ class StreamService:
             )
             
             if use_dynamic_generation:
+                # Ensure profile is synced with SCTE35Service before starting generation
+                # The dynamic marker service should sync with SCTE35Service profile
+                if hasattr(self.dynamic_marker_service, 'scte35_service'):
+                    scte35_service = self.dynamic_marker_service.scte35_service
+                    if hasattr(scte35_service, 'profile_name'):
+                        current_profile = scte35_service.profile_name
+                        if current_profile != self.dynamic_marker_service.profile_name:
+                            self.logger.info(f"Syncing dynamic marker service profile to: {current_profile}")
+                            self.dynamic_marker_service.set_profile(current_profile)
+                
                 # Start dynamic marker generation
                 self.logger.info("Starting dynamic marker generation for continuous injection")
                 self.dynamic_marker_service.start_generation(
@@ -138,9 +148,24 @@ class StreamService:
                     output_callback=output_callback
                 )
                 # Use dynamic markers directory instead of single file
+                # Get directory AFTER generation starts to ensure it's the correct profile directory
                 marker_path = self.dynamic_marker_service.get_dynamic_markers_dir()
                 profile_dir = self.dynamic_marker_service.get_profile_directory()
-                self.logger.info(f"Profile: {self.dynamic_marker_service.profile_name}")
+                
+                # Verify the path is correct (should include profile name if not default)
+                expected_path_str = str(marker_path)
+                profile_name = self.dynamic_marker_service.profile_name
+                if profile_name and profile_name != "default":
+                    # Check if profile name (sanitized) is in the path
+                    safe_name = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
+                    safe_name = safe_name.replace(' ', '_')
+                    if safe_name.lower() not in expected_path_str.lower():
+                        self.logger.warning(f"Profile directory path may be incorrect!")
+                        self.logger.warning(f"Expected profile '{profile_name}' (sanitized: '{safe_name}') in path")
+                        self.logger.warning(f"Current path: {expected_path_str}")
+                        self.logger.warning(f"This may cause markers to be generated in wrong directory!")
+                
+                self.logger.info(f"Profile: {profile_name}")
                 self.logger.info(f"Profile directory: {profile_dir}")
                 self.logger.info(f"Dynamic markers directory: {marker_path}")
                 self.logger.info(f"TSDuck will use: {marker_path / 'splice*.xml'}")

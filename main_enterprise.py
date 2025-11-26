@@ -64,7 +64,7 @@ def main():
         
         logger = get_logger("Main")
         logger.info("=" * 60)
-        logger.info("IBE-210 v2.2.3 Enterprise Starting...")
+        logger.info("IBE-210 v2.2.4 Enterprise Starting...")
         logger.info("=" * 60)
         
         # Initialize services
