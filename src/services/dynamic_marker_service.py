@@ -36,13 +36,12 @@ class DynamicMarkerService:
             self.profile_name = profile_name
         
         # Directory for dynamic markers (TSDuck monitors this)
-        # Use general/global directory: scte35_final/dynamic_markers/ (no profile subdirectory)
+        # Use scte35_final directly (no subdirectory)
         if dynamic_markers_dir:
             self.dynamic_markers_dir = Path(dynamic_markers_dir)
         else:
-            # Always use general directory: scte35_final/dynamic_markers/
-            base_dir = Path("scte35_final")
-            self.dynamic_markers_dir = base_dir / "dynamic_markers"
+            # Use scte35_final directly
+            self.dynamic_markers_dir = Path("scte35_final")
         
         # Convert to absolute path to ensure TSDuck can find it
         self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
@@ -232,21 +231,8 @@ class DynamicMarkerService:
         
         # Get the correct directory path (ensure it's initialized)
         # CRITICAL: Always rebuild path to ensure it's correct
-        # Use get_dynamic_markers_dir() which handles path resolution properly
+        # Use scte35_final directly (no subdirectory)
         markers_dir = self.get_dynamic_markers_dir()
-        
-        # Verify it's the correct path
-        markers_dir_str = str(markers_dir)
-        if "dynamic_markers" not in markers_dir_str:
-            self.logger.error(f"ERROR: Path does not contain 'dynamic_markers': {markers_dir}")
-            # Force correct path
-            import os
-            cwd = Path(os.getcwd())
-            base_dir = cwd / "scte35_final"
-            markers_dir = base_dir / "dynamic_markers"
-            markers_dir.mkdir(parents=True, exist_ok=True)
-            self.dynamic_markers_dir = markers_dir.resolve()
-            self.logger.warning(f"Corrected path to: {markers_dir}")
         
         # Ensure directory exists
         markers_dir.mkdir(parents=True, exist_ok=True)
@@ -354,11 +340,10 @@ class DynamicMarkerService:
             self.logger.error(f"Failed to clear directory: {e}")
     
     def get_dynamic_markers_dir(self) -> Path:
-        """Get the dynamic markers directory path (general/global directory)"""
+        """Get the dynamic markers directory path (scte35_final directly)"""
         # CRITICAL: Always rebuild path from scratch to ensure it's correct
-        # Use absolute path resolution from current working directory
-        base_dir = Path("scte35_final").resolve()
-        markers_dir = base_dir / "dynamic_markers"
+        # Use scte35_final directly (no subdirectory)
+        markers_dir = Path("scte35_final").resolve()
         
         # Ensure directory exists
         markers_dir.mkdir(parents=True, exist_ok=True)
