@@ -199,12 +199,22 @@ class TSDuckService:
                 abs_marker_path = marker_path.resolve()
                 wildcard_pattern = str(abs_marker_path / "splice*.xml")
                 self.logger.info(f"Using absolute path for dynamic markers: {wildcard_pattern}")
+                self.logger.info(f"TSDuck will monitor: {abs_marker_path}")
+                # Verify directory exists and is accessible
+                if not abs_marker_path.exists():
+                    self.logger.warning(f"WARNING: Marker directory does not exist: {abs_marker_path}")
+                else:
+                    # List existing files
+                    existing = list(abs_marker_path.glob("splice*.xml"))
+                    self.logger.info(f"Found {len(existing)} existing splice*.xml files in directory")
+                
                 command.extend(["-P", "spliceinject",
                     "--pid", str(config.scte35_pid),
                     "--pts-pid", str(config.vpid),
                     "--files", wildcard_pattern,
                     "--delete-files",  # Delete files after injection
                     "--poll-interval", "500",  # Poll every 500ms (default)
+                    "--min-stable-delay", "500",  # File must be stable for 500ms
                     "--inject-count", "1"])  # Each file injected once
             elif marker_path.exists():
                 # Single file mode: traditional injection

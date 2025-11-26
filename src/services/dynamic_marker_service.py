@@ -197,13 +197,17 @@ class DynamicMarkerService:
         self.logger.info(f"Generation loop started (interval: {interval_seconds}s)")
         self.logger.info(f"Dynamic markers directory: {markers_dir}")
         self.logger.info(f"Directory exists: {markers_dir.exists()}")
+        self.logger.info(f"Current Event ID: {self._next_event_id}")
         
         if output_callback:
             output_callback(f"[INFO] Generation loop started")
             output_callback(f"[INFO] Directory: {markers_dir}")
+            output_callback(f"[INFO] Interval: {interval_seconds} seconds")
+            output_callback(f"[INFO] Current Event ID: {self._next_event_id}")
         
         # NOTE: First marker is already generated in start_generation() before this thread starts
         # Wait for interval before generating next marker
+        marker_count = 0
         while self._running:
             # Wait for interval (or stop event)
             if self._stop_event.wait(timeout=interval_seconds):
@@ -211,16 +215,19 @@ class DynamicMarkerService:
                 break
             
             # Generate next marker
+            marker_count += 1
             try:
+                self.logger.info(f"Generating marker #{marker_count} (Event ID: {self._next_event_id})")
                 self._generate_and_save_marker(output_callback)
+                self.logger.info(f"Successfully generated marker #{marker_count}")
             except Exception as e:
-                self.logger.error(f"Failed to generate marker: {e}", exc_info=True)
+                self.logger.error(f"Failed to generate marker #{marker_count}: {e}", exc_info=True)
                 if output_callback:
-                    output_callback(f"[ERROR] Failed to generate marker: {e}")
+                    output_callback(f"[ERROR] Failed to generate marker #{marker_count}: {e}")
                 # Continue even if one marker fails
                 continue
         
-        self.logger.info("Generation loop stopped")
+        self.logger.info(f"Generation loop stopped (generated {marker_count} markers)")
     
     def _generate_and_save_marker(self, output_callback: Optional[Callable[[str], None]]):
         """Generate a marker and save it to dynamic directory"""
@@ -322,9 +329,20 @@ class DynamicMarkerService:
         self.logger.info(f"File exists: {target_path.exists()}")
         self.logger.info(f"File size: {file_size} bytes")
         self.logger.info(f"Full path: {target_path.resolve()}")
+        self.logger.info(f"Next Event ID will be: {self._next_event_id}")
+        
+        # List all splice*.xml files in directory to verify TSDuck can see them
+        try:
+            existing_files = list(markers_dir.glob("splice*.xml"))
+            self.logger.info(f"Files matching splice*.xml in directory: {len(existing_files)}")
+            for f in existing_files[:5]:  # Show first 5
+                self.logger.info(f"  - {f.name}")
+        except Exception as e:
+            self.logger.warning(f"Could not list files in directory: {e}")
         
         if output_callback:
             output_callback(f"[SUCCESS] New marker generated: {target_filename}")
+            output_callback(f"[INFO] Event ID: {event_id}, Next: {self._next_event_id}")
             output_callback(f"[INFO] Marker saved to: {target_path}")
             output_callback(f"[INFO] File verified: {file_size} bytes")
     
