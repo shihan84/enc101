@@ -231,8 +231,17 @@ class DynamicMarkerService:
         event_id = self._next_event_id
         
         # Get the correct directory path (ensure it's initialized)
-        markers_dir = self.get_dynamic_markers_dir()
-        self.logger.debug(f"Using markers directory: {markers_dir}")
+        # CRITICAL: Always rebuild path to ensure it's correct
+        base_dir = Path("scte35_final").resolve()
+        markers_dir = base_dir / "dynamic_markers"
+        markers_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Update instance variable
+        self.dynamic_markers_dir = markers_dir
+        
+        self.logger.info(f"Using markers directory: {markers_dir}")
+        self.logger.info(f"Directory exists: {markers_dir.exists()}")
+        self.logger.info(f"Directory is absolute: {markers_dir.is_absolute()}")
         
         # Generate marker
         marker = self.scte35_service.generate_marker(
@@ -303,16 +312,19 @@ class DynamicMarkerService:
     
     def get_dynamic_markers_dir(self) -> Path:
         """Get the dynamic markers directory path (general/global directory)"""
-        # Always use general directory: scte35_final/dynamic_markers/
-        if not hasattr(self, 'dynamic_markers_dir') or self.dynamic_markers_dir is None:
-            base_dir = Path("scte35_final")
-            self.dynamic_markers_dir = base_dir / "dynamic_markers"
+        # CRITICAL: Always rebuild path from scratch to ensure it's correct
+        # Use absolute path resolution from current working directory
+        base_dir = Path("scte35_final").resolve()
+        markers_dir = base_dir / "dynamic_markers"
         
-        # Convert to absolute path
-        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
         # Ensure directory exists
-        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
-        return self.dynamic_markers_dir
+        markers_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Update instance variable
+        self.dynamic_markers_dir = markers_dir
+        
+        self.logger.debug(f"get_dynamic_markers_dir() returning: {markers_dir}")
+        return markers_dir
     
     def get_profile_directory(self) -> Path:
         """Get the profile directory path (parent of dynamic_markers)"""
