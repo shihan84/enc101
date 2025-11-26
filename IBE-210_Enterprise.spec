@@ -115,6 +115,9 @@ hiddenimports = [
     'cryptography.hazmat.bindings',
     'cryptography.hazmat.bindings.openssl',
     'cryptography.utils',
+    # cffi is required by cryptography
+    'cffi',
+    '_cffi_backend',
     'psutil',
     'PyQt6',
     'PyQt6.QtCore',
@@ -125,21 +128,26 @@ hiddenimports = [
 # Collect cryptography binaries and data files
 cryptography_binaries = []
 cryptography_datas = []
+cffi_binaries = []
 try:
     from PyInstaller.utils.hooks import collect_dynamic_libs, collect_data_files
     cryptography_binaries = collect_dynamic_libs('cryptography')
     cryptography_datas = collect_data_files('cryptography')
+    # Also collect cffi binaries (required by cryptography)
+    cffi_binaries = collect_dynamic_libs('cffi')
     if cryptography_binaries:
         print(f"[INFO] Collected {len(cryptography_binaries)} cryptography binaries")
     if cryptography_datas:
         print(f"[INFO] Collected {len(cryptography_datas)} cryptography data files")
+    if cffi_binaries:
+        print(f"[INFO] Collected {len(cffi_binaries)} cffi binaries")
 except Exception as e:
-    print(f"[WARNING] Failed to collect cryptography binaries/data: {e}")
+    print(f"[WARNING] Failed to collect cryptography/cffi binaries/data: {e}")
 
 a = Analysis(
     ['main_enterprise.py'],
     pathex=[str(Path('.').absolute()), str(Path('src').absolute())],  # Add current dir and src to path
-    binaries=cryptography_binaries,
+    binaries=cryptography_binaries + cffi_binaries,
     datas=datas + cryptography_datas,
     hiddenimports=hiddenimports,
     hookspath=['hooks'] if Path('hooks').exists() else [],
