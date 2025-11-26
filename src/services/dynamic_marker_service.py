@@ -315,19 +315,8 @@ class DynamicMarkerService:
             self.logger.error(f"CRITICAL: File is empty: {target_path}")
             raise SCTE35Error(f"Marker file is empty: {target_path}")
         
-        # Ensure file is written and stable
-        # TSDuck's min-stable-delay is 500ms, and poll-interval is 500ms
-        # Wait 1 second to ensure file is stable and TSDuck can detect it
-        time.sleep(1.0)
-        
-        # Verify file exists and has content
-        if not target_path.exists():
-            self.logger.error(f"CRITICAL: Marker file was not created: {target_path}")
-            if output_callback:
-                output_callback(f"[ERROR] Marker file not created: {target_path}")
-        else:
-            file_size = target_path.stat().st_size
-            self.logger.info(f"Marker file verified: {target_path} (size: {file_size} bytes)")
+        # File is already verified above, no need to verify again
+        # The file_size variable is already set from the verification above
         
         # Increment event ID for next marker
         self._next_event_id = event_id + 1
