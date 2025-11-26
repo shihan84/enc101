@@ -285,17 +285,48 @@ class DynamicMarkerService:
     
     def get_dynamic_markers_dir(self) -> Path:
         """Get the dynamic markers directory path"""
+        # Ensure directory is initialized (defensive check)
+        if not hasattr(self, 'dynamic_markers_dir') or self.dynamic_markers_dir is None:
+            self.logger.error("dynamic_markers_dir is not initialized! Reinitializing...")
+            # Reinitialize using current profile
+            base_dir = Path("scte35_final")
+            if self.profile_name and self.profile_name != "default":
+                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
+                safe_name = safe_name.replace(' ', '_')
+                profile_dir = base_dir / safe_name
+                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
+            else:
+                self.dynamic_markers_dir = base_dir / "dynamic_markers"
+            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+            self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+        
         # Re-resolve to ensure we have the absolute path with current profile
         # This is important if profile was changed after initialization
-        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        try:
+            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        except (AttributeError, TypeError) as e:
+            self.logger.error(f"Failed to resolve directory path: {e}. Reinitializing...")
+            # Reinitialize
+            base_dir = Path("scte35_final")
+            if self.profile_name and self.profile_name != "default":
+                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
+                safe_name = safe_name.replace(' ', '_')
+                profile_dir = base_dir / safe_name
+                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
+            else:
+                self.dynamic_markers_dir = base_dir / "dynamic_markers"
+            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        
         # Ensure directory exists before returning
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         return self.dynamic_markers_dir
     
     def get_profile_directory(self) -> Path:
         """Get the profile directory path (parent of dynamic_markers)"""
+        # Ensure directory is initialized first
+        markers_dir = self.get_dynamic_markers_dir()
         # Profile directory is the parent of dynamic_markers_dir
-        profile_dir = self.dynamic_markers_dir.parent
+        profile_dir = markers_dir.parent
         profile_dir.mkdir(parents=True, exist_ok=True)
         return profile_dir
     
@@ -318,10 +349,17 @@ class DynamicMarkerService:
         if profile_name == self.profile_name:
             # Even if same profile, ensure directory exists and is correctly resolved
             # Re-resolve to ensure absolute path is current
-            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-            self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
-            self.logger.debug(f"Profile unchanged: '{profile_name}', directory: {self.dynamic_markers_dir}")
-            return  # No change needed
+            if hasattr(self, 'dynamic_markers_dir') and self.dynamic_markers_dir is not None:
+                try:
+                    self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+                    self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+                    self.logger.debug(f"Profile unchanged: '{profile_name}', directory: {self.dynamic_markers_dir}")
+                except (AttributeError, TypeError) as e:
+                    self.logger.warning(f"Failed to resolve directory: {e}. Will reinitialize.")
+                    # Fall through to reinitialize
+                else:
+                    return  # No change needed
+            # If directory is None or resolve failed, fall through to reinitialize
         
         if self._running:
             self.logger.warning("Cannot change profile while dynamic generation is running")
