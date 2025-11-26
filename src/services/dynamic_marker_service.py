@@ -36,34 +36,20 @@ class DynamicMarkerService:
             self.profile_name = profile_name
         
         # Directory for dynamic markers (TSDuck monitors this)
-        # Use profile-specific directory if profile is provided
+        # Use general/global directory: scte35_final/dynamic_markers/ (no profile subdirectory)
         if dynamic_markers_dir:
             self.dynamic_markers_dir = Path(dynamic_markers_dir)
         else:
-            # Use profile-specific directory structure: scte35_final/{profile_name}/dynamic_markers/
-            # This matches the SCTE35Service directory structure
+            # Always use general directory: scte35_final/dynamic_markers/
             base_dir = Path("scte35_final")
-            if self.profile_name and self.profile_name != "default":
-                # Sanitize profile name for filesystem (same logic as SCTE35Service)
-                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
-                safe_name = safe_name.replace(' ', '_')
-                # Create profile directory first: scte35_final/{profile_name}/
-                profile_dir = base_dir / safe_name
-                profile_dir.mkdir(parents=True, exist_ok=True)
-                self.logger.info(f"Created profile directory: {profile_dir.resolve()}")
-                # Then create dynamic_markers subdirectory: scte35_final/{profile_name}/dynamic_markers/
-                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
-            else:
-                # Default profile: scte35_final/dynamic_markers/
-                self.dynamic_markers_dir = base_dir / "dynamic_markers"
+            self.dynamic_markers_dir = base_dir / "dynamic_markers"
         
         # Convert to absolute path to ensure TSDuck can find it
         self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-        # Create directory structure (including parent profile directory if needed)
+        # Create directory structure
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         
-        self.logger.info(f"Dynamic marker service initialized with profile: {self.profile_name}")
-        self.logger.info(f"Profile directory: {self.dynamic_markers_dir.parent}")
+        self.logger.info(f"Dynamic marker service initialized")
         self.logger.info(f"Dynamic markers directory: {self.dynamic_markers_dir}")
         self.logger.info(f"TSDuck will use: {self.dynamic_markers_dir / 'splice*.xml'}")
         
@@ -284,40 +270,15 @@ class DynamicMarkerService:
             self.logger.error(f"Failed to clear directory: {e}")
     
     def get_dynamic_markers_dir(self) -> Path:
-        """Get the dynamic markers directory path"""
-        # Ensure directory is initialized (defensive check)
+        """Get the dynamic markers directory path (general/global directory)"""
+        # Always use general directory: scte35_final/dynamic_markers/
         if not hasattr(self, 'dynamic_markers_dir') or self.dynamic_markers_dir is None:
-            self.logger.error("dynamic_markers_dir is not initialized! Reinitializing...")
-            # Reinitialize using current profile
             base_dir = Path("scte35_final")
-            if self.profile_name and self.profile_name != "default":
-                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
-                safe_name = safe_name.replace(' ', '_')
-                profile_dir = base_dir / safe_name
-                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
-            else:
-                self.dynamic_markers_dir = base_dir / "dynamic_markers"
-            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-            self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
+            self.dynamic_markers_dir = base_dir / "dynamic_markers"
         
-        # Re-resolve to ensure we have the absolute path with current profile
-        # This is important if profile was changed after initialization
-        try:
-            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-        except (AttributeError, TypeError) as e:
-            self.logger.error(f"Failed to resolve directory path: {e}. Reinitializing...")
-            # Reinitialize
-            base_dir = Path("scte35_final")
-            if self.profile_name and self.profile_name != "default":
-                safe_name = "".join(c for c in self.profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
-                safe_name = safe_name.replace(' ', '_')
-                profile_dir = base_dir / safe_name
-                self.dynamic_markers_dir = profile_dir / "dynamic_markers"
-            else:
-                self.dynamic_markers_dir = base_dir / "dynamic_markers"
-            self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-        
-        # Ensure directory exists before returning
+        # Convert to absolute path
+        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
+        # Ensure directory exists
         self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
         return self.dynamic_markers_dir
     
@@ -343,69 +304,8 @@ class DynamicMarkerService:
         return self._markers_generated
     
     def set_profile(self, profile_name: str):
-        """Update profile and switch to profile-specific directory"""
-        profile_name = profile_name or "default"
-        
-        if profile_name == self.profile_name:
-            # Even if same profile, ensure directory exists and is correctly resolved
-            # Re-resolve to ensure absolute path is current
-            if hasattr(self, 'dynamic_markers_dir') and self.dynamic_markers_dir is not None:
-                try:
-                    self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-                    self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
-                    self.logger.debug(f"Profile unchanged: '{profile_name}', directory: {self.dynamic_markers_dir}")
-                except (AttributeError, TypeError) as e:
-                    self.logger.warning(f"Failed to resolve directory: {e}. Will reinitialize.")
-                    # Fall through to reinitialize
-                else:
-                    return  # No change needed
-            # If directory is None or resolve failed, fall through to reinitialize
-        
-        if self._running:
-            self.logger.warning("Cannot change profile while dynamic generation is running")
-            return
-        
-        old_dir = self.dynamic_markers_dir
-        old_profile = self.profile_name
-        self.profile_name = profile_name
-        
-        self.logger.info(f"Changing profile from '{old_profile}' to '{profile_name}'")
-        self.logger.info(f"Old directory: {old_dir}")
-        
-        # Create new profile-specific directory structure
-        # This matches the SCTE35Service directory structure: scte35_final/{profile_name}/dynamic_markers/
-        base_dir = Path("scte35_final")
-        if profile_name and profile_name != "default":
-            # Sanitize profile name for filesystem (same logic as SCTE35Service)
-            safe_name = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip()
-            safe_name = safe_name.replace(' ', '_')
-            # Create profile directory structure: scte35_final/{profile_name}/dynamic_markers/
-            profile_dir = base_dir / safe_name
-            self.dynamic_markers_dir = profile_dir / "dynamic_markers"
-            
-            # Ensure profile directory exists first (scte35_final/{profile_name}/)
-            profile_dir.mkdir(parents=True, exist_ok=True)
-            self.logger.info(f"Created profile directory: {profile_dir.resolve()}")
-        else:
-            # Default profile: scte35_final/dynamic_markers/
-            self.dynamic_markers_dir = base_dir / "dynamic_markers"
-        
-        # Convert to absolute path - CRITICAL: Must resolve to get absolute path
-        self.dynamic_markers_dir = self.dynamic_markers_dir.resolve()
-        # Create directory structure (including parent profile directory if needed)
-        self.dynamic_markers_dir.mkdir(parents=True, exist_ok=True)
-        
-        self.logger.info(f"✅ Switched to profile: {self.profile_name}")
-        self.logger.info(f"✅ Profile directory: {self.dynamic_markers_dir.parent}")
-        self.logger.info(f"✅ Dynamic markers directory: {self.dynamic_markers_dir}")
-        self.logger.info(f"✅ TSDuck will use: {self.dynamic_markers_dir / 'splice*.xml'}")
-        
-        # Verify the path contains the profile name
-        path_str = str(self.dynamic_markers_dir).lower()
-        if profile_name != "default":
-            safe_name_lower = "".join(c for c in profile_name if c.isalnum() or c in (' ', '-', '_')).strip().replace(' ', '_').lower()
-            if safe_name_lower not in path_str:
-                self.logger.error(f"❌ ERROR: Profile name '{safe_name_lower}' not found in directory path!")
-                self.logger.error(f"Path: {self.dynamic_markers_dir}")
-                self.logger.error(f"This indicates a directory path issue!")
+        """Update profile (no-op for dynamic markers - always uses general directory)"""
+        # Dynamic markers always use general directory, profile doesn't affect directory
+        self.profile_name = profile_name or "default"
+        self.logger.debug(f"Profile updated to: {self.profile_name} (dynamic markers use general directory)")
 
