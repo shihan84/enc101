@@ -262,21 +262,24 @@ class SCTE35Service:
     def generate_preroll_sequence(
         self,
         base_event_id: Optional[int] = None,
-        preroll_seconds: int = 4,  # Industry standard minimum: 4.0 seconds
-        ad_duration_seconds: int = 600,
-        immediate: bool = True,
+        preroll_seconds: int = 0,  # Preroll: 0-10 seconds (time BEFORE ad break starts)
+        ad_duration_seconds: int = 600,  # Ad duration: Example 600 seconds (10 minutes)
+        immediate: bool = False,  # Per distributor: Preroll uses scheduled injection when > 0
         auto_increment: bool = True,
         include_crash: bool = True
     ) -> Tuple[SCTE35Marker, SCTE35Marker, Optional[SCTE35Marker]]:
         """
         Generate preroll sequence: CUE-OUT, CUE-IN, and optionally CUE-CRASH
-        with incremental event IDs
+        Per distributor requirements:
+        - CUE-OUT: Program out point, scheduled with preroll (0-10 seconds before ad)
+        - CUE-IN: Program in point, immediate return to program
+        - CUE-CRASH: Emergency return, immediate
         
         Args:
-            base_event_id: Base event ID (CUE-OUT will use this)
-            preroll_seconds: Preroll duration in seconds
-            ad_duration_seconds: Duration of ad break
-            immediate: Whether to trigger immediately
+            base_event_id: Base event ID (CUE-OUT will use this, increments sequentially)
+            preroll_seconds: Preroll duration (0-10 seconds) - time BEFORE ad break starts
+            ad_duration_seconds: Duration of ad break in seconds (Example: 600 = 10 minutes)
+            immediate: If False and preroll > 0, uses scheduled injection with pts_time
             auto_increment: If True, automatically increments from last used ID
             include_crash: If True, also generates CUE-CRASH marker
         
@@ -291,16 +294,22 @@ class SCTE35Service:
                 base_event_id = 10023
             
             # Generate CUE-OUT marker
+            # Per distributor requirements:
+            # - If preroll > 0: Use scheduled injection with pts_time = preroll duration
+            # - If preroll = 0: Use immediate injection
+            # The "immediate" parameter is ignored when preroll > 0 (always scheduled)
+            cue_out_immediate = (preroll_seconds == 0)  # Only immediate if preroll is 0
             cue_out = self.generate_marker(
                 event_id=base_event_id,
                 cue_type=CueType.CUE_OUT,
                 preroll_seconds=preroll_seconds,
                 ad_duration_seconds=ad_duration_seconds,
-                immediate=immediate,
+                immediate=cue_out_immediate,  # Immediate only if preroll = 0
                 auto_increment=auto_increment
             )
             
             # Generate CUE-IN marker with next sequential ID
+            # Per distributor requirements: CUE-IN is always immediate (Program in point)
             cue_in_id = base_event_id + 1
             if auto_increment:
                 self._save_last_event_id(cue_in_id)
@@ -310,7 +319,7 @@ class SCTE35Service:
                 cue_type=CueType.CUE_IN,
                 preroll_seconds=0,
                 ad_duration_seconds=0,  # CUE-IN has no duration
-                immediate=immediate,
+                immediate=True,  # CUE-IN is always immediate (per distributor requirements)
                 auto_increment=False  # Already incremented manually
             )
             
@@ -354,19 +363,38 @@ class SCTE35Service:
         pts_time_attr = f'pts_time="{preroll * 90000}"' if not immediate else ""
         
         if cue_type == CueType.PREROLL:
-            # PREROLL: can be immediate or scheduled
-            if immediate:
-                pts_line = ""
-            else:
-                pts_line = f'                      pts_time="{preroll * 90000}" \n'
-            return f'''<?xml version="1.0" encoding="UTF-8"?>
+            # PREROLL: Same as CUE-OUT but with auto_return="true"
+            # Per distributor requirements: Preroll (0-10 seconds) is time BEFORE ad break starts
+            # Use scheduled injection with pts_time = preroll duration
+            # If preroll is 0, use immediate injection
+            if preroll > 0:
+                # Scheduled injection: PREROLL happens "preroll" seconds before ad break
+                pts_time_pts = preroll * 90000  # Convert seconds to PTS units (90kHz)
+                return f'''<?xml version="1.0" encoding="UTF-8"?>
 <tsduck>
     <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
         <splice_insert splice_event_id="{event_id}" 
                       splice_event_cancel="false" 
                       out_of_network="true" 
-                      splice_immediate="{immediate_str}" 
-{pts_line}                      unique_program_id="1" 
+                      splice_immediate="false" 
+                      pts_time="{pts_time_pts}" 
+                      unique_program_id="1" 
+                      avail_num="1" 
+                      avails_expected="1">
+            <break_duration auto_return="true" duration="{ad_duration * 90000}" />
+        </splice_insert>
+    </splice_information_table>
+</tsduck>'''
+            else:
+                # Immediate injection: No preroll (preroll = 0)
+                return f'''<?xml version="1.0" encoding="UTF-8"?>
+<tsduck>
+    <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
+        <splice_insert splice_event_id="{event_id}" 
+                      splice_event_cancel="false" 
+                      out_of_network="true" 
+                      splice_immediate="true" 
+                      unique_program_id="1" 
                       avail_num="1" 
                       avails_expected="1">
             <break_duration auto_return="true" duration="{ad_duration * 90000}" />
@@ -374,19 +402,38 @@ class SCTE35Service:
     </splice_information_table>
 </tsduck>'''
         elif cue_type == CueType.CUE_OUT:
-            # CUE-OUT: usually not immediate, needs pts_time
-            if immediate:
-                pts_line = ""
-            else:
-                pts_line = '                      pts_time="0" \n'
-            return f'''<?xml version="1.0" encoding="UTF-8"?>
+            # CUE-OUT: Program out point (SCTE START from playout)
+            # Per distributor requirements: Preroll (0-10 seconds) is time BEFORE ad break starts
+            # Use scheduled injection with pts_time = preroll duration (in PTS units: preroll * 90000)
+            # If preroll is 0, use immediate injection
+            if preroll > 0:
+                # Scheduled injection: CUE-OUT happens "preroll" seconds before ad break
+                pts_time_pts = preroll * 90000  # Convert seconds to PTS units (90kHz)
+                return f'''<?xml version="1.0" encoding="UTF-8"?>
 <tsduck>
     <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
         <splice_insert splice_event_id="{event_id}" 
                       splice_event_cancel="false" 
                       out_of_network="true" 
-                      splice_immediate="{immediate_str}" 
-{pts_line}                      unique_program_id="1" 
+                      splice_immediate="false" 
+                      pts_time="{pts_time_pts}" 
+                      unique_program_id="1" 
+                      avail_num="1" 
+                      avails_expected="1">
+            <break_duration auto_return="false" duration="{ad_duration * 90000}" />
+        </splice_insert>
+    </splice_information_table>
+</tsduck>'''
+            else:
+                # Immediate injection: No preroll (preroll = 0)
+                return f'''<?xml version="1.0" encoding="UTF-8"?>
+<tsduck>
+    <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
+        <splice_insert splice_event_id="{event_id}" 
+                      splice_event_cancel="false" 
+                      out_of_network="true" 
+                      splice_immediate="true" 
+                      unique_program_id="1" 
                       avail_num="1" 
                       avails_expected="1">
             <break_duration auto_return="false" duration="{ad_duration * 90000}" />

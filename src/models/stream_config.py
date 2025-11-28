@@ -41,6 +41,7 @@ class StreamConfig:
     output_srt: str = ""
     output_hls: str = "output/hls"
     output_dash: str = "output/dash"
+    output_file: str = "output.ts"  # For FILE output type
     
     # Service configuration
     service_name: str = "SCTE-35 Stream"
@@ -63,8 +64,8 @@ class StreamConfig:
     
     # SCTE-35 injection settings
     start_delay: int = 2000
-    inject_count: int = 1
-    inject_interval: int = 1000
+    inject_count: int = 1000  # High count for continuous live injection
+    inject_interval: int = 300000  # 5 minutes (300000ms = 5 * 60 * 1000) for live streaming
     
     # Metadata
     profile_name: Optional[str] = None
@@ -123,8 +124,8 @@ class StreamConfig:
             segment_duration=data.get('segment_duration', 6),
             playlist_window=data.get('playlist_window', 5),
             start_delay=data.get('start_delay', 2000),
-            inject_count=data.get('inject_count', 1),
-            inject_interval=data.get('inject_interval', 1000),
+            inject_count=data.get('inject_count', 1000),  # Default: continuous injection
+            inject_interval=data.get('inject_interval', 300000),  # Default: 5 minutes
             profile_name=data.get('profile_name'),
             description=data.get('description')
         )

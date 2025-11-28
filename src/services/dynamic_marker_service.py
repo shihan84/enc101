@@ -136,8 +136,9 @@ class DynamicMarkerService:
             output_callback(f"[INFO] Interval: {interval_seconds} seconds ({inject_interval_ms} ms)")
             output_callback(f"[INFO] Starting Event ID: {self._next_event_id}")
         
-        # Clear directory (remove any old files)
-        self._clear_directory()
+        # Clear directory (remove any old files) - but keep any files created in last 30 seconds
+        # This prevents deleting files that TSDuck might be processing or about to process
+        self._clear_directory(keep_recent=True, recent_seconds=30)
         
         # Reset injection counter
         self._markers_generated = 0
@@ -234,8 +235,6 @@ class DynamicMarkerService:
         if self._next_event_id is None:
             self._next_event_id = self.scte35_service.get_next_event_id()
         
-        event_id = self._next_event_id
-        
         # Get the correct directory path (ensure it's initialized)
         # CRITICAL: Always rebuild path to ensure it's correct
         # Use scte35_final directly (no subdirectory)
@@ -247,31 +246,62 @@ class DynamicMarkerService:
         # Update instance variable
         self.dynamic_markers_dir = markers_dir
         
-        self.logger.info(f"Using markers directory: {markers_dir}")
-        self.logger.info(f"Directory exists: {markers_dir.exists()}")
-        self.logger.info(f"Directory is absolute: {markers_dir.is_absolute()}")
-        
-        # CRITICAL: Delete old splice*.xml files BEFORE creating new one
-        # This ensures only one file exists at a time, and TSDuck can process it
-        # Keep the current file until the next one is generated
+        # For PREROLL, generate sequence: CUE-OUT, CUE-IN, CUE-CRASH
+        if self._current_cue_type == CueType.PREROLL:
+            self._generate_preroll_sequence(markers_dir, output_callback)
+        else:
+            # For other cue types, generate single marker
+            event_id = self._next_event_id
+            self._generate_single_marker(event_id, markers_dir, output_callback)
+    
+    def _generate_preroll_sequence(self, markers_dir: Path, output_callback: Optional[Callable[[str], None]]):
+        """Generate preroll sequence: CUE-OUT, CUE-IN, CUE-CRASH"""
         try:
-            old_files = list(markers_dir.glob("splice*.xml"))
-            if old_files:
-                self.logger.info(f"Deleting {len(old_files)} old marker file(s) before creating new one")
-                for old_file in old_files:
-                    try:
-                        old_file.unlink()
-                        self.logger.debug(f"Deleted old marker: {old_file.name}")
-                    except Exception as e:
-                        self.logger.warning(f"Failed to delete old marker {old_file.name}: {e}")
+            base_event_id = self._next_event_id
+            
+            # Generate preroll sequence using the service method
+            cue_out, cue_in, cue_crash = self.scte35_service.generate_preroll_sequence(
+                base_event_id=base_event_id,
+                preroll_seconds=self._current_preroll,
+                ad_duration_seconds=self._current_ad_duration,
+                immediate=self._current_immediate,
+                auto_increment=True,
+                include_crash=True  # Always include CUE-CRASH for preroll
+            )
+            
+            # Save all three markers
+            self._save_marker_file(cue_out, markers_dir, output_callback)
+            self._save_marker_file(cue_in, markers_dir, output_callback)
+            if cue_crash:
+                self._save_marker_file(cue_crash, markers_dir, output_callback)
+            
+            # Update next event ID (after CUE-CRASH)
+            if cue_crash:
+                self._next_event_id = cue_crash.event_id + 1
+            else:
+                self._next_event_id = cue_in.event_id + 1
+            
+            self._markers_generated += 3  # Count all three markers
+            self.logger.info(f"Generated preroll sequence: OUT={cue_out.event_id}, IN={cue_in.event_id}, CRASH={cue_crash.event_id if cue_crash else 'N/A'}")
+            
+            if output_callback:
+                output_callback(f"[MARKER] Preroll sequence generated: OUT={cue_out.event_id}, IN={cue_in.event_id}, CRASH={cue_crash.event_id if cue_crash else 'N/A'}")
+                
         except Exception as e:
-            self.logger.warning(f"Failed to clean old markers: {e}")
+            self.logger.error(f"Failed to generate preroll sequence: {e}", exc_info=True)
+            if output_callback:
+                output_callback(f"[ERROR] Failed to generate preroll sequence: {e}")
+            raise
+    
+    def _generate_single_marker(self, event_id: int, markers_dir: Path, output_callback: Optional[Callable[[str], None]]):
+        """Generate a single marker (non-preroll)"""
+        # Clean up old files (only very old ones)
+        self._cleanup_old_files(markers_dir)
         
         if output_callback:
             output_callback(f"[INFO] Marker directory: {markers_dir}")
         
-        # Generate marker XML content directly (don't create file in scte35_final)
-        # Access the private method to generate XML content
+        # Generate marker XML content directly
         xml_content = self.scte35_service._generate_xml(
             event_id=event_id,
             cue_type=self._current_cue_type,
@@ -280,17 +310,64 @@ class DynamicMarkerService:
             immediate=self._current_immediate
         )
         
-        # Save directly to dynamic directory with consistent naming
-        # Use zero-padded event ID for proper ordering - TSDuck expects splice*.xml
+        # Save marker file
         target_filename = f"splice_{event_id:05d}.xml"
-        
-        # Ensure directory exists
-        markers_dir.mkdir(parents=True, exist_ok=True)
-        
         target_path = markers_dir / target_filename
         
-        # Write marker file directly to dynamic_markers directory
-        self.logger.info(f"Writing marker directly to: {target_path}")
+        self._write_marker_file(target_path, xml_content, output_callback)
+        
+        # Update next event ID
+        self._next_event_id = event_id + 1
+        self._markers_generated += 1
+        
+        self.logger.info(f"Generated marker: {target_filename} (Event ID: {event_id})")
+        if output_callback:
+            output_callback(f"[MARKER] Event ID {event_id} marker created")
+    
+    def _cleanup_old_files(self, markers_dir: Path):
+        """Clean up old marker files (only very old ones)"""
+        try:
+            old_files = list(markers_dir.glob("splice*.xml"))
+            if old_files:
+                self.logger.info(f"Found {len(old_files)} existing marker file(s) - TSDuck will process or delete them")
+                # Only delete files older than 5 minutes (likely stale/unprocessed)
+                import time
+                current_time = time.time()
+                for old_file in old_files:
+                    try:
+                        file_age = current_time - old_file.stat().st_mtime
+                        if file_age > 300:  # 5 minutes old
+                            self.logger.warning(f"Deleting stale marker file (age: {file_age:.1f}s): {old_file.name}")
+                            old_file.unlink()
+                        else:
+                            self.logger.debug(f"Keeping marker file (age: {file_age:.1f}s): {old_file.name}")
+                    except Exception as e:
+                        self.logger.warning(f"Failed to check marker {old_file.name}: {e}")
+        except Exception as e:
+            self.logger.warning(f"Failed to check old markers: {e}")
+    
+    def _save_marker_file(self, marker: SCTE35Marker, markers_dir: Path, output_callback: Optional[Callable[[str], None]]):
+        """Save a marker file to the dynamic directory"""
+        target_filename = f"splice_{marker.event_id:05d}.xml"
+        target_path = markers_dir / target_filename
+        
+        # Get XML content from marker
+        xml_content = marker.xml_content if hasattr(marker, 'xml_content') else self.scte35_service._generate_xml(
+            event_id=marker.event_id,
+            cue_type=marker.cue_type,
+            preroll=marker.preroll_seconds,
+            ad_duration=marker.ad_duration_seconds,
+            immediate=marker.immediate
+        )
+        
+        self._write_marker_file(target_path, xml_content, output_callback)
+    
+    def _write_marker_file(self, target_path: Path, xml_content: str, output_callback: Optional[Callable[[str], None]]):
+        """Write marker file to disk"""
+        # Ensure directory exists
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        self.logger.info(f"Writing marker to: {target_path}")
         try:
             # Write file with explicit encoding
             with open(target_path, 'w', encoding='utf-8') as f:
@@ -298,67 +375,69 @@ class DynamicMarkerService:
                 f.flush()
                 import os
                 os.fsync(f.fileno())  # Force write to disk
+            
+            # Verify file was written (before TSDuck might delete it)
+            if target_path.exists():
+                file_size = target_path.stat().st_size
+                self.logger.info(f"Marker file written: {target_path} ({file_size} bytes)")
+                if file_size == 0:
+                    raise SCTE35Error(f"Marker file is empty: {target_path}")
+            else:
+                # File might have been deleted by TSDuck immediately (expected behavior)
+                self.logger.warning(f"File disappeared after write (TSDuck may have deleted it): {target_path}")
+                self.logger.info(f"This is expected if TSDuck --delete-files is active")
+            
+            # Wait for file to be stable (TSDuck needs stable files)
+            # Only wait if file still exists (TSDuck hasn't deleted it yet)
+            import time
+            if target_path.exists():
+                time.sleep(0.6)  # 600ms - matches min-stable-delay
+                # Check again after wait
+                if target_path.exists():
+                    self.logger.info(f"Marker file verified and stable: {target_path}")
+                else:
+                    self.logger.info(f"File deleted by TSDuck during stability wait: {target_path} (expected)")
+            else:
+                # File already deleted, just log it
+                self.logger.info(f"File already deleted by TSDuck: {target_path} (expected)")
+            
+        except FileNotFoundError:
+            # File was deleted by TSDuck - this is expected and OK
+            self.logger.info(f"File deleted by TSDuck after write: {target_path} (expected with --delete-files)")
         except Exception as e:
             self.logger.error(f"Failed to write marker file: {e}", exc_info=True)
             raise SCTE35Error(f"Failed to create marker file: {target_path} - {e}")
-        
-        # Verify the file was written
-        if not target_path.exists():
-            self.logger.error(f"CRITICAL: File does not exist after write: {target_path}")
-            self.logger.error(f"Parent directory: {target_path.parent}")
-            self.logger.error(f"Parent exists: {target_path.parent.exists()}")
-            raise SCTE35Error(f"Failed to create marker file: {target_path}")
-        
-        # Verify file has content
-        file_size = target_path.stat().st_size
-        if file_size == 0:
-            self.logger.error(f"CRITICAL: File is empty: {target_path}")
-            raise SCTE35Error(f"Marker file is empty: {target_path}")
-        
-        # File is already verified above, no need to verify again
-        # The file_size variable is already set from the verification above
-        
-        # Increment event ID for next marker
-        self._next_event_id = event_id + 1
-        if self._next_event_id > 99999:
-            self._next_event_id = 10000  # Wrap around
-        
-        # Save last event ID to service state
-        self.scte35_service._save_last_event_id(event_id)
-        
-        # Increment injection counter (file generated = will be injected by TSDuck)
-        self._markers_generated += 1
-        
-        self.logger.info(f"Generated dynamic marker: {target_filename} (Event ID: {event_id}, Total generated: {self._markers_generated})")
-        self.logger.info(f"Marker saved to: {target_path}")
-        self.logger.info(f"File exists: {target_path.exists()}")
-        self.logger.info(f"File size: {file_size} bytes")
-        self.logger.info(f"Full path: {target_path.resolve()}")
-        self.logger.info(f"Next Event ID will be: {self._next_event_id}")
-        
-        # List all splice*.xml files in directory to verify TSDuck can see them
-        try:
-            existing_files = list(markers_dir.glob("splice*.xml"))
-            self.logger.info(f"Files matching splice*.xml in directory: {len(existing_files)}")
-            for f in existing_files[:5]:  # Show first 5
-                self.logger.info(f"  - {f.name}")
-        except Exception as e:
-            self.logger.warning(f"Could not list files in directory: {e}")
-        
-        if output_callback:
-            output_callback(f"[SUCCESS] New marker generated: {target_filename}")
-            output_callback(f"[INFO] Event ID: {event_id}, Next: {self._next_event_id}")
-            output_callback(f"[INFO] Marker saved to: {target_path}")
-            output_callback(f"[INFO] File verified: {file_size} bytes")
     
-    def _clear_directory(self):
-        """Clear all files from dynamic markers directory"""
+    def _clear_directory(self, keep_recent: bool = False, recent_seconds: int = 10):
+        """Clear files from dynamic markers directory
+        
+        Args:
+            keep_recent: If True, keep files created in the last recent_seconds
+            recent_seconds: Number of seconds to consider a file "recent"
+        """
+        markers_dir = self.get_dynamic_markers_dir()
         try:
-            for file in self.dynamic_markers_dir.glob("*.xml"):
-                try:
-                    file.unlink()
-                except Exception as e:
-                    self.logger.warning(f"Failed to delete {file}: {e}")
+            if markers_dir.exists():
+                import time
+                current_time = time.time()
+                deleted_count = 0
+                kept_count = 0
+                
+                for file in markers_dir.glob("splice*.xml"):
+                    try:
+                        file_age = current_time - file.stat().st_mtime
+                        if keep_recent and file_age < recent_seconds:
+                            self.logger.debug(f"Keeping recent marker file: {file.name} (age: {file_age:.1f}s)")
+                            kept_count += 1
+                        else:
+                            file.unlink()
+                            self.logger.debug(f"Cleared old marker file: {file.name} (age: {file_age:.1f}s)")
+                            deleted_count += 1
+                    except Exception as e:
+                        self.logger.warning(f"Failed to delete {file.name}: {e}")
+                
+                if deleted_count > 0 or kept_count > 0:
+                    self.logger.info(f"Directory cleanup: deleted {deleted_count}, kept {kept_count} recent file(s)")
         except Exception as e:
             self.logger.error(f"Failed to clear directory: {e}")
     

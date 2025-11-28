@@ -13,8 +13,6 @@ from PyQt6.QtGui import QFont
 from datetime import datetime
 import psutil
 from .scte35_monitor_widget import SCTE35MonitorWidget
-from .stream_quality_widget import StreamQualityWidget
-from .bitrate_monitor_widget import BitrateMonitorWidget
 
 
 class MonitoringWidget(QWidget):
@@ -158,19 +156,7 @@ class MonitoringWidget(QWidget):
         else:
             self.scte35_monitor_widget = None
         
-        # Stream Quality
-        if self.stream_analyzer_service:
-            self.stream_quality_widget = StreamQualityWidget(self.stream_analyzer_service)
-            advanced_tabs.addTab(self.stream_quality_widget, "📊 Quality")
-        else:
-            self.stream_quality_widget = None
-        
-        # Bitrate Monitor
-        if self.bitrate_monitor_service:
-            self.bitrate_monitor_widget = BitrateMonitorWidget(self.bitrate_monitor_service)
-            advanced_tabs.addTab(self.bitrate_monitor_widget, "📈 Bitrate")
-        else:
-            self.bitrate_monitor_widget = None
+        # Stream Quality and Bitrate Monitor tabs removed - not needed for now
         
         right_layout.addWidget(advanced_tabs)
         splitter.addWidget(right_panel)
@@ -333,11 +319,9 @@ Runtime:        {runtime_str}
               REAL-TIME METRICS
 ═══════════════════════════════════════════════════
 
-Statistics:
   Packets:      {session.packets_processed:,}
   Packets/sec: {pps_str}
   Errors:       {session.errors_count}
-  SCTE-35:      {session.scte35_injected} markers injected
 
 ═══════════════════════════════════════════════════
 """

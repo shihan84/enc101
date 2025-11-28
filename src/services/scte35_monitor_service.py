@@ -201,9 +201,10 @@ class SCTE35MonitorService:
             command.extend(["-I", "file", input_source])
         
         # Splicemonitor plugin - monitors SCTE-35 events
+        # Note: splicemonitor automatically monitors all SCTE-35 splice information
+        # No --pid option needed (it monitors all SCTE-35 PIDs automatically)
         command.extend([
             "-P", "splicemonitor",
-            "--pid", str(scte35_pid),
             "--json"  # Output in JSON format for easier parsing
         ])
         

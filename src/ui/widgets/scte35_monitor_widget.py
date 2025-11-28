@@ -5,11 +5,10 @@ Real-time SCTE-35 event detection and display
 
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
-    QTableWidget, QTableWidgetItem, QHeaderView, QTextEdit,
-    QGroupBox, QLineEdit, QSpinBox, QFormLayout, QScrollArea
+    QTextEdit, QGroupBox, QLineEdit, QSpinBox, QFormLayout, QScrollArea
 )
-from PyQt6.QtCore import QTimer, Qt, pyqtSignal
-from PyQt6.QtGui import QFont, QColor
+from PyQt6.QtCore import Qt, pyqtSignal
+from PyQt6.QtGui import QFont
 from datetime import datetime
 from typing import Optional
 from src.services.scte35_monitor_service import SCTE35MonitorService, SCTE35Event
@@ -266,78 +265,7 @@ class SCTE35MonitorWidget(QWidget):
         telegram_group.setLayout(telegram_layout)
         layout.addWidget(telegram_group)
         
-        # Statistics Panel
-        stats_group = QGroupBox("📊 Statistics")
-        stats_group.setStyleSheet("""
-            QGroupBox {
-                border: 2px solid rgba(148, 163, 184, 0.2);
-                border-radius: 8px;
-                margin-top: 10px;
-                padding-top: 15px;
-                font-weight: 600;
-            }
-        """)
-        stats_layout = QHBoxLayout()
-        
-        self.total_events_label = QLabel("Total Events: 0")
-        self.total_events_label.setStyleSheet("font-size: 14px; font-weight: bold; color: #4CAF50;")
-        stats_layout.addWidget(self.total_events_label)
-        
-        self.events_per_min_label = QLabel("Events/min: 0")
-        self.events_per_min_label.setStyleSheet("font-size: 14px; font-weight: bold; color: #2196F3;")
-        stats_layout.addWidget(self.events_per_min_label)
-        
-        self.last_event_label = QLabel("Last Event: None")
-        self.last_event_label.setStyleSheet("font-size: 14px; font-weight: bold; color: #FF9800;")
-        stats_layout.addWidget(self.last_event_label)
-        
-        stats_layout.addStretch()
-        stats_group.setLayout(stats_layout)
-        layout.addWidget(stats_group)
-        
-        # Events Table
-        events_group = QGroupBox("📋 Detected Events")
-        events_group.setStyleSheet("""
-            QGroupBox {
-                border: 2px solid rgba(148, 163, 184, 0.2);
-                border-radius: 8px;
-                margin-top: 10px;
-                padding-top: 15px;
-                font-weight: 600;
-            }
-        """)
-        events_layout = QVBoxLayout()
-        
-        self.events_table = QTableWidget()
-        self.events_table.setColumnCount(6)
-        self.events_table.setHorizontalHeaderLabels([
-            "Time", "Event ID", "Cue Type", "PTS", "Duration", "Status"
-        ])
-        self.events_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
-        self.events_table.setAlternatingRowColors(True)
-        self.events_table.setStyleSheet("""
-            QTableWidget {
-                background-color: #1e1e1e;
-                color: #ffffff;
-                gridline-color: #444;
-            }
-            QTableWidget::item {
-                padding: 5px;
-            }
-            QHeaderView::section {
-                background-color: #2a2a2a;
-                color: #ffffff;
-                padding: 8px;
-                font-weight: bold;
-                border: 1px solid #444;
-            }
-        """)
-        self.events_table.setMaximumHeight(250)
-        self.events_table.setMinimumHeight(200)
-        events_layout.addWidget(self.events_table)
-        
-        events_group.setLayout(events_layout)
-        layout.addWidget(events_group)
+        # Statistics and Events Table removed - not working without active SCTE-35 injection
         
         # Log Console
         log_group = QGroupBox("📺 Monitor Log")
@@ -377,10 +305,7 @@ class SCTE35MonitorWidget(QWidget):
     
     def setup_timers(self):
         """Setup update timers"""
-        # Update statistics every 2 seconds
-        self.stats_timer = QTimer()
-        self.stats_timer.timeout.connect(self._update_statistics)
-        self.stats_timer.start(2000)
+        # Statistics timer removed - feature not working
     
     def _start_monitoring(self):
         """Start SCTE-35 monitoring"""
@@ -424,7 +349,7 @@ class SCTE35MonitorWidget(QWidget):
         """Clear event history"""
         if self.monitor_service:
             self.monitor_service.clear_events()
-        self.events_table.setRowCount(0)
+        # Events table removed - feature not working without active SCTE-35 injection
         self.log_console.append("[INFO] Event history cleared")
     
     def _on_event_detected(self, event: SCTE35Event):
@@ -432,65 +357,13 @@ class SCTE35MonitorWidget(QWidget):
         # Emit signal
         self.event_detected.emit(event)
         
-        # Add to table
-        row = self.events_table.rowCount()
-        self.events_table.insertRow(row)
-        
-        # Time
-        time_str = event.timestamp.strftime("%H:%M:%S")
-        self.events_table.setItem(row, 0, QTableWidgetItem(time_str))
-        
-        # Event ID
-        event_id_str = str(event.event_id) if event.event_id else "N/A"
-        self.events_table.setItem(row, 1, QTableWidgetItem(event_id_str))
-        
-        # Cue Type
-        cue_type_str = event.cue_type or "Unknown"
-        self.events_table.setItem(row, 2, QTableWidgetItem(cue_type_str))
-        
-        # PTS
-        pts_str = str(event.pts_time) if event.pts_time else "N/A"
-        self.events_table.setItem(row, 3, QTableWidgetItem(pts_str))
-        
-        # Duration
-        duration_str = str(event.break_duration) if event.break_duration else "N/A"
-        self.events_table.setItem(row, 4, QTableWidgetItem(duration_str))
-        
-        # Status
-        status = "Out of Network" if event.out_of_network else "In Network"
-        status_item = QTableWidgetItem(status)
-        if event.out_of_network:
-            status_item.setForeground(QColor("#f44336"))
-        else:
-            status_item.setForeground(QColor("#4CAF50"))
-        self.events_table.setItem(row, 5, status_item)
-        
-        # Scroll to bottom
-        self.events_table.scrollToBottom()
-        
-        # Limit rows
-        if self.events_table.rowCount() > 1000:
-            self.events_table.removeRow(0)
+        # Log to console only (events table removed - not working)
+        event_str = f"[SCTE-35] Event detected: {event.cue_type or 'Unknown'}"
+        if event.event_id:
+            event_str += f" (ID: {event.event_id})"
+        self.log_console.append(event_str)
     
-    def _update_statistics(self):
-        """Update statistics display"""
-        if not self.monitor_service:
-            return
-        
-        stats = self.monitor_service.get_statistics()
-        
-        self.total_events_label.setText(f"Total Events: {stats.get('total_events', 0)}")
-        self.events_per_min_label.setText(f"Events/min: {stats.get('events_per_minute', 0)}")
-        
-        last_event_time = stats.get('last_event_time')
-        if last_event_time:
-            if isinstance(last_event_time, datetime):
-                time_str = last_event_time.strftime("%H:%M:%S")
-            else:
-                time_str = str(last_event_time)
-            self.last_event_label.setText(f"Last Event: {time_str}")
-        else:
-            self.last_event_label.setText("Last Event: None")
+    # _update_statistics method removed - feature not working
     
     def append_log(self, message: str):
         """Append message to log console"""

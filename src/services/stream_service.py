@@ -146,18 +146,40 @@ class StreamService:
                     output_callback=output_callback
                 )
                 
-                # Wait a bit to ensure first marker file is stable before TSDuck starts
-                import time
-                time.sleep(1.0)  # Wait 1 second for file to be stable
-                self.logger.info("First marker ready, TSDuck can now start")
-                self.logger.info(f"TSDuck will use: {marker_path / 'splice*.xml'}")
+                # Verify files exist (quick check, no blocking wait)
+                # The stream stabilization wait is moved to background thread to avoid blocking UI
+                existing_files = list(marker_path.glob("splice*.xml"))
+                
+                if existing_files:
+                    self.logger.info(f"[OK] Verified {len(existing_files)} marker file(s) exist before TSDuck start")
+                    for f in existing_files[:5]:  # Only log first 5 to avoid spam
+                        try:
+                            size = f.stat().st_size
+                            self.logger.info(f"  - {f.name} ({size} bytes)")
+                        except FileNotFoundError:
+                            self.logger.warning(f"  - {f.name} (file disappeared!)")
+                else:
+                    self.logger.warning("WARNING: No marker files found initially - dynamic generation should create them")
             else:
                 # Use single marker file (traditional mode - only if dynamic service not available)
                 marker_path = marker.xml_path if marker else None
                 self.logger.info(f"Using single marker file: {marker_path}")
             
-            # Build command
-            command = self.tsduck_service.build_command(config, marker_path)
+            # Build command with verbose logging for debugging
+            # For dynamic generation: use directory (wildcard pattern)
+            # For single file mode: use marker file path
+            if use_dynamic_generation and marker_path and marker_path.is_dir():
+                # Use directory for wildcard pattern (continuous injection)
+                actual_marker_path = marker_path
+                self.logger.info(f"Using directory for wildcard pattern injection: {actual_marker_path}")
+            elif marker and marker.xml_path:
+                # Use single file path (traditional mode)
+                actual_marker_path = marker.xml_path
+                self.logger.info(f"Using single marker file for injection: {actual_marker_path}")
+            else:
+                actual_marker_path = marker_path
+            
+            command = self.tsduck_service.build_command(config, actual_marker_path, verbose=True)
             
             self.logger.info(f"Starting stream session: {session.session_id}")
             cmd_str = ' '.join(command)
@@ -200,6 +222,18 @@ class StreamService:
     
     def _run_stream(self, command: list, session: StreamSession):
         """Run stream processing in background thread"""
+        # Wait for stream to stabilize and provide valid PTS values (moved here to avoid blocking UI)
+        # TSDuck needs valid PTS from video stream for injection (even with immediate injection)
+        # Reduced wait time since everything is working properly - 10 seconds is sufficient for stream stabilization
+        # This wait is now in background thread so it doesn't freeze the GUI
+        if self.dynamic_marker_service:
+            wait_seconds = 10.0  # Reduced to 10 seconds: sufficient for stream stabilization and PTS availability
+            self.logger.info(f"Waiting for stream to stabilize and PTS to be available ({wait_seconds} seconds)...")
+            self.logger.info("This allows TSDuck to receive and track PTS values from video stream")
+            self.logger.info("NOTE: This wait happens in background thread - GUI remains responsive")
+            time.sleep(wait_seconds)
+            self.logger.info("Stream stabilization wait complete - TSDuck can now start")
+        
         max_retries = 999
         retry_count = 0
         
@@ -263,8 +297,14 @@ class StreamService:
                         line_text = line.strip()
                         self._notify_output(f"[TSDuck] {line_text}")
                         
-                        # Detect SRT connection errors
+                        # Log TSDuck errors and warnings (especially from spliceinject)
                         line_lower = line_text.lower()
+                        if "error" in line_lower or "warning" in line_lower or "fail" in line_lower:
+                            self.logger.warning(f"TSDuck output (potential issue): {line_text}")
+                            if "splice" in line_lower or "scte" in line_lower:
+                                self.logger.error(f"TSDuck SCTE-35 related issue: {line_text}")
+                        
+                        # Detect SRT connection errors
                         if "srt" in line_lower and ("error" in line_lower or "reject" in line_lower):
                             srt_error_detected = True
                             srt_error_details.append(line_text)
@@ -277,7 +317,7 @@ class StreamService:
                             self._notify_output("[SRT TIP] Verify server address and port are correct")
                             self._notify_output("[SRT TIP] Ensure server is accepting connections")
                         
-                        # Parse splicemonitor output for SCTE-35 marker detection
+                        # Parse splicemonitor output for SCTE-35 detection and bitrate (for testing)
                         self._parse_splicemonitor_output(line_text, session)
                         
                         # Sync injection count from dynamic marker service (if using dynamic generation)
@@ -578,8 +618,20 @@ class StreamService:
                             # Fallback: increment counter
                             session.scte35_injected += 1
                         
-                        self.logger.info(f"SCTE-35 marker detected by splicemonitor: Event ID={event_id}, Total={session.scte35_injected}")
+                        # Extract bitrate information if available
+                        bitrate_info = None
+                        if 'bitrate' in data:
+                            bitrate_info = data.get('bitrate')
+                        elif 'splice_pid' in data:
+                            # Check for PID bitrate info
+                            splice_pid = data.get('splice_pid')
+                            if splice_pid:
+                                bitrate_info = f"PID {splice_pid}"
+                        
+                        self.logger.info(f"SCTE-35 marker detected by splicemonitor: Event ID={event_id}, Total={session.scte35_injected}, Bitrate={bitrate_info}")
                         self._notify_output(f"[SCTE-35] Marker detected: Event ID={event_id} (Total: {session.scte35_injected})")
+                        if bitrate_info:
+                            self._notify_output(f"[SCTE-35] Bitrate info: {bitrate_info}")
                         
                         # Send Telegram notification if enabled
                         if self.telegram_service and self.telegram_service.enabled:
@@ -634,6 +686,7 @@ class StreamService:
                             if markers_generated > session.scte35_injected:
                                 session.scte35_injected = markers_generated
                         else:
+                            # Fallback: increment counter
                             session.scte35_injected += 1
                         
                         self.logger.info(f"SCTE-35 marker detected by splicemonitor (text): Event ID={event_id}, Total={session.scte35_injected}")
@@ -684,7 +737,31 @@ class StreamService:
                 except (ValueError, AttributeError):
                     pass
             
-            # Pattern 2: "Bitrate: 15.234 Mbps" or "Bitrate: 15234000 b/s"
+            # Pattern 2: SCTE-35 PID bitrate detection (PID 500 / 0x01F4)
+            # Look for "0x01F4" or "PID 500" with bitrate information
+            scte35_bitrate_match = re.search(r'(?:0x01f4|pid\s*500|scte[\s-]*35)[^:]*bitrate[:\s]+([\d,.]+)\s*(mbps|mb/s|mb|kbps|kb/s|kb|bps|b/s)?', line_lower)
+            if scte35_bitrate_match:
+                try:
+                    scte35_bitrate_val = float(scte35_bitrate_match.group(1).replace(',', ''))
+                    scte35_unit = scte35_bitrate_match.group(2).lower() if scte35_bitrate_match.lastindex >= 2 else 'bps'
+                    # Convert to b/s for SCTE-35 (usually very low bitrate)
+                    if scte35_unit in ['mbps', 'mb/s', 'mb']:
+                        scte35_bitrate_bps = scte35_bitrate_val * 1000000
+                    elif scte35_unit in ['kbps', 'kb/s', 'kb']:
+                        scte35_bitrate_bps = scte35_bitrate_val * 1000
+                    else:
+                        scte35_bitrate_bps = scte35_bitrate_val
+                    
+                    if scte35_bitrate_bps > 0:
+                        self.logger.info(f"SCTE-35 bitrate detected: {scte35_bitrate_bps:.2f} b/s")
+                        self._notify_output(f"[SCTE-35] Bitrate: {scte35_bitrate_bps:.2f} b/s")
+                        # Store in session if there's a field for it
+                        if hasattr(session, 'scte35_bitrate'):
+                            session.scte35_bitrate = scte35_bitrate_bps
+                except (ValueError, AttributeError):
+                    pass
+            
+            # Pattern 3: General bitrate detection
             bitrate_match = re.search(r'bitrate[:\s]+([\d,.]+)\s*(mbps|mb/s|mb|kbps|kb/s|kb|bps|b/s)?', line_lower)
             if bitrate_match:
                 try:

@@ -29,7 +29,7 @@ class TSDuckService:
             self.tsduck_path = tsduck_path
             self.tsduck_source = "user-specified"
         else:
-            # Try bundled TSDuck first (IBE-210 feature)
+            # Try bundled TSDuck first (IBE-210 feature - no separate installation needed)
             bundled_path = self._get_bundled_tsduck_path()
             if bundled_path and Path(bundled_path).exists():
                 self.tsduck_path = bundled_path
@@ -38,17 +38,43 @@ class TSDuckService:
                 # Set up environment for bundled TSDuck
                 self._setup_bundled_tsduck_environment()
             else:
-                # Fallback to system TSDuck
-                self.tsduck_path = find_tsduck()
-                self.tsduck_source = "system"
-                self.logger.info(f"Using system TSDuck: {self.tsduck_path}")
+                # Fallback to installed TSDuck (C:\Program Files\TSDuck)
+                installed_path = self._get_installed_tsduck_path()
+                if installed_path and Path(installed_path).exists():
+                    self.tsduck_path = installed_path
+                    self.tsduck_source = "installed"
+                    self.logger.info(f"Using installed TSDuck: {self.tsduck_path}")
+                else:
+                    # Final fallback to system TSDuck (from PATH)
+                    self.tsduck_path = find_tsduck()
+                    self.tsduck_source = "system"
+                    self.logger.info(f"Using system TSDuck: {self.tsduck_path}")
         
         self.logger.info(f"TSDuck service initialized (source: {self.tsduck_source})")
+    
+    def _get_installed_tsduck_path(self) -> Optional[str]:
+        """
+        Get path to installed TSDuck executable (C:\\Program Files\\TSDuck)
+        Returns None if installed TSDuck is not found
+        """
+        # Check standard Windows installation path
+        installed_paths = [
+            Path(r"C:\Program Files\TSDuck\bin\tsp.exe"),
+            Path(r"C:\Program Files (x86)\TSDuck\bin\tsp.exe"),
+        ]
+        
+        for path in installed_paths:
+            if path.exists():
+                self.logger.info(f"Found installed TSDuck at: {path}")
+                return str(path)
+        
+        return None
     
     def _get_bundled_tsduck_path(self) -> Optional[str]:
         """
         Get path to bundled TSDuck executable
         Returns None if bundled TSDuck is not found
+        Optimized to check most likely paths first
         """
         if getattr(sys, 'frozen', False):
             # PyInstaller bundled mode
@@ -57,18 +83,24 @@ class TSDuckService:
             # Development mode
             base_path = Path(__file__).parent.parent.parent
         
-        # Try different possible locations
-        possible_paths = [
-            base_path / "tsduck" / "bin" / "tsp.exe",  # Windows
-            base_path / "tsduck" / "bin" / "tsp",      # Linux/macOS
+        # Try most likely locations first (optimized order)
+        # Check current directory structure first
+        most_likely = base_path / "tsduck" / "bin" / "tsp.exe"
+        if most_likely.exists():
+            return str(most_likely)
+        
+        # Check Linux/macOS version
+        most_likely_linux = base_path / "tsduck" / "bin" / "tsp"
+        if most_likely_linux.exists():
+            return str(most_likely_linux)
+        
+        # Only check other paths if first didn't work
+        other_paths = [
             base_path.parent / "tsduck" / "bin" / "tsp.exe",
             base_path.parent / "tsduck" / "bin" / "tsp",
-            # Also check in dist folder (for development)
-            base_path.parent.parent / "tsduck" / "bin" / "tsp.exe",
-            base_path.parent.parent / "tsduck" / "bin" / "tsp",
         ]
         
-        for path in possible_paths:
+        for path in other_paths:
             if path.exists():
                 return str(path)
         
@@ -122,127 +154,240 @@ class TSDuckService:
     def build_command(
         self,
         config: StreamConfig,
-        marker_path: Optional[Path] = None
+        marker_path: Optional[Path] = None,
+        verbose: bool = False
     ) -> List[str]:
         """
         Build TSDuck command from configuration
+        Based on official TSDuck documentation:
+        - https://tsduck.io/docs/tsduck.html#srt-input
+        - https://tsduck.io/docs/tsduck.html#_srt_output
+        - https://tsduck.io/docs/tsduck.html#spliceinject-ref
+        - https://tsduck.io/docs/tsduck.html#_pmt
         
         Args:
             config: Stream configuration
-            marker_path: Path to SCTE-35 marker XML file
+            marker_path: Path to SCTE-35 marker XML file or directory
+            verbose: Enable verbose logging
         
         Returns:
             List of command arguments
         """
         command = [self.tsduck_path]
         
-        # Input plugin
-        input_plugin_map = {
-            InputType.HLS: "hls",
-            InputType.SRT: "srt",
-            InputType.UDP: "ip",
-            InputType.TCP: "tcp",
-            InputType.HTTP: "http",
-            InputType.DVB: "dvb",
-            InputType.ASI: "asi"
-        }
+        # Add verbose flag if requested
+        if verbose:
+            command.append("--verbose")
         
-        input_plugin = input_plugin_map.get(config.input_type, "hls")
+        # Add input stuffing (adds null packets for proper stream structure)
+        # Per TSDuck sample: --add-input-stuffing 1/10 (1 null packet every 10 packets)
+        # This helps with PTS extraction and stream structure
+        command.extend(["--add-input-stuffing", "1/10"])
         
-        # Handle SRT input specially
+        # ============================================
+        # INPUT PLUGIN
+        # ============================================
+        # Official TSDuck SRT input syntax:
+        # -I srt <host:port> [options]
+        # Options: --transtype, --latency, --streamid
         if config.input_type == InputType.SRT:
+            # Parse SRT URL: srt://host:port?streamid=xxx or host:port
             clean_url = config.input_url.replace("srt://", "").replace("srt:", "")
+            host_port = clean_url
+            streamid_param = None
+            
             if "?" in clean_url:
                 host_port = clean_url.split("?")[0]
                 query_part = clean_url.split("?")[1]
-                streamid_param = None
                 if "streamid=" in query_part:
-                    streamid_param = query_part.split("streamid=")[1]
-                
-                command.extend(["-I", "srt", host_port,
-                              "--transtype", "live",
-                              "--messageapi",
-                              "--latency", "2000"])
-                if streamid_param:
-                    command.extend(["--streamid", streamid_param])
-            else:
-                command.extend(["-I", "srt", clean_url,
-                              "--transtype", "live",
-                              "--messageapi",
-                              "--latency", "2000"])
+                    streamid_param = query_part.split("streamid=")[1].split("&")[0]
+            
+            # SRT input: --transtype live, --latency 2000ms (per distributor requirements)
+            command.extend(["-I", "srt", host_port,
+                          "--transtype", "live",
+                          "--latency", "2000"])
+            
+            if streamid_param:
+                command.extend(["--streamid", streamid_param])
         else:
+            # Other input types
+            input_plugin_map = {
+                InputType.HLS: "hls",
+                InputType.UDP: "ip",
+                InputType.TCP: "tcp",
+                InputType.HTTP: "http",
+                InputType.DVB: "dvb",
+                InputType.ASI: "asi"
+            }
+            input_plugin = input_plugin_map.get(config.input_type, "hls")
             command.extend(["-I", input_plugin, config.input_url])
         
-        # SDT Plugin - Service Description Table
+        # ============================================
+        # SDT PLUGIN - Service Description Table
+        # ============================================
         command.extend(["-P", "sdt",
             "--service", str(config.service_id),
             "--name", config.service_name,
             "--provider", config.provider_name])
         
-        # Smart PID Remapping (skip for SRT input)
-        if config.input_type != InputType.SRT:
-            command.extend(["-P", "remap", f"211={config.vpid}", f"221={config.apid}"])
+        # ============================================
+        # REMAP PLUGIN - PID Remapping
+        # ============================================
+        # Remap video PID 211->256, audio PID 221->257
+        # This ensures consistent PIDs regardless of input stream
+        command.extend(["-P", "remap",
+            f"211={config.vpid}",  # Video: 211 -> 256
+            f"221={config.apid}"])  # Audio: 221 -> 257
         
-        # PMT Plugin - Program Map Table
+        # ============================================
+        # PMT PLUGIN - Program Map Table
+        # ============================================
+        # Per TSDuck documentation and distributor requirements:
+        # - Add CUE identifier descriptor (0x43554549 = "CUEI") for SCTE-35 detection
+        # - Add video PID (0x1b = H.264)
+        # - Add audio PID (0x0f = AAC)
+        # - Add SCTE-35 PID (0x86 = splice_info_section)
         command.extend(["-P", "pmt",
             "--service", str(config.service_id),
-            "--add-pid", f"{config.vpid}/0x1b",  # Video PID
-            "--add-pid", f"{config.apid}/0x0f",  # Audio PID
-            "--add-pid", f"{config.scte35_pid}/0x86"])  # SCTE-35 PID
+            "--add-programinfo-id", "0x43554549",  # CUE identifier descriptor
+            "--add-pid", f"{config.vpid}/0x1b",  # Video: H.264
+            "--add-pid", f"{config.apid}/0x0f",  # Audio: AAC
+            "--add-pid", f"{config.scte35_pid}/0x86"])  # SCTE-35: splice_info_section
         
-        # SpliceInject Plugin (if marker provided)
+        self.logger.info(f"PMT: Service {config.service_id}, CUE-ID=0x43554549, Video={config.vpid}/0x1b, Audio={config.apid}/0x0f, SCTE-35={config.scte35_pid}/0x86")
+        
+        # ============================================
+        # SPLICEINJECT PLUGIN - SCTE-35 Injection
+        # ============================================
+        # Per official TSDuck documentation:
+        # - Use --service instead of --pid (GitHub issue #1578)
+        # - --pts-pid: PID to extract PTS from (video PID after remapping)
+        # - For continuous injection: Use wildcard pattern with polling
+        # - --files: Wildcard pattern for dynamic file loading
+        # - --delete-files: Delete files after injection (recommended for dynamic generation)
+        # - --poll-interval: Interval between poll operations (default: 500ms)
+        # - --min-stable-delay: File must be stable before loading (default: 500ms)
+        # - --inject-count: Number of times to inject same section (use 1 for continuous injection)
         if marker_path:
-            # Check if marker_path is a directory (for dynamic generation) or a file
+            # Handle directory (dynamic generation) or single file
             if marker_path.is_dir():
-                # Dynamic marker generation mode: use wildcard pattern
-                # Convert to absolute path to ensure TSDuck can find it
-                abs_marker_path = marker_path.resolve()
-                wildcard_pattern = str(abs_marker_path / "splice*.xml")
-                self.logger.info(f"Using absolute path for dynamic markers: {wildcard_pattern}")
-                self.logger.info(f"TSDuck will monitor: {abs_marker_path}")
-                # Verify directory exists and is accessible
-                if not abs_marker_path.exists():
-                    self.logger.warning(f"WARNING: Marker directory does not exist: {abs_marker_path}")
-                else:
-                    # List existing files
-                    existing = list(abs_marker_path.glob("splice*.xml"))
-                    self.logger.info(f"Found {len(existing)} existing splice*.xml files in directory")
+                # Dynamic generation mode: Use wildcard pattern with polling
+                # This allows TSDuck to continuously monitor and inject new files as they're created
+                wildcard_pattern = str(marker_path / "splice*.xml")
                 
+                self.logger.info(f"SpliceInject: Dynamic mode - using wildcard pattern: {wildcard_pattern}")
+                self.logger.info(f"SpliceInject: TSDuck will poll for new files and inject each once")
+                
+                # Build spliceinject command with wildcard pattern and polling
                 command.extend(["-P", "spliceinject",
-                    "--pid", str(config.scte35_pid),
-                    "--pts-pid", str(config.vpid),
+                    "--service", str(config.service_id),
+                    "--pts-pid", str(config.vpid),  # Use remapped video PID (256)
                     "--files", wildcard_pattern,
-                    # DO NOT use --delete-files - we manage file deletion manually
-                    # Keep files until next marker is generated to ensure TSDuck can inject them
-                    "--poll-interval", "500",  # Poll every 500ms (default)
-                    "--min-stable-delay", "500",  # File must be stable for 500ms
-                    "--inject-count", "1"])  # Each file injected once
-            elif marker_path.exists():
-                # Single file mode: traditional injection
-                command.extend(["-P", "spliceinject",
-                    "--pid", str(config.scte35_pid),
-                    "--pts-pid", str(config.vpid),
-                    "--files", str(marker_path),
-                    "--inject-count", str(config.inject_count),
-                    "--inject-interval", str(config.inject_interval),
-                    "--start-delay", str(config.start_delay)])
+                    "--delete-files",  # Delete files after successful injection (prevents directory bloat)
+                    "--poll-interval", "500",  # Poll every 500ms for new files
+                    "--min-stable-delay", "500",  # File must be stable for 500ms before loading
+                    "--inject-count", "1"])  # Each file injected once (for continuous injection with incrementing event IDs)
+                
+                self.logger.info(f"SpliceInject: Service={config.service_id}, PTS-PID={config.vpid}")
+                self.logger.info(f"SpliceInject: Wildcard={wildcard_pattern}, Poll=500ms, Stable=500ms, Count=1")
+                self.logger.info(f"SpliceInject: Files will be deleted after injection (dynamic generation mode)")
+                
+            else:
+                # Single file mode: Traditional injection (for testing or one-time injection)
+                if marker_path.exists():
+                    # Determine injection mode (immediate vs scheduled)
+                    is_immediate = False
+                    has_pts_time = False
+                    try:
+                        marker_content = marker_path.read_text(encoding='utf-8')
+                        is_immediate = 'splice_immediate="true"' in marker_content
+                        has_pts_time = 'pts_time=' in marker_content and 'pts_time="0"' not in marker_content
+                    except Exception as e:
+                        self.logger.warning(f"Could not read marker file to determine injection mode: {e}")
+                    
+                    # Build spliceinject command for single file
+                    command.extend(["-P", "spliceinject",
+                        "--service", str(config.service_id),
+                        "--pts-pid", str(config.vpid),  # Use remapped video PID (256)
+                        "--files", str(marker_path),
+                        "--inject-count", str(config.inject_count),
+                        "--inject-interval", str(config.inject_interval)])
+                    
+                    # Add --start-delay for scheduled injection (when pts_time is present)
+                    if has_pts_time:
+                        start_delay = getattr(config, 'start_delay', 2000)
+                        command.extend(["--start-delay", str(start_delay)])
+                        self.logger.info(f"SpliceInject: Scheduled mode (pts_time present), start-delay={start_delay}ms")
+                    elif is_immediate:
+                        self.logger.info(f"SpliceInject: Immediate mode (splice_immediate=true)")
+                    else:
+                        # Default: add start-delay for safety
+                        start_delay = getattr(config, 'start_delay', 2000)
+                        command.extend(["--start-delay", str(start_delay)])
+                        self.logger.info(f"SpliceInject: Default mode, start-delay={start_delay}ms")
+                    
+                    self.logger.info(f"SpliceInject: Single file mode - File={marker_path.name}, Count={config.inject_count}, Interval={config.inject_interval}ms")
+                else:
+                    self.logger.warning(f"Marker file does not exist: {marker_path}")
             
-            # SpliceMonitor Plugin - detect injected markers (after spliceinject, before analyze)
-            # This verifies that markers are actually in the stream before sending to distributor
-            # Note: splicemonitor doesn't need --pid, it automatically monitors all SCTE-35 splice information
-            command.extend(["-P", "splicemonitor",
-                "--json"])  # JSON format for easier parsing
+            # Add splicemonitor plugin (for testing - detects SCTE-35 injection)
+            # ============================================
+            # SPLICEMONITOR PLUGIN - SCTE-35 Detection
+            # ============================================
+            # Per TSDuck documentation: Monitors and reports SCTE-35 splice information
+            # This is added for testing purposes to verify SCTE-35 injection and bitrate
+            command.extend(["-P", "splicemonitor", "--json"])
+            self.logger.info("SpliceMonitor: Added for testing - SCTE-35 detection and bitrate monitoring")
+            
+            # Add splicerestamp plugin (for both modes)
+            # ============================================
+            # SPLICERESTAMP PLUGIN - PTS/PCR Adjustment
+            # ============================================
+            # Per TSDuck documentation: Adjusts PCR/PTS values for proper SCTE-35 timing
+            command.extend(["-P", "splicerestamp"])
+            self.logger.info("SpliceRestamp: Added for PTS/PCR synchronization")
         
-        # Analyze Plugin - for real-time metrics (add before output)
-        # Outputs statistics every 1 second for real-time monitoring
-        command.extend(["-P", "analyze", "--interval", "1"])
-        
-        # Output plugin
+        # ============================================
+        # OUTPUT PLUGIN
+        # ============================================
+        # Official TSDuck SRT output syntax:
+        # -O srt --caller <host:port> [options]  (caller mode)
+        # -O srt --listener <port> [options]     (listener mode)
+        # Options: --latency, --streamid
         if config.output_type == OutputType.SRT:
-            output_args = ["-O", "srt", "--caller", config.output_srt, "--latency", str(config.latency)]
-            # Only add streamid if it's not empty (match old version behavior)
-            if config.stream_id and config.stream_id.strip():
-                output_args.extend(["--streamid", config.stream_id.strip()])
+            # Parse output SRT URL
+            output_host_port = config.output_srt
+            output_streamid = config.stream_id
+            
+            if "srt://" in output_host_port or "?" in output_host_port:
+                clean_output = output_host_port.replace("srt://", "").replace("srt:", "")
+                if "?" in clean_output:
+                    output_host_port = clean_output.split("?")[0]
+                    query_part = clean_output.split("?")[1]
+                    if "streamid=" in query_part:
+                        output_streamid = query_part.split("streamid=")[1].split("&")[0]
+                        if "%" in output_streamid:
+                            import urllib.parse
+                            output_streamid = urllib.parse.unquote(output_streamid)
+            
+            # Detect listener mode (port only) vs caller mode (host:port)
+            # If output_host_port is just a number, use listener mode
+            # Otherwise, use caller mode
+            try:
+                port_only = int(output_host_port)
+                # Listener mode: just port number
+                output_args = ["-O", "srt", "--listener", str(port_only),
+                              "--latency", str(config.latency)]
+                self.logger.info(f"SRT output: Listener mode on port {port_only}")
+            except ValueError:
+                # Caller mode: host:port
+                output_args = ["-O", "srt", "--caller", output_host_port,
+                              "--latency", str(config.latency)]
+                self.logger.info(f"SRT output: Caller mode to {output_host_port}")
+            
+            if output_streamid and output_streamid.strip():
+                output_args.extend(["--streamid", output_streamid.strip()])
+            
             command.extend(output_args)
         elif config.output_type == OutputType.HLS:
             command.extend(["-O", "hls", "--live", config.output_hls,
@@ -259,13 +404,17 @@ class TSDuckService:
                 command.extend(["--cors", "*"])
         elif config.output_type == OutputType.UDP:
             command.extend(["-O", "ip", config.output_srt])
+        elif config.output_type == OutputType.FILE:
+            output_file = getattr(config, 'output_file', 'output.ts')
+            command.extend(["-O", "file", output_file])
+            self.logger.info(f"Output: File to {output_file}")
         elif config.output_type == OutputType.TCP:
             command.extend(["-O", "tcp", config.output_srt])
         elif config.output_type == OutputType.HTTP:
             command.extend(["-O", "http", config.output_srt])
             if config.enable_cors:
                 command.extend(["--cors", "*"])
-        else:  # FILE
+        else:
             command.extend(["-O", "file", config.output_srt])
         
         return command

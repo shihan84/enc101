@@ -21,3 +21,20 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+
+# Test files and generated content
+test_*.py
+*_test.py
+*.ts
+*.log
+scte35_final/
+*.json
+*.xml
+!src/**/*.json
+!src/**/*.xml
+
+# Documentation (keep guides, exclude test summaries)
+*_TEST*.md
+*_SUMMARY*.md
+!LICENSING_IMPLEMENTATION_GUIDE.md
+!TELEGRAM_LICENSING_GUIDE.md

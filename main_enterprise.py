@@ -72,8 +72,9 @@ def main():
         
         # TSDuck service
         tsduck_service = TSDuckService(config.tsduck_path or None)
-        if not tsduck_service.verify_installation():
-            logger.warning("TSDuck installation not verified. Some features may not work.")
+        # Skip verification on startup to avoid blocking - verify lazily when needed
+        # Verification will happen automatically when TSDuck is first used
+        logger.info(f"TSDuck service initialized (path: {tsduck_service.tsduck_path})")
         
         # Database
         database = Database()
