@@ -233,11 +233,33 @@ class TSDuckService:
         # ============================================
         # REMAP PLUGIN - PID Remapping
         # ============================================
-        # Remap video PID 211->256, audio PID 221->257
-        # This ensures consistent PIDs regardless of input stream
-        command.extend(["-P", "remap",
-            f"211={config.vpid}",  # Video: 211 -> 256
-            f"221={config.apid}"])  # Audio: 221 -> 257
+        # Smart PID Remapping: Only remap if needed to avoid conflicts
+        # - Skip remapping for SRT input (stream PIDs are already correct)
+        # - Skip remapping if source PID matches target PID (no remap needed)
+        # - Skip remapping if target PID is already in stream (would cause conflict)
+        remap_rules = []
+        
+        # Skip remapping for SRT input - stream PIDs are already correct
+        if config.input_type != InputType.SRT:
+            # Video PID remapping: only if 211 != target vpid
+            # This prevents remapping 211->256 if stream already has 256
+            if 211 != config.vpid:
+                remap_rules.append(f"211={config.vpid}")  # Video: 211 -> vpid
+            
+            # Audio PID remapping: only if 221 != target apid
+            # This prevents remapping 221->257 if stream already has 257
+            if 221 != config.apid:
+                remap_rules.append(f"221={config.apid}")  # Audio: 221 -> apid
+        
+        # Only add remap plugin if we have remapping rules
+        if remap_rules:
+            command.extend(["-P", "remap"] + remap_rules)
+            self.logger.info(f"PID Remapping: {', '.join(remap_rules)}")
+        else:
+            if config.input_type == InputType.SRT:
+                self.logger.info(f"PID Remapping skipped: SRT input uses stream PIDs directly (vpid={config.vpid}, apid={config.apid})")
+            else:
+                self.logger.info(f"PID Remapping skipped: Stream already has target PIDs (vpid={config.vpid}, apid={config.apid})")
         
         # ============================================
         # PMT PLUGIN - Program Map Table
