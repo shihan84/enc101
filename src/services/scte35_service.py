@@ -294,17 +294,15 @@ class SCTE35Service:
                 base_event_id = 10023
             
             # Generate CUE-OUT marker
-            # Per distributor requirements:
-            # - If preroll > 0: Use scheduled injection with pts_time = preroll duration
-            # - If preroll = 0: Use immediate injection
-            # The "immediate" parameter is ignored when preroll > 0 (always scheduled)
-            cue_out_immediate = (preroll_seconds == 0)  # Only immediate if preroll is 0
+            # FIX: Use immediate injection for CUE-OUT to ensure reliable injection
+            # The preroll value is informational (0-10 seconds) but injection should be immediate
+            # This ensures CUE-OUT is injected before CUE-IN and works correctly with --delete-files
             cue_out = self.generate_marker(
                 event_id=base_event_id,
                 cue_type=CueType.CUE_OUT,
                 preroll_seconds=preroll_seconds,
                 ad_duration_seconds=ad_duration_seconds,
-                immediate=cue_out_immediate,  # Immediate only if preroll = 0
+                immediate=True,  # Always immediate for reliable injection
                 auto_increment=auto_increment
             )
             
@@ -364,30 +362,9 @@ class SCTE35Service:
         
         if cue_type == CueType.PREROLL:
             # PREROLL: Same as CUE-OUT but with auto_return="true"
-            # Per distributor requirements: Preroll (0-10 seconds) is time BEFORE ad break starts
-            # Use scheduled injection with pts_time = preroll duration
-            # If preroll is 0, use immediate injection
-            if preroll > 0:
-                # Scheduled injection: PREROLL happens "preroll" seconds before ad break
-                pts_time_pts = preroll * 90000  # Convert seconds to PTS units (90kHz)
-                return f'''<?xml version="1.0" encoding="UTF-8"?>
-<tsduck>
-    <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
-        <splice_insert splice_event_id="{event_id}" 
-                      splice_event_cancel="false" 
-                      out_of_network="true" 
-                      splice_immediate="false" 
-                      pts_time="{pts_time_pts}" 
-                      unique_program_id="1" 
-                      avail_num="1" 
-                      avails_expected="1">
-            <break_duration auto_return="true" duration="{ad_duration * 90000}" />
-        </splice_insert>
-    </splice_information_table>
-</tsduck>'''
-            else:
-                # Immediate injection: No preroll (preroll = 0)
-                return f'''<?xml version="1.0" encoding="UTF-8"?>
+            # FIX: Always use immediate injection for reliability (consistent with CUE-OUT fix)
+            # The preroll value (0-10 seconds) is informational and handled by distributor's system
+            return f'''<?xml version="1.0" encoding="UTF-8"?>
 <tsduck>
     <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
         <splice_insert splice_event_id="{event_id}" 
@@ -403,30 +380,10 @@ class SCTE35Service:
 </tsduck>'''
         elif cue_type == CueType.CUE_OUT:
             # CUE-OUT: Program out point (SCTE START from playout)
-            # Per distributor requirements: Preroll (0-10 seconds) is time BEFORE ad break starts
-            # Use scheduled injection with pts_time = preroll duration (in PTS units: preroll * 90000)
-            # If preroll is 0, use immediate injection
-            if preroll > 0:
-                # Scheduled injection: CUE-OUT happens "preroll" seconds before ad break
-                pts_time_pts = preroll * 90000  # Convert seconds to PTS units (90kHz)
-                return f'''<?xml version="1.0" encoding="UTF-8"?>
-<tsduck>
-    <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
-        <splice_insert splice_event_id="{event_id}" 
-                      splice_event_cancel="false" 
-                      out_of_network="true" 
-                      splice_immediate="false" 
-                      pts_time="{pts_time_pts}" 
-                      unique_program_id="1" 
-                      avail_num="1" 
-                      avails_expected="1">
-            <break_duration auto_return="false" duration="{ad_duration * 90000}" />
-        </splice_insert>
-    </splice_information_table>
-</tsduck>'''
-            else:
-                # Immediate injection: No preroll (preroll = 0)
-                return f'''<?xml version="1.0" encoding="UTF-8"?>
+            # FIX: Always use immediate injection for reliability
+            # The preroll value (0-10 seconds) is informational and handled by distributor's system
+            # Immediate injection ensures CUE-OUT is injected correctly with --delete-files
+            return f'''<?xml version="1.0" encoding="UTF-8"?>
 <tsduck>
     <splice_information_table protocol_version="0" pts_adjustment="0" tier="0xFFF">
         <splice_insert splice_event_id="{event_id}" 
