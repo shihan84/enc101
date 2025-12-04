@@ -12,7 +12,7 @@ from pathlib import Path
 from ..core.logger import get_logger
 from ..models.stream_config import StreamConfig
 from ..models.session import StreamSession
-from ..models.scte35_marker import SCTE35Marker
+from ..models.scte35_marker import SCTE35Marker, CueType
 from .tsduck_service import TSDuckService
 from .dynamic_marker_service import DynamicMarkerService
 from ..utils.exceptions import StreamError
@@ -135,14 +135,26 @@ class StreamService:
                 self.logger.info(f"Dynamic markers directory: {marker_path}")
                 
                 # Start dynamic marker generation (this generates the first marker immediately)
+                # CRITICAL: Always use PREROLL type for dynamic generation to ensure
+                # we generate full sequences (CUE-OUT, CUE-IN, CUE-CRASH)
+                # Start from next available event ID after the initial marker
                 self.logger.info("Starting dynamic marker generation for continuous injection")
+                
+                # Get next available event ID (after the initial marker)
+                # If marker is part of a pair/sequence, we need the ID after the sequence
+                next_event_id = marker.event_id + 1
+                # But if we're using a service that tracks IDs, use that instead
+                if hasattr(self.dynamic_marker_service, 'scte35_service'):
+                    next_event_id = self.dynamic_marker_service.scte35_service.get_next_event_id()
+                    self.logger.info(f"Using next event ID from service: {next_event_id}")
+                
                 self.dynamic_marker_service.start_generation(
                     config=config,
-                    cue_type=marker.cue_type,
+                    cue_type=CueType.PREROLL,  # Always use PREROLL for dynamic generation
                     preroll_seconds=marker.preroll_seconds,
                     ad_duration_seconds=marker.ad_duration_seconds,
                     immediate=marker.immediate,
-                    start_event_id=marker.event_id,  # Start with the marker's event ID
+                    start_event_id=next_event_id,  # Start from next available ID
                     output_callback=output_callback
                 )
                 
@@ -593,19 +605,46 @@ class StreamService:
                     data = json.loads(line)
                     
                     # Check for splice_insert detection (various JSON formats)
-                    if 'splice_insert' in data or 'event_id' in data or 'splice' in str(data).lower():
+                    # TSDuck splicemonitor JSON can have different structures:
+                    # 1. {"#name": "event", "event-id": 10074, "event-type": "in", ...}
+                    # 2. {"splice_insert": {"event_id": 10074, "out_of_network": true, ...}}
+                    # 3. {"event_id": 10074, "out_of_network": true, ...}
+                    if 'splice_insert' in data or 'event_id' in data or 'event-id' in data or 'splice' in str(data).lower():
                         event_id = None
+                        out_of_network = None
+                        event_type = None
+                        cue_type_name = None
+                        
+                        # Extract event ID (try multiple field names)
                         if 'splice_insert' in data:
                             splice_data = data['splice_insert']
                             event_id = splice_data.get('event_id') or splice_data.get('splice_event_id')
+                            out_of_network = splice_data.get('out_of_network')
                         elif 'event_id' in data:
                             event_id = data['event_id']
+                            out_of_network = data.get('out_of_network')
+                        elif 'event-id' in data:
+                            # TSDuck splicemonitor format: {"event-id": 10074, "event-type": "in"}
+                            event_id = data.get('event-id')
+                            event_type = data.get('event-type')  # "in" or "out"
+                            # Map event-type to out_of_network
+                            if event_type == 'out':
+                                out_of_network = True
+                                cue_type_name = "CUE-OUT"
+                            elif event_type == 'in':
+                                out_of_network = False
+                                cue_type_name = "CUE-IN"
                         elif isinstance(data, dict):
                             # Try to find event_id anywhere in the dict
                             for key, value in data.items():
                                 if 'event' in key.lower() and 'id' in key.lower():
                                     event_id = value
                                     break
+                            # Try to find out_of_network
+                            if 'out_of_network' in data:
+                                out_of_network = data.get('out_of_network')
+                            elif 'out-of-network' in data:
+                                out_of_network = data.get('out-of-network')
                         
                         # Only increment if we haven't already counted this (avoid double counting)
                         # Use dynamic marker service count if available (more accurate)
@@ -628,8 +667,17 @@ class StreamService:
                             if splice_pid:
                                 bitrate_info = f"PID {splice_pid}"
                         
-                        self.logger.info(f"SCTE-35 marker detected by splicemonitor: Event ID={event_id}, Total={session.scte35_injected}, Bitrate={bitrate_info}")
-                        self._notify_output(f"[SCTE-35] Marker detected: Event ID={event_id} (Total: {session.scte35_injected})")
+                        # Determine cue type for logging
+                        if not cue_type_name:
+                            if out_of_network is True:
+                                cue_type_name = "CUE-OUT"
+                            elif out_of_network is False:
+                                cue_type_name = "CUE-IN"
+                            else:
+                                cue_type_name = "SCTE-35"
+                        
+                        self.logger.info(f"SCTE-35 marker detected by splicemonitor: Event ID={event_id}, Type={cue_type_name}, Total={session.scte35_injected}, Bitrate={bitrate_info}")
+                        self._notify_output(f"[SCTE-35] {cue_type_name} detected: Event ID={event_id} (Total: {session.scte35_injected})")
                         if bitrate_info:
                             self._notify_output(f"[SCTE-35] Bitrate info: {bitrate_info}")
                         
